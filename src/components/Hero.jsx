@@ -38,6 +38,16 @@ export default function Hero() {
         }}
       />
 
+      {/* High-visibility education doodle background sketch layer with multiply blend mode */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.15] mix-blend-multiply"
+        style={{
+          backgroundImage: "url('/doodle_bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "360px auto",
+        }}
+      />
+
       {/* 2. Soft radial spotlight gradient centered behind the text so dots recede slightly */}
       <div 
         className="absolute inset-0 pointer-events-none z-[1]"
@@ -47,11 +57,11 @@ export default function Hero() {
       />
 
       {/* 3. Large barely visible watermark letter "E" on the right side */}
-      <div 
+      {/* <div 
         className="absolute right-[-20px] md:right-[8%] bottom-[5%] md:bottom-[10%] font-serif text-[240px] sm:text-[360px] md:text-[500px] font-bold text-brand-charcoal opacity-[0.03] select-none pointer-events-none z-[1] leading-none"
       >
         E
-      </div>
+      </div> */}
 
       {/* 4. Centered Editorial Content Layout */}
       <motion.div

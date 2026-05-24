@@ -1,93 +1,106 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Courses() {
-  const [activeCard, setActiveCard] = useState(null);
-  const containerRef = useRef(null);
-  const cardRefs = useRef([]);
+  const [activeCategory, setActiveCategory] = useState("Beginner");
+  const [activeCourseIndex, setActiveCourseIndex] = useState(0);
 
-  const courses = [
-    {
-      badge: "BEGINNER",
-      course: "Foundation English",
-      description: "Master the fundamentals of spoken English — pronunciation, basic grammar, and everyday conversation.",
-      duration: "3 Months",
-      batch: "Max 12 Students",
-      letter: "F"
-    },
-    {
-      badge: "INTERMEDIATE",
-      course: "Business Communication",
-      description: "Learn professional English for meetings, emails, presentations, and workplace conversations.",
-      duration: "3 Months",
-      batch: "Max 12 Students",
-      letter: "B"
-    },
-    {
-      badge: "ADVANCED",
-      course: "Interview Preparation",
-      description: "Sharpen your English for job interviews, HR rounds, and high-pressure professional settings.",
-      duration: "6 Weeks",
-      batch: "Max 8 Students",
-      letter: "I"
-    },
-    {
-      badge: "ADVANCED",
-      course: "Public Speaking Mastery",
-      description: "Command any room. Build stage confidence, delivery, and articulation for any audience.",
-      duration: "8 Weeks",
-      batch: "Max 8 Students",
-      letter: "P"
-    }
-  ];
-
-  useEffect(() => {
-    const activeStates = new Map();
-
-    const callback = (entries) => {
-      entries.forEach((entry) => {
-        const index = parseInt(entry.target.dataset.index, 10);
-        if (entry.isIntersecting) {
-          activeStates.set(index, true);
-        } else {
-          activeStates.delete(index);
-        }
-      });
-
-      if (activeStates.size > 0) {
-        const activeIndices = Array.from(activeStates.keys());
-        const maxIndex = Math.max(...activeIndices);
-        setActiveCard(maxIndex);
-      } else {
-        setActiveCard(null);
+  const courseCategories = {
+    "Beginner": [
+      {
+        badge: "BEGINNER",
+        course: "Foundation English",
+        description: "Master the fundamentals of spoken English — pronunciation, basic grammar, and everyday conversation.",
+        duration: "3 Months",
+        batch: "Max 12 Students",
+        letter: "F",
+        highlights: [
+          "Interactive Vocabulary Audits",
+          "Everyday Conversational English",
+          "Essential Grammar & Tenses",
+          "Vocal Confidence Drills"
+        ]
       }
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      threshold: 0.6,
-    });
-
-    cardRefs.current.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
+    ],
+    "Intermediate": [
+      {
+        badge: "INTERMEDIATE",
+        course: "Business Communication",
+        description: "Learn professional English for meetings, emails, presentations, and workplace conversations.",
+        duration: "3 Months",
+        batch: "Max 12 Students",
+        letter: "B",
+        highlights: [
+          "Email Etiquette & Drafting",
+          "Corporate Vocabulary & Slang",
+          "Executive Presentation Delivery",
+          "Negotiation & Pitching"
+        ]
       }
-    });
+    ],
+    "Advanced": [
+      {
+        badge: "ADVANCED",
+        course: "Interview Preparation",
+        description: "Sharpen your English for job interviews, HR rounds, and high-pressure professional settings.",
+        duration: "6 Weeks",
+        batch: "Max 8 Students",
+        letter: "I",
+        highlights: [
+          "LinkedIn & Resume Reviews",
+          "Mock Technical & HR Panels",
+          "Handling High-Pressure Questions",
+          "Cadence & Pitch Refinement"
+        ]
+      },
+      {
+        badge: "ADVANCED",
+        course: "Public Speaking Mastery",
+        description: "Command any room. Build stage confidence, delivery, and articulation for any audience.",
+        duration: "8 Weeks",
+        batch: "Max 8 Students",
+        letter: "P",
+        highlights: [
+          "Stage Presence & Body Language",
+          "Impromptu Rhetoric & Debating",
+          "Tone & Vocal Variety Audits",
+          "Storytelling & Engagement"
+        ]
+      }
+    ]
+  };
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const categories = Object.keys(courseCategories);
+  const categoryCourses = courseCategories[activeCategory];
+  const activeCourse = categoryCourses[activeCourseIndex];
+  const hasMultipleCourses = categoryCourses.length > 1;
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    setActiveCourseIndex(0);
+  };
+
+  const handleNextCourse = () => {
+    setActiveCourseIndex((prev) => (prev + 1) % categoryCourses.length);
+  };
+
+  const handlePrevCourse = () => {
+    setActiveCourseIndex((prev) => (prev - 1 + categoryCourses.length) % categoryCourses.length);
+  };
 
   return (
-    <section id="courses" className="w-full bg-[#fafaf8] py-20 border-b border-[#dddbd4] relative">
+    <section id="courses" className="w-full bg-[#fafaf8] py-[100px] border-b border-[#dddbd4] relative overflow-hidden">
+      {/* High-visibility education doodle background sketch layer with multiply blend mode */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.15] mix-blend-multiply"
+        style={{
+          backgroundImage: "url('/doodle_bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "360px auto",
+        }}
+      />
       {/* Section Header */}
-      <div className="flex flex-col items-center text-center mb-20 px-6 select-none">
+      <div className="flex flex-col items-center text-center mb-10 px-6 select-none">
         <span className="font-sans font-light text-[11px] text-[#999999] tracking-[0.25em] uppercase mb-4 block">
           [ CURRICULUM SYLLABUS ]
         </span>
@@ -96,115 +109,148 @@ export default function Courses() {
         </h2>
       </div>
 
-      {/* Outer container (runway) */}
-      <div 
-        ref={containerRef}
-        className="relative w-full h-auto md:h-[480vh]"
-      >
-        {courses.map((course, idx) => {
-          const cardNum = idx + 1;
-          
-          // Incremental z-indexes for sticky stack overlay behavior
-          const zIndexClass = 
-            idx === 0 ? "z-[1] md:z-[1]" :
-            idx === 1 ? "z-[2] md:z-[2]" :
-            idx === 2 ? "z-[3] md:z-[3]" :
-            "z-[4] md:z-[4]";
+      {/* Tabs Navigation (Categories: Beginner, Intermediate, Advanced) */}
+      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 max-w-4xl mx-auto mb-12 px-6">
+        <div className="flex bg-[#f3f2ee] p-1.5 rounded-full border border-[#dddbd4] flex-wrap justify-center gap-1 md:gap-2">
+          {categories.map((cat, idx) => {
+            const isActive = activeCategory === cat;
+            return (
+              <button
+                key={idx}
+                onClick={() => handleCategoryChange(cat)}
+                className={`relative px-6 py-2.5 rounded-full font-sans text-[13px] md:text-[14px] font-medium transition-colors duration-300 outline-none select-none cursor-pointer ${
+                  isActive ? 'text-[#fafaf8]' : 'text-[#888888] hover:text-[#1a1a1a]'
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="activeCategoryIndicator"
+                    className="absolute inset-0 bg-[#0a1628] rounded-full z-0"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{cat}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
-          // Separating stack layers using no extra margin on desktop for tight, continuous stacking
-          const spacingClass = "mb-8 md:mb-0";
+      {/* Active Course Display */}
+      <div className="max-w-5xl mx-auto px-6 w-full flex flex-col justify-center min-h-[460px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`${activeCategory}-${activeCourseIndex}`}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full md:h-[420px] bg-[#fafaf8] border border-[#dddbd4] border-l-[4px] border-l-[#0a1628] rounded-[24px] p-8 md:p-[48px_52px] shadow-[0_8px_32px_rgba(0,0,0,0.02)] flex flex-col md:flex-row items-stretch gap-10 md:gap-12 relative overflow-hidden"
+          >
+            {/* Background Watermark Letter */}
+            <div className="absolute right-6 bottom-[-20px] font-serif text-[240px] text-[#1a1a1a] opacity-[0.03] select-none font-normal leading-none pointer-events-none z-0">
+              {activeCourse.letter}
+            </div>
 
-          return (
-            <div
-              key={idx}
-              ref={el => cardRefs.current[idx] = el}
-              data-index={cardNum}
-              className={`relative md:sticky md:top-0 h-auto md:h-screen w-full flex items-start justify-center md:pt-[12vh] pt-8 ${zIndexClass} ${spacingClass}`}
-            >
-              {/* Card Inner Content */}
-              <div className="max-w-[860px] w-[90%] bg-[#fafaf8] border border-[#dddbd4] border-l-[4px] border-l-[#0a1628] rounded-[20px] p-8 md:p-[48px_52px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-0">
-                {/* Left Column (60%) */}
-                <div className="w-full md:w-[60%] flex flex-col items-start justify-center text-left">
-                  {/* Badge */}
-                  <span className="inline-flex px-3 py-1 bg-[#0a1628] text-white font-sans text-[11px] font-medium tracking-[0.1em] uppercase rounded-full">
-                    {course.badge}
-                  </span>
+            {/* Left Column (55% on desktop) - General Info */}
+            <div className="w-full md:w-[55%] flex flex-col items-start justify-center text-left relative z-10">
+              {/* Badge */}
+              <span className="inline-flex px-3 py-1 bg-[#0a1628] text-white font-sans text-[11px] font-medium tracking-[0.1em] uppercase rounded-full">
+                {activeCourse.badge}
+              </span>
 
-                  {/* Course Title */}
-                  <h3 className="mt-5 font-serif text-[32px] md:text-[42px] text-[#1a1a1a] font-medium leading-tight mb-4">
-                    {course.course}
-                  </h3>
+              {/* Course Title */}
+              <h3 className="mt-5 font-serif text-[32px] md:text-[42px] text-[#1a1a1a] font-medium leading-tight mb-4">
+                {activeCourse.course}
+              </h3>
 
-                  {/* Description */}
-                  <p className="font-sans font-light text-[16px] text-[#888888] leading-[1.6] line-clamp-2 mb-7">
-                    {course.description}
-                  </p>
+              {/* Description */}
+              <p className="font-sans font-light text-[15px] md:text-[16px] text-[#888888] leading-[1.6] mb-8">
+                {activeCourse.description}
+              </p>
 
-                  {/* Metadata Row */}
-                  <div className="flex items-center gap-6 font-sans font-light text-[13px] text-[#888888] mb-8">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#888888]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      <span>{course.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#888888]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                      </svg>
-                      <span>{course.batch}</span>
-                    </div>
-                  </div>
-
-                  {/* Enroll Button */}
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center justify-center px-[28px] py-[12px] bg-[#0a1628] text-white font-sans text-[14px] font-medium rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm"
-                  >
-                    Enroll Now
-                  </a>
+              {/* Metadata Row */}
+              <div className="flex flex-wrap items-center gap-6 font-sans font-light text-[13px] text-[#888888] mb-8">
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-[#888888]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  <span>{activeCourse.duration}</span>
                 </div>
-
-                {/* Right Column (40%) */}
-                <div className="w-full md:w-[40%] flex items-center justify-center relative min-h-[160px] md:min-h-full">
-                  <div className="font-serif text-[150px] md:text-[200px] text-[#1a1a1a] opacity-5 select-none font-normal leading-none">
-                    {course.letter}
-                  </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-[#888888]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  <span>{activeCourse.batch}</span>
                 </div>
               </div>
+
+              {/* Enroll Button */}
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-[32px] py-[14px] bg-[#0a1628] text-white font-sans text-[14px] font-medium rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-sm"
+              >
+                Enroll Now
+              </a>
             </div>
-          );
-        })}
-      </div>
 
-      {/* Fixed Card Counter */}
-      <div 
-        className={`fixed bottom-10 right-12 z-[100] hidden md:flex items-baseline gap-1 select-none transition-opacity duration-500 ${
-          activeCard !== null ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <span className="font-sans font-medium text-[18px] text-[#0a1628]">
-          {activeCard ? `0${activeCard}` : '01'}
-        </span>
-        <span className="font-sans font-light text-[14px] text-[#888888]">
-          / 04
-        </span>
-      </div>
+            {/* Vertical Divider (Desktop Only) */}
+            <div className="hidden md:block w-[1px] bg-[#dddbd4] self-stretch my-2 relative z-10" />
 
-      {/* Fixed Scroll Progress Line */}
-      <div 
-        className={`fixed right-6 top-0 w-[2px] h-screen bg-[#dddbd4] z-[99] hidden md:block transition-opacity duration-500 ${
-          activeCard !== null ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <motion.div
-          className="w-[2px] h-full bg-[#0a1628] origin-top"
-          style={{ scaleY: scrollYProgress }}
-        />
+            {/* Right Column (45% on desktop) - Detailed Syllabus Highlights */}
+            <div className="w-full md:w-[45%] flex flex-col items-start justify-center text-left relative z-10">
+              <h4 className="font-sans font-semibold text-[15px] uppercase tracking-[0.1em] text-[#1a1a1a] mb-5">
+                What You Will Master:
+              </h4>
+              
+              <ul className="flex flex-col gap-4 w-full">
+                {activeCourse.highlights.map((h, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-[#f3f2ee] border border-[#dddbd4] flex items-center justify-center text-[#0a1628] font-sans text-[11px] font-semibold mt-0.5 flex-shrink-0 select-none">
+                      {i + 1}
+                    </span>
+                    <span className="font-sans font-light text-[15px] text-[#666666] leading-snug">
+                      {h}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Arrows & Pagination indicator (Visible only if Category has multiple courses) */}
+        {hasMultipleCourses && (
+          <div className="flex items-center justify-end gap-4 mt-6 select-none">
+            <span className="font-sans font-light text-[13px] text-[#888888]">
+              {activeCourseIndex + 1} of {categoryCourses.length}
+            </span>
+            <div className="flex gap-2">
+              <button
+                onClick={handlePrevCourse}
+                className="w-10 h-10 rounded-full border border-[#dddbd4] bg-[#fafaf8] text-[#0a1628] flex items-center justify-center hover:bg-[#0a1628] hover:text-white hover:border-[#0a1628] transition-all duration-300 cursor-pointer outline-none shadow-sm"
+                aria-label="Previous Course"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={handleNextCourse}
+                className="w-10 h-10 rounded-full border border-[#dddbd4] bg-[#fafaf8] text-[#0a1628] flex items-center justify-center hover:bg-[#0a1628] hover:text-white hover:border-[#0a1628] transition-all duration-300 cursor-pointer outline-none shadow-sm"
+                aria-label="Next Course"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

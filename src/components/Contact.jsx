@@ -19,16 +19,25 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#fafaf8] py-[120px] border-b border-[#dddbd4] relative">
+    <section id="contact" className="w-full bg-[#fafaf8] py-[120px] border-b border-[#dddbd4] relative overflow-hidden">
+      {/* High-visibility education doodle background sketch layer with multiply blend mode */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.1] mix-blend-multiply"
+        style={{
+          backgroundImage: "url('/doodle_bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "360px auto",
+        }}
+      />
       <div className="max-w-7xl mx-auto px-6 md:px-16">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none">
           <span className="font-sans font-light text-[11px] text-[#999999] tracking-[0.25em] uppercase mb-4 block">
-            [ GET IN TOUCH ]
+            [ FREE FLUENCY ASSESSMENT ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
-            Start Your Journey.
+            Book Your Speaking Audit.
           </h2>
         </div>
 
@@ -59,12 +68,16 @@ export default function Contact() {
               Open until 8:00 PM
             </p>
 
-            {/* Map Placeholder Box */}
-            <div className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[12px] h-[180px] flex flex-col items-center justify-center select-none">
-              <i className="ti ti-map-pin text-[32px] text-[#dddbd4] mb-2" />
-              <span className="font-sans font-light text-[13px] text-[#999999] tracking-wide">
-                Vastral, Ahmedabad
-              </span>
+            {/* Real Interactive Google Map */}
+            <div className="w-full rounded-[12px] overflow-hidden border border-[#dddbd4] h-[180px] relative">
+              <iframe
+                title="Ocean Blue Vastral Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1189445422894!2d72.65651527606132!3d22.99920151676646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87178cb7194f%3A0xb3de38ea346bd400!2sRadhe%20Chamber%2C%20Vastral%2C%20Ahmedabad%2C%20Gujarat%20382418!5e0!3m2!1sen!2sin!4v1716548000000!5m2!1sen!2sin"
+                className="w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </motion.div>
 

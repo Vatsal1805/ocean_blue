@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
     {
       icon: "ti-clock",
       title: "Flexible Timings",
-      desc: "Morning and evening batches to fit your schedule."
+      desc: "Batches from 7:00 AM to 9:00 PM to fit your routine."
     }
   ];
 
