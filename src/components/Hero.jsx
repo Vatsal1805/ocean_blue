@@ -75,11 +75,8 @@ export default function Hero() {
           variants={itemVariants}
           className="font-serif text-[46px] sm:text-[72px] md:text-[88px] text-brand-charcoal leading-[1.05] font-normal tracking-tight max-w-4xl mb-6 select-none"
         >
-          <span className="block">Speak With</span>
-          <span className="block">Confidence.</span>
-          <span className="block text-[#666666] text-[36px] sm:text-[54px] md:text-[68px] mt-4 font-light italic">
-            Lead With English.
-          </span>
+          <span className="block">One Institute.</span>
+          <span className="block text-[#0a1628] font-light italic">Every Goal.</span>
         </motion.h1>
 
         {/* Premium Body Copy */}
@@ -87,7 +84,7 @@ export default function Hero() {
           variants={itemVariants}
           className="font-sans font-light text-[16px] md:text-[18px] text-brand-grey max-w-2xl leading-relaxed mb-10"
         >
-          An elite language coaching sanctuary in Ahmedabad designed for executives, innovators, and leaders. Master the art of elegant articulation through personalized, cinematic cohorts.
+          School tuitions, competitive prep, and language programs — all under one roof in Ahmedabad.
         </motion.p>
 
         {/* Premium Dual CTA Actions */}

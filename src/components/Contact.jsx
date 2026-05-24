@@ -52,20 +52,40 @@ export default function Contact() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex flex-col items-start text-left w-full"
           >
-            <h3 className="font-sans font-semibold text-[18px] text-[#1a1a1a] mb-2 leading-tight">
-              Ocean Blue Spoken English
+            <h3 className="font-sans font-semibold text-[20px] text-[#1a1a1a] mb-6 leading-tight">
+              Ocean Blue Education
             </h3>
             
-            <p className="font-sans font-light text-[15px] text-[#888888] mb-4 leading-relaxed max-w-md">
-              Radhe Chamber, 110, Vastral, Ahmedabad, Gujarat 382418
-            </p>
+            <div className="flex flex-col gap-6 w-full mb-8">
+              {/* Vastral Branch */}
+              <div>
+                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-[#0a1628] block mb-1">
+                  Vastral Branch (Head Office)
+                </span>
+                <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
+                  Radhe Chamber, 110, Vastral, Ahmedabad, Gujarat 382418
+                </p>
+                <span className="font-sans font-medium text-[15px] text-[#1a1a1a]">
+                  +91 90335 52048
+                </span>
+              </div>
 
-            <span className="font-sans font-medium text-[15px] text-[#1a1a1a] mb-2 block leading-none">
-              090335 52048
-            </span>
+              {/* Nikol Branch */}
+              <div>
+                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-[#0a1628] block mb-1">
+                  Nikol Branch
+                </span>
+                <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
+                  Nikol Main Road, Nikol, Ahmedabad, Gujarat 382350
+                </p>
+                <span className="font-sans font-medium text-[15px] text-[#1a1a1a]">
+                  +91 80003 28054
+                </span>
+              </div>
+            </div>
 
             <p className="font-sans font-light text-[14px] text-[#888888] mb-8 leading-none">
-              Open until 8:00 PM
+              Timing: 7:00 AM – 9:00 PM
             </p>
 
             {/* Real Interactive Google Map */}

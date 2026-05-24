@@ -2,69 +2,97 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Courses() {
-  const [activeCategory, setActiveCategory] = useState("Beginner");
+  const [activeCategory, setActiveCategory] = useState("School Tuitions");
   const [activeCourseIndex, setActiveCourseIndex] = useState(0);
 
   const courseCategories = {
-    "Beginner": [
+    "School Tuitions": [
       {
-        badge: "BEGINNER",
-        course: "Foundation English",
-        description: "Master the fundamentals of spoken English — pronunciation, basic grammar, and everyday conversation.",
-        duration: "3 Months",
+        badge: "K-10 TUITIONS",
+        course: "Primary & Secondary (4th–10th)",
+        description: "Building strong conceptual foundations in Mathematics, Science, and English for ICSE, CBSE, and GSEB board standards.",
+        duration: "Academic Year",
         batch: "Max 12 Students",
-        letter: "F",
+        letter: "S",
         highlights: [
-          "Interactive Vocabulary Audits",
-          "Everyday Conversational English",
-          "Essential Grammar & Tenses",
-          "Vocal Confidence Drills"
-        ]
-      }
-    ],
-    "Intermediate": [
-      {
-        badge: "INTERMEDIATE",
-        course: "Business Communication",
-        description: "Learn professional English for meetings, emails, presentations, and workplace conversations.",
-        duration: "3 Months",
-        batch: "Max 12 Students",
-        letter: "B",
-        highlights: [
-          "Email Etiquette & Drafting",
-          "Corporate Vocabulary & Slang",
-          "Executive Presentation Delivery",
-          "Negotiation & Pitching"
-        ]
-      }
-    ],
-    "Advanced": [
-      {
-        badge: "ADVANCED",
-        course: "Interview Preparation",
-        description: "Sharpen your English for job interviews, HR rounds, and high-pressure professional settings.",
-        duration: "6 Weeks",
-        batch: "Max 8 Students",
-        letter: "I",
-        highlights: [
-          "LinkedIn & Resume Reviews",
-          "Mock Technical & HR Panels",
-          "Handling High-Pressure Questions",
-          "Cadence & Pitch Refinement"
+          "Comprehensive Syllabus Coverage",
+          "Weekly Concept & Doubt Audits",
+          "Board Exam Mock Practice Drills",
+          "Small, Focus-Driven Batch Sizes"
         ]
       },
       {
-        badge: "ADVANCED",
-        course: "Public Speaking Mastery",
-        description: "Command any room. Build stage confidence, delivery, and articulation for any audience.",
-        duration: "8 Weeks",
-        batch: "Max 8 Students",
-        letter: "P",
+        badge: "11th–12th COHORTS",
+        course: "Senior Secondary (11th–12th)",
+        description: "Advanced stream-specific coaching for Science (Physics, Chemistry, Biology, Maths) and Commerce (Accountancy, Economics).",
+        duration: "Academic Year",
+        batch: "Max 15 Students",
+        letter: "H",
         highlights: [
-          "Stage Presence & Body Language",
-          "Impromptu Rhetoric & Debating",
-          "Tone & Vocal Variety Audits",
-          "Storytelling & Engagement"
+          "Stream-Specialized Expert Faculty",
+          "NCERT & Board Pattern Focus",
+          "Daily Practice Problem (DPP) Sheets",
+          "Regular Parents-Teacher Audits"
+        ]
+      }
+    ],
+    "Competitive Prep": [
+      {
+        badge: "ENGINEERING ENTRANCE",
+        course: "JEE Main & Advanced",
+        description: "Elite, rigorous coaching designed by specialized mathematics and physics mentors to crack national engineering entrance exams.",
+        duration: "1 & 2 Year Programs",
+        batch: "Max 10 Students",
+        letter: "J",
+        highlights: [
+          "Concept-Based Lecture Frameworks",
+          "Simulated Mock Testing Centers",
+          "Rank-Boosting Doubt Clinics",
+          "Objective Problem Speed Drills"
+        ]
+      },
+      {
+        badge: "MEDICAL ENTRANCE",
+        course: "NEET UG Prep",
+        description: "Comprehensive biology, chemistry, and physics coaching to secure top ranks in the medical common entrance test.",
+        duration: "1 & 2 Year Programs",
+        batch: "Max 10 Students",
+        letter: "N",
+        highlights: [
+          "Specialized NCERT Biology Focus",
+          "Weekly Simulated OMR Sheet Tests",
+          "High-Yield Physics Practice",
+          "Detailed Mock Performance Audits"
+        ]
+      }
+    ],
+    "Language Programs": [
+      {
+        badge: "STUDY ABROAD EXAMS",
+        course: "IELTS & PTE Coaching",
+        description: "Complete, specialized training in reading, writing, listening, and speaking modules to clear international language tests.",
+        duration: "6 Weeks to 3 Months",
+        batch: "Max 8 Students",
+        letter: "I",
+        highlights: [
+          "Mock Speaking & Writing Evaluations",
+          "Listening & Reading Speed Drills",
+          "Certified Native-Fluent Instructors",
+          "Personalized Band-Score Audits"
+        ]
+      },
+      {
+        badge: "ENGLISH COGNITIVE SKILLS",
+        course: "Spoken English & Fluency",
+        description: "Polishing your pronunciation, everyday conversation abilities, and stage confidence to express yourself articulate in any crowd.",
+        duration: "3 Months",
+        batch: "Max 12 Students",
+        letter: "E",
+        highlights: [
+          "Everyday Dialog & Small Talk",
+          "Public Speaking & Debate Drills",
+          "Accent & Pronunciation Coaching",
+          "Interactive Vocabulary Audits"
         ]
       }
     ]

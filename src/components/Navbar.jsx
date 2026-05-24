@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 h-[72px] px-8 md:px-16 flex items-center justify-between z-50 bg-brand-primaryBg/90 backdrop-blur-md border-b border-brand-border transition-all duration-300"
+        className="fixed top-4 left-4 right-4 md:left-12 md:right-12 h-[64px] px-8 md:px-10 flex items-center justify-between z-50 bg-brand-primaryBg/75 backdrop-blur-xl border border-brand-border/40 rounded-full shadow-[0_8px_30px_rgba(10,22,40,0.03)] transition-all duration-300"
       >
         {/* Left Side: Brand Logo */}
         <a
@@ -82,7 +82,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed top-[72px] left-0 w-full bg-brand-primaryBg border-b border-brand-border backdrop-blur-lg flex flex-col p-8 gap-6 md:hidden z-40"
+            className="fixed top-[88px] left-4 right-4 bg-brand-primaryBg/95 backdrop-blur-xl border border-brand-border/40 rounded-[24px] shadow-[0_16px_40px_rgba(10,22,40,0.08)] flex flex-col p-8 gap-6 md:hidden z-40"
           >
             {navItems.map((item) => (
               <a

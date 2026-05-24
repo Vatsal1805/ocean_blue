@@ -8,7 +8,7 @@ export default function CTA() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.12, // 120ms stagger
+        staggerChildren: 0.05, // Much faster, snappier word stagger (50ms)
       }
     }
   };
@@ -16,13 +16,13 @@ export default function CTA() {
   const wordVariants = {
     hidden: { 
       opacity: 0, 
-      y: 24 
+      y: 20 
     },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: [0.25, 1, 0.5, 1]
       }
     }
@@ -33,6 +33,16 @@ export default function CTA() {
       {/* Subtle background radial gradient for high-end warm glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(13,31,60,0.5)_0%,transparent_70%)] pointer-events-none" />
 
+      {/* Subtle background doodle texture (inverted for white outlines at 2.5% opacity on dark background) */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.02] invert"
+        style={{
+          backgroundImage: "url('/doodle_bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "360px auto",
+        }}
+      />
+
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
         
         {/* Section Label */}
@@ -40,7 +50,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 0.4, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="font-sans font-light text-[11px] text-white tracking-[0.25em] uppercase mb-6 block"
         >
           [ ADMISSIONS COHORT ]
@@ -65,28 +75,28 @@ export default function CTA() {
           ))}
         </motion.h2>
 
-        {/* Subtext - Fades in 400ms after headline completes */}
+        {/* Subtext - Fades in snappily after headline completes */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ 
-            opacity: { duration: 0.8, delay: 1.5 },
-            y: { duration: 0.8, delay: 1.5 }
+            opacity: { duration: 0.6, delay: 0.35 },
+            y: { duration: 0.6, delay: 0.35 }
           }}
           className="font-sans font-light text-[16px] sm:text-[20px] text-white/60 max-w-2xl mb-10 leading-relaxed"
         >
-          No commitment. Just come and experience it.
+          No commitment. Book a free demo class for K-12 school tuitions, JEE/NEET, or language programs.
         </motion.p>
 
-        {/* Looping Breathing Button */}
+        {/* Snappy Breathing Button */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ 
-            opacity: { duration: 0.8, delay: 1.9 },
-            y: { duration: 0.8, delay: 1.9 }
+            opacity: { duration: 0.6, delay: 0.6 },
+            y: { duration: 0.6, delay: 0.6 }
           }}
         >
           <motion.a
@@ -104,7 +114,7 @@ export default function CTA() {
               willChange: "transform"
             }}
           >
-            Book Your Free Class →
+            Book Your Free Demo Class →
           </motion.a>
         </motion.div>
 

@@ -16,42 +16,52 @@ export default function Gallery() {
 
   const images = [
     {
-      label: "Classroom Session",
+      label: "Standard Classroom",
       src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80"
     },
     {
-      label: "Speaking Practice",
-      src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80"
+      label: "JEE Physics Lecture",
+      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80"
     },
     {
-      label: "Group Discussion",
+      label: "NEET Biology Cohort",
+      src: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=600&q=80"
+    },
+    {
+      label: "Mathematics Doubt Clinic",
+      src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80"
+    },
+    {
+      label: "Board Exam Study Room",
+      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
+    },
+    {
+      label: "IELTS Mock Speaking",
+      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+    },
+    {
+      label: "Interactive Group Debate",
       src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80"
     },
     {
-      label: "Batch Activity",
-      src: "https://images.unsplash.com/photo-1544531585-9847b68c8c86?w=600&q=80"
-    },
-    {
-      label: "One-on-One Coaching",
-      src: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=600&q=80"
-    },
-    {
-      label: "Stage Practice",
+      label: "Vocal Articulation Drill",
       src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80"
-    },
-    {
-      label: "Debate Session",
-      src: "https://images.unsplash.com/photo-1558008258-3256797b43f3?w=600&q=80"
-    },
-    {
-      label: "Mock Interview",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
     }
   ];
 
   return (
     <section id="gallery" className="w-full bg-[#f3f2ee] py-[100px] border-b border-[#dddbd4] overflow-hidden relative">
-      <div className="w-full">
+      {/* Subtle tiled background doodle overlay for visual continuity (2.5% opacity) */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.025]"
+        style={{
+          backgroundImage: "url('/doodle_bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "360px auto",
+        }}
+      />
+      
+      <div className="w-full relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12 px-6 select-none">
