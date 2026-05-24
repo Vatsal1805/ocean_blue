@@ -50,7 +50,7 @@ export default function Statistics() {
     { target: "500", suffix: "+", label: "Students Trained", isDecimal: false },
     { target: "4.7", suffix: "★", label: "Google Rating", isDecimal: true },
     { target: "147", suffix: "", label: "Reviews", isDecimal: false },
-    { target: "5.0", suffix: "+", label: "Years Teaching", isDecimal: true },
+    { target: "15", suffix: "+", label: "Years of Trust (Since 2009)", isDecimal: false },
   ];
 
   return (

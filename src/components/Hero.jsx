@@ -125,7 +125,7 @@ export default function Hero() {
           </div>
           {/* trust details copy */}
           <span className="font-sans font-light text-[14px] text-brand-grey tracking-wide">
-            500+ Students &middot; 4.7★ &middot; 147 Google Reviews
+            15+ Years of Trust (Since 2009) &middot; 500+ Students &middot; 4.7★ (147 Google Reviews)
           </span>
         </motion.div>
       </motion.div>

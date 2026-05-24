@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
             </a>
             <p className="font-sans font-light text-[14px] text-[#cccccc] leading-relaxed mb-6 max-w-xs">
-              An elite academic sanctuary in Ahmedabad, dedicated to K-12 tuition excellence, entrance prep success (JEE/NEET), and global language mastery.
+              An elite academic sanctuary in Ahmedabad, dedicated to 4th to 12th tuition excellence, entrance prep success (JEE/NEET), and global language mastery.
             </p>
             <div className="flex flex-col gap-3 font-sans font-light text-[13px] text-[#888888]">
               <div className="flex items-center gap-2.5">
@@ -45,7 +45,7 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3.5 font-sans font-light text-[14px] text-[#cccccc]">
               <a href="#courses" className="hover:text-white transition-colors duration-200">
-                K-10 Secondary Tutions
+                4-10 Secondary Tutions
               </a>
               <a href="#courses" className="hover:text-white transition-colors duration-200">
                 11th–12th Sci & Com Cohorts

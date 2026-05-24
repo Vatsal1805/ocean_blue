@@ -6,28 +6,34 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "The structure and cohort selection at Ocean Blue are impeccable. The speech audits completely reshaped my public speaking delivery.",
-      name: "Aarav Sharma"
+      quote: "The conceptual depth in physics and mathematics classes is unmatched. The systematic test-prep strategy and daily doubt clinics gave me the edge I needed to succeed.",
+      name: "Aarav Sharma",
+      track: "IIT JEE Aspirant"
     },
     {
-      quote: "It is a high-society sanctuary for polished dialogue. I developed conversational eloquence that immediately won over my business clients.",
-      name: "Meera Patel"
+      quote: "The biology lectures and weekly mock OMR diagnostics are exceptional. The coaching team gave me absolute clarity on complex zoology and anatomy concepts.",
+      name: "Meera Patel",
+      track: "NEET UG Candidate"
     },
     {
-      quote: "The vocal stress audits and accent coaching were game-changers for me. I transformed my cadence from flat to highly persuasive.",
-      name: "Kabir Mehta"
+      quote: "The IELTS preparation and personalized vocabulary feedback sessions were incredible. I went from feeling stuck to securing my target band score for study abroad.",
+      name: "Kabir Mehta",
+      track: "IELTS Academy Student"
     },
     {
-      quote: "We simulated high-stakes executive boardrooms and press interviews. I learned how to command any room with verbal confidence under intense pressure.",
-      name: "Ishaan Desai"
+      quote: "As a Class 10 board student, the conceptual clarity in Science and Mathematics was a game-changer. The teachers bridge the gap between textbook formulas and real-world logic.",
+      name: "Ishaan Desai",
+      track: "Class 10 Board Topper"
     },
     {
-      quote: "No boring textbook fill-in-the-blank drills. Every session is active conversation designed around real-world high-impact situations.",
-      name: "Riya Sen"
+      quote: "The Senior Secondary Science lectures are highly detailed. With dedicated NCERT sheets and parent-teacher tracking, they ensure excellent preparation for board exams.",
+      name: "Riya Sen",
+      track: "Class 12 Science Student"
     },
     {
-      quote: "I mastered impromptu rhetoric and structuring persuasive arguments. It helped me successfully lead our global project presentation.",
-      name: "Devang Vyas"
+      quote: "The spoken English modules and public speaking drills completely cured my stage fright. I can now converse, debate, and present in public with complete fluency.",
+      name: "Devang Vyas",
+      track: "Fluent English Alumni"
     }
   ];
 
@@ -54,7 +60,7 @@ export default function Testimonials() {
 
       {/* Subtitle */}
       <p className="font-sans font-light text-[12px] text-white/40 mt-1 leading-tight">
-        Student · Ocean Blue Spoken English
+        {item.track} · Ocean Blue Academy
       </p>
     </div>
   );
@@ -69,7 +75,7 @@ export default function Testimonials() {
             [ WHAT OUR STUDENTS SAY ]
           </span>
           <h2 className="font-serif text-[42px] sm:text-[52px] text-white font-normal leading-tight">
-            They Came. They Spoke. They Led.
+            Dedicated Mentorship. Proven Outcomes.
           </h2>
         </div>
 

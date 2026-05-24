@@ -86,7 +86,7 @@ export default function CTA() {
           }}
           className="font-sans font-light text-[16px] sm:text-[20px] text-white/60 max-w-2xl mb-10 leading-relaxed"
         >
-          No commitment. Book a free demo class for K-12 school tuitions, JEE/NEET, or language programs.
+          No commitment. Book a free demo class for 4th to 12th school tuitions, JEE/NEET, or language programs.
         </motion.p>
 
         {/* Snappy Breathing Button */}

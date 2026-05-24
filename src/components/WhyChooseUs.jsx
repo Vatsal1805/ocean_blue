@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           </span>
           <h2 className="font-serif text-[42px] sm:text-[52px] text-[#1a1a1a] font-normal leading-[1.15] max-w-3xl">
             Built Around One Thing.<br />
-            Your Fluency.
+            Your Success.
           </h2>
         </div>
 

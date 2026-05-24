@@ -129,7 +129,7 @@ export default function Contact({ prefilledProgram }) {
                 </div>
                 <h3 className="font-serif text-[22px] text-[#1a1a1a] font-normal mb-2">Message Sent</h3>
                 <p className="font-sans font-light text-[14px] text-[#888888] max-w-xs leading-relaxed">
-                  Thank you! We will get in touch with you shortly to schedule your spoken English audit.
+                  Thank you! We will get in touch with you shortly to schedule your academic counseling session and seat booking.
                 </p>
               </div>
             ) : (
@@ -168,7 +168,7 @@ export default function Contact({ prefilledProgram }) {
                     name="program"
                     value={formData.program}
                     onChange={handleChange}
-                    placeholder="Program of Interest (e.g. JEE Prep, Spoken English)"
+                    placeholder="Program of Interest (e.g. Class 10 Tuition, JEE/NEET, IELTS)"
                     className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
                   />
                 </div>
