@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Navbar() {
+export default function Navbar({ activeProgram, closeProgram }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -11,6 +11,12 @@ export default function Navbar() {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const handleNavClick = () => {
+    if (activeProgram) {
+      closeProgram();
+    }
+  };
+
   return (
     <>
       <header
@@ -19,6 +25,7 @@ export default function Navbar() {
         {/* Left Side: Brand Logo */}
         <a
           href="#home"
+          onClick={handleNavClick}
           className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none"
         >
           Ocean Blue
@@ -31,6 +38,7 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
+              onClick={handleNavClick}
               className="font-sans font-light text-[15px] text-brand-grey hover:text-brand-charcoal transition-colors duration-300 relative group"
             >
               {item.label}
@@ -44,6 +52,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center">
           <a
             href="#contact"
+            onClick={handleNavClick}
             className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-navy text-brand-white font-sans text-[14px] font-medium border border-brand-navy hover:bg-transparent hover:text-brand-navy transition-all duration-300"
           >
             Enroll Now
@@ -88,7 +97,10 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  handleNavClick();
+                }}
                 className="font-sans font-light text-[18px] text-brand-grey hover:text-brand-charcoal transition-colors duration-300"
               >
                 {item.label}
@@ -96,7 +108,10 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleNavClick();
+              }}
               className="inline-flex items-center justify-center w-full py-3 rounded-full bg-brand-navy text-brand-white font-sans text-[15px] font-medium border border-brand-navy hover:bg-transparent hover:text-brand-navy transition-all duration-300 mt-2"
             >
               Enroll Now

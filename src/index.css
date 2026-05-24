@@ -68,3 +68,14 @@
 .pause-hover:hover .animate-marquee-right {
   animation-play-state: paused;
 }
+
+/* Snappy Hardware-Accelerated Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1), transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}

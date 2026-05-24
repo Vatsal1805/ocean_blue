@@ -25,7 +25,7 @@ export default function Gallery() {
     },
     {
       label: "NEET Biology Cohort",
-      src: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?w=600&q=80"
+      src: "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=600&q=80"
     },
     {
       label: "Mathematics Doubt Clinic",

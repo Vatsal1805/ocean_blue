@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+export default function Contact({ prefilledProgram }) {
+  const [formData, setFormData] = useState({ 
+    name: '', 
+    phone: '', 
+    program: prefilledProgram || '', 
+    message: '' 
+  });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (prefilledProgram) {
+      setFormData((prev) => ({ ...prev, program: prefilledProgram }));
+    }
+  }, [prefilledProgram]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -145,6 +156,19 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone"
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
+                  />
+                </div>
+
+                {/* Program Interest Field */}
+                <div className="flex flex-col items-start w-full">
+                  <input
+                    required
+                    type="text"
+                    name="program"
+                    value={formData.program}
+                    onChange={handleChange}
+                    placeholder="Program of Interest (e.g. JEE Prep, Spoken English)"
                     className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
                   />
                 </div>
