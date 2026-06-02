@@ -35,7 +35,7 @@ export default function ProgramDetails({ programId, closeProgram }) {
         {/* Floating Back Pill Button */}
         <button 
           onClick={closeProgram} 
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#dddbd4] bg-[#fafaf8]/80 backdrop-blur-md text-[#0a1628] hover:bg-[#0a1628] hover:text-white transition-all duration-300 font-sans text-[13px] font-medium shadow-sm cursor-pointer select-none mb-8"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#dddbd4] bg-[#fafaf8]/80 backdrop-blur-md text-brand-navy hover:bg-brand-yellow hover:text-brand-navy hover:border-brand-yellow transition-all duration-300 font-sans text-[13px] font-semibold shadow-sm cursor-pointer select-none mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Programs</span>
@@ -47,7 +47,7 @@ export default function ProgramDetails({ programId, closeProgram }) {
           {/* Left Column (65%): General Info & Subjects list */}
           <div className="lg:col-span-8 flex flex-col items-start text-left w-full">
             {/* Badge */}
-            <span className="inline-flex px-3 py-1 bg-[#0a1628] text-white font-sans text-[11px] font-medium tracking-[0.1em] uppercase rounded-full">
+            <span className="inline-flex px-3 py-1 bg-brand-yellow text-brand-navy font-sans text-[11px] font-semibold tracking-[0.1em] uppercase rounded-full">
               {program.badge}
             </span>
 
@@ -66,7 +66,7 @@ export default function ProgramDetails({ programId, closeProgram }) {
               {program.streams ? (
                 <div className="flex flex-col gap-6">
                   <h3 className="font-sans font-semibold text-[15px] uppercase tracking-[0.1em] text-[#1a1a1a] mb-2 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-[#0a1628]" />
+                    <BookOpen className="w-4 h-4 text-brand-navy" />
                     <span>Specialized Preparation Streams:</span>
                   </h3>
                   
@@ -74,11 +74,11 @@ export default function ProgramDetails({ programId, closeProgram }) {
                     {program.streams.map((stream) => (
                       <div 
                         key={stream.id}
-                        className="bg-white/80 backdrop-blur-md border border-[#dddbd4] rounded-[24px] p-6 shadow-sm hover:border-[#0a1628] hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                        className="bg-white/80 backdrop-blur-md border border-[#dddbd4] rounded-[24px] p-6 shadow-sm hover:border-brand-yellow hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                       >
                         <div>
                           <div className="flex items-center justify-between mb-4">
-                            <span className="inline-flex px-2.5 py-0.5 bg-[#0a1628]/5 border border-[#0a1628]/10 text-[#0a1628] font-sans text-[10px] font-medium tracking-[0.05em] uppercase rounded-full">
+                            <span className="inline-flex px-2.5 py-0.5 bg-brand-yellow/15 border border-brand-yellow/30 text-brand-navy font-sans text-[10px] font-semibold tracking-[0.05em] uppercase rounded-full">
                               {stream.badge}
                             </span>
                           </div>
@@ -100,9 +100,9 @@ export default function ProgramDetails({ programId, closeProgram }) {
                           {stream.subjects.map((sub, i) => (
                             <div 
                               key={i} 
-                              className="flex items-center gap-3 bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[14px] p-3 transition-all duration-300 hover:border-[#0a1628] hover:bg-white"
+                              className="flex items-center gap-3 bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[14px] p-3 transition-all duration-300 hover:border-brand-yellow hover:bg-white"
                             >
-                              <span className="w-5 h-5 rounded-full bg-[#0a1628] text-white flex items-center justify-center font-sans text-[10px] font-semibold flex-shrink-0 select-none">
+                              <span className="w-5 h-5 rounded-full bg-brand-yellow text-brand-navy flex items-center justify-center font-sans text-[10px] font-semibold flex-shrink-0 select-none">
                                 0{i + 1}
                               </span>
                               <span className="font-sans font-light text-[13px] text-[#1a1a1a] leading-tight">
@@ -118,7 +118,7 @@ export default function ProgramDetails({ programId, closeProgram }) {
               ) : (
                 <div>
                   <h3 className="font-sans font-semibold text-[15px] uppercase tracking-[0.1em] text-[#1a1a1a] mb-6 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-[#0a1628]" />
+                    <BookOpen className="w-4 h-4 text-brand-navy" />
                     <span>Curriculum & Subjects Covered:</span>
                   </h3>
                   
@@ -126,9 +126,9 @@ export default function ProgramDetails({ programId, closeProgram }) {
                     {program.subjects.map((sub, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-3 bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[16px] p-4 transition-all duration-300 hover:border-[#0a1628] hover:bg-white"
+                        className="flex items-center gap-3 bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[16px] p-4 transition-all duration-300 hover:border-brand-yellow hover:bg-white"
                       >
-                        <span className="w-6 h-6 rounded-full bg-[#0a1628] text-white flex items-center justify-center font-sans text-[11px] font-semibold flex-shrink-0 select-none">
+                        <span className="w-6 h-6 rounded-full bg-brand-yellow text-brand-navy flex items-center justify-center font-sans text-[11px] font-semibold flex-shrink-0 select-none">
                           0{i + 1}
                         </span>
                         <span className="font-sans font-light text-[15px] text-[#1a1a1a] leading-tight">
@@ -145,20 +145,20 @@ export default function ProgramDetails({ programId, closeProgram }) {
           {/* Right Column (35%): Logistics & Schedules Info */}
           <div className="lg:col-span-4 w-full">
             <div className="bg-[#fafaf8]/80 backdrop-blur-md border border-[#dddbd4] rounded-[24px] p-8 shadow-sm flex flex-col gap-6 text-left">
-              <h3 className="font-sans font-semibold text-[13px] uppercase tracking-[0.15em] text-[#999999]">
+              <h3 className="font-sans font-semibold text-[13px] uppercase tracking-[0.15em] text-brand-label">
                 Course Details
               </h3>
               
               {/* Timings */}
               <div>
-                <span className="font-sans font-semibold text-[14px] text-[#0a1628] flex items-center gap-2 mb-2">
+                <span className="font-sans font-semibold text-[14px] text-brand-navy flex items-center gap-2 mb-2">
                   <Clock className="w-4 h-4" />
                   <span>Batch Timings</span>
                 </span>
                 <ul className="flex flex-col gap-2 font-sans font-light text-[14px] text-[#666666]">
                   {program.timings.map((t, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0a1628]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow" />
                       <span>{t}</span>
                     </li>
                   ))}
@@ -170,12 +170,12 @@ export default function ProgramDetails({ programId, closeProgram }) {
 
               {/* Capacities */}
               <div>
-                <span className="font-sans font-semibold text-[14px] text-[#0a1628] flex items-center gap-2 mb-2">
+                <span className="font-sans font-semibold text-[14px] text-brand-navy flex items-center gap-2 mb-2">
                   <Users className="w-4 h-4" />
                   <span>Max Batch Capacity</span>
                 </span>
                 <p className="font-sans font-light text-[14px] text-[#666666] leading-relaxed">
-                  Strictly limited to a maximum of <strong className="font-semibold text-[#0a1628]">{program.batchLimit} students</strong> per batch to guarantee individualized concept focus and direct mentoring.
+                  Strictly limited to a maximum of <strong className="font-semibold text-brand-navy">{program.batchLimit} students</strong> per batch to guarantee individualized concept focus and direct mentoring.
                 </p>
               </div>
             </div>

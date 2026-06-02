@@ -41,10 +41,10 @@ export default function Testimonials() {
   const renderCard = (item, idx) => (
     <div
       key={idx}
-      className="bg-[#0d1f3c] border border-white/[0.08] rounded-[16px] p-[28px_32px] w-[320px] flex-shrink-0 flex flex-col items-start text-left select-none"
+      className="bg-brand-navyLight border border-white/[0.08] rounded-[16px] p-[28px_32px] w-[320px] flex-shrink-0 flex flex-col items-start text-left select-none"
     >
       {/* 5 Stars */}
-      <div className="flex text-white text-[14px] leading-none select-none tracking-wider">
+      <div className="flex text-brand-yellow text-[14px] leading-none select-none tracking-wider">
         ★★★★★
       </div>
 
@@ -66,12 +66,12 @@ export default function Testimonials() {
   );
 
   return (
-    <section id="testimonials" className="w-full bg-[#0a1628] py-[120px] border-b border-white/10 overflow-hidden relative">
+    <section id="testimonials" className="w-full bg-brand-navy py-[120px] border-b border-white/10 overflow-hidden relative">
       <div className="w-full">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 px-6 select-none">
-          <span className="font-sans font-light text-[11px] text-white/40 tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ WHAT OUR STUDENTS SAY ]
           </span>
           <h2 className="font-serif text-[42px] sm:text-[52px] text-white font-normal leading-tight">

@@ -65,7 +65,7 @@ export default function Gallery() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12 px-6 select-none">
-          <span className="font-sans font-light text-[11px] text-[#999999] tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ OUR INSTITUTE ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -93,7 +93,7 @@ export default function Gallery() {
                 key={idx}
                 whileHover={{ 
                   scale: 1.05, 
-                  borderColor: '#0a1628'
+                  borderColor: '#fecd00'
                 }}
                 transition={{ duration: 0.2 }}
                 className="w-[220px] md:w-[280px] h-[160px] md:h-[200px] flex-shrink-0 rounded-[16px] overflow-hidden border border-[#dddbd4] relative cursor-pointer"

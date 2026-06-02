@@ -44,7 +44,7 @@ export default function Contact({ prefilledProgram }) {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none">
-          <span className="font-sans font-light text-[11px] text-[#999999] tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ FREE FLUENCY ASSESSMENT ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -70,7 +70,7 @@ export default function Contact({ prefilledProgram }) {
             <div className="flex flex-col gap-6 w-full mb-8">
               {/* Vastral Branch */}
               <div>
-                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-[#0a1628] block mb-1">
+                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-brand-navy block mb-1">
                   Vastral Branch (Head Office)
                 </span>
                 <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
@@ -83,7 +83,7 @@ export default function Contact({ prefilledProgram }) {
 
               {/* Nikol Branch */}
               <div>
-                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-[#0a1628] block mb-1">
+                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-brand-navy block mb-1">
                   Nikol Branch
                 </span>
                 <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
@@ -122,7 +122,7 @@ export default function Contact({ prefilledProgram }) {
           >
             {submitted ? (
               <div className="flex flex-col items-center justify-center text-center py-12 bg-[#f3f2ee] border border-[#dddbd4] rounded-[12px]">
-                <div className="w-12 h-12 rounded-full bg-[#0a1628] text-white flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-brand-yellow text-brand-navy flex items-center justify-center mb-4">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -143,7 +143,7 @@ export default function Contact({ prefilledProgram }) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Name"
-                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-brand-yellow transition-colors duration-200 outline-none"
                   />
                 </div>
 
@@ -156,7 +156,7 @@ export default function Contact({ prefilledProgram }) {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone"
-                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-brand-yellow transition-colors duration-200 outline-none"
                   />
                 </div>
 
@@ -169,7 +169,7 @@ export default function Contact({ prefilledProgram }) {
                     value={formData.program}
                     onChange={handleChange}
                     placeholder="Program of Interest (e.g. Class 10 Tuition, JEE/NEET, IELTS)"
-                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none"
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-brand-yellow transition-colors duration-200 outline-none"
                   />
                 </div>
 
@@ -181,14 +181,14 @@ export default function Contact({ prefilledProgram }) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Message"
-                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-[#0a1628] transition-colors duration-200 outline-none h-[120px] resize-none"
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-brand-yellow transition-colors duration-200 outline-none h-[120px] resize-none"
                   />
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#0a1628] text-white font-sans font-medium text-[15px] py-[14px] rounded-[10px] hover:bg-opacity-95 transition-all duration-300 shadow-sm cursor-pointer select-none"
+                  className="w-full bg-brand-yellow text-brand-navy font-sans font-semibold text-[15px] py-[14px] rounded-[10px] hover:bg-brand-yellowDeep transition-all duration-300 shadow-sm cursor-pointer select-none"
                 >
                   Submit
                 </button>

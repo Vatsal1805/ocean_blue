@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, GraduationCap } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0a1628] border-t border-white/[0.08] relative overflow-hidden select-none pt-16 pb-8">
+    <footer className="w-full bg-brand-navy border-t border-white/[0.08] relative overflow-hidden select-none pt-16 pb-8">
       {/* Subtle tiled background doodle overlay for visual continuity (1.5% opacity on dark background) */}
       <div 
         className="absolute inset-0 pointer-events-none z-0 opacity-[0.015] invert"
@@ -25,7 +25,7 @@ export default function Footer() {
               className="flex items-center gap-1.5 font-sans font-medium text-[20px] text-white tracking-tight mb-5"
             >
               Ocean Blue Education
-              <span className="w-1.5 h-1.5 rounded-full bg-white" />
+              <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
             </a>
             <p className="font-sans font-light text-[14px] text-[#cccccc] leading-relaxed mb-6 max-w-xs">
               An elite academic sanctuary in Ahmedabad, dedicated to 4th to 12th tuition excellence, entrance prep success (JEE/NEET), and global language mastery.
@@ -44,22 +44,22 @@ export default function Footer() {
               Our Tracks
             </h4>
             <nav className="flex flex-col gap-3.5 font-sans font-light text-[14px] text-[#cccccc]">
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 4-10 Secondary Tutions
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 11th–12th Sci & Com Cohorts
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 JEE Main & Advanced Prep
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 NEET UG Medical Coaching
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 IELTS & PTE Academic
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 Spoken English & Fluency
               </a>
             </nav>
@@ -71,19 +71,19 @@ export default function Footer() {
               Quick Links
             </h4>
             <nav className="flex flex-col gap-3.5 font-sans font-light text-[14px] text-[#cccccc]">
-              <a href="#home" className="hover:text-white transition-colors duration-200">
+              <a href="#home" className="hover:text-brand-yellow transition-colors duration-200">
                 Home Banner
               </a>
-              <a href="#courses" className="hover:text-white transition-colors duration-200">
+              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
                 Our Programs
               </a>
-              <a href="#about" className="hover:text-white transition-colors duration-200">
+              <a href="#about" className="hover:text-brand-yellow transition-colors duration-200">
                 Why Choose Us
               </a>
-              <a href="#testimonials" className="hover:text-white transition-colors duration-200">
+              <a href="#testimonials" className="hover:text-brand-yellow transition-colors duration-200">
                 Student Testimonials
               </a>
-              <a href="#contact" className="hover:text-white transition-colors duration-200">
+              <a href="#contact" className="hover:text-brand-yellow transition-colors duration-200">
                 Book Free Audit
               </a>
             </nav>

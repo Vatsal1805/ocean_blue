@@ -12,10 +12,12 @@
   --color-brand-border: #dddbd4;
   --color-brand-charcoal: #1a1a1a;
   --color-brand-grey: #888888;
-  --color-brand-navy: #0a1628;
-  --color-brand-navyLight: #0d1f3c;
+  --color-brand-navy: #201D72;
+  --color-brand-navyLight: #2d2994;
   --color-brand-white: #ffffff;
-  --color-brand-label: #999999;
+  --color-brand-yellow: #fecd00;
+  --color-brand-yellowDeep: #e5b800;
+  --color-brand-label: rgba(254, 205, 0, 0.7);
   
   --spacing-120: 120px;
 }
@@ -39,7 +41,7 @@
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0a1628;
+  background: var(--color-brand-navy);
 }
 
 /* GPU-Accelerated Marquee Animations */

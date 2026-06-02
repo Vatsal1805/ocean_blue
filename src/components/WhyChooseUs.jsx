@@ -77,13 +77,13 @@ export default function WhyChooseUs() {
                 }}
                 whileHover={{ 
                   y: -8,
-                  borderColor: "#0a1628",
+                  borderColor: "var(--color-brand-navy)",
                   boxShadow: "0 12px 40px rgba(10, 22, 40, 0.04)",
                 }}
                 className="bg-[#fafaf8] border border-[#dddbd4] rounded-[20px] p-8 flex flex-col items-start text-left cursor-default transition-all duration-300 group"
               >
                 {/* Icon Container with subtle scale animation on card hover */}
-                <div className="w-12 h-12 rounded-[14px] bg-[#f3f2ee] border border-[#dddbd4] flex items-center justify-center text-[#0a1628] group-hover:bg-[#0a1628] group-hover:text-white group-hover:border-[#0a1628] transition-all duration-300">
+                <div className="w-12 h-12 rounded-[14px] bg-[#f3f2ee] border border-[#dddbd4] flex items-center justify-center text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-yellow group-hover:border-brand-navy transition-all duration-300">
                   <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                 </div>
 

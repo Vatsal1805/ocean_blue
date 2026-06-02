@@ -76,7 +76,7 @@ export default function Hero() {
           className="font-serif text-[46px] sm:text-[72px] md:text-[88px] text-brand-charcoal leading-[1.05] font-normal tracking-tight max-w-4xl mb-6 select-none"
         >
           <span className="block">One Institute.</span>
-          <span className="block text-[#0a1628] font-light italic">Every Goal.</span>
+          <span className="block text-brand-navy font-light italic">Every Goal.</span>
         </motion.h1>
 
         {/* Premium Body Copy */}
@@ -94,13 +94,13 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-navy text-brand-white font-sans text-[15px] font-medium border border-brand-navy hover:bg-transparent hover:text-brand-navy transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-yellow text-brand-navy font-sans text-[15px] font-semibold border border-brand-yellow hover:bg-brand-yellowDeep hover:border-brand-yellowDeep transition-all duration-300"
           >
             Enroll Now
           </a>
           <a
             href="#courses"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full border-[1.5px] border-brand-navy text-brand-navy font-sans text-[15px] font-medium bg-transparent hover:bg-brand-navy hover:text-brand-white transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full border-[1.5px] border-brand-yellow text-brand-navy font-sans text-[15px] font-semibold bg-transparent hover:bg-brand-yellowDeep hover:border-brand-yellowDeep transition-all duration-300"
           >
             View Courses
           </a>

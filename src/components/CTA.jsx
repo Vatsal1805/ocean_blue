@@ -29,9 +29,9 @@ export default function CTA() {
   };
 
   return (
-    <section id="cta" className="relative w-full bg-[#0a1628] py-[140px] border-b border-white/10 overflow-hidden select-none">
+    <section id="cta" className="relative w-full bg-brand-navy py-[140px] border-b border-white/10 overflow-hidden select-none">
       {/* Subtle background radial gradient for high-end warm glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(13,31,60,0.5)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(26,35,126,0.5)_0%,transparent_70%)] pointer-events-none" />
 
       {/* Subtle background doodle texture (inverted for white outlines at 2.5% opacity on dark background) */}
       <div 
@@ -48,10 +48,10 @@ export default function CTA() {
         {/* Section Label */}
         <motion.span
           initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 0.4, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="font-sans font-light text-[11px] text-white tracking-[0.25em] uppercase mb-6 block"
+          className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-6 block"
         >
           [ ADMISSIONS COHORT ]
         </motion.span>
@@ -109,7 +109,7 @@ export default function CTA() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white text-[#0a1628] font-sans text-[16px] font-medium hover:bg-white/95 transition-colors shadow-lg shadow-white/5 cursor-pointer"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-brand-yellow text-brand-navy font-sans text-[16px] font-semibold hover:bg-brand-yellowDeep transition-all duration-300 shadow-lg shadow-white/5 cursor-pointer"
             style={{
               willChange: "transform"
             }}
