@@ -21,7 +21,7 @@ export default function Contact({ prefilledProgram }) {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: '', phone: '', message: '' });
+      setFormData({ name: '', phone: '', program: '', message: '' });
     }, 4000);
   };
 
@@ -30,8 +30,8 @@ export default function Contact({ prefilledProgram }) {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#fafaf8] py-[120px] border-b border-[#dddbd4] relative overflow-hidden">
-      {/* High-visibility education doodle background sketch layer with multiply blend mode */}
+    <section id="contact" className="w-full bg-[#fafaf8] py-[120px] border-b border-[#dddbd4] relative overflow-hidden select-none">
+      {/* High-visibility education doodle background sketch layer */}
       <div 
         className="absolute inset-0 pointer-events-none z-0 opacity-[0.1] mix-blend-multiply"
         style={{
@@ -40,20 +40,20 @@ export default function Contact({ prefilledProgram }) {
           backgroundSize: "360px auto",
         }}
       />
-      <div className="max-w-7xl mx-auto px-6 md:px-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none">
           <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
-            [ FREE FLUENCY ASSESSMENT ]
+            [ GET IN TOUCH ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
-            Book Your Speaking Audit.
+            Start Your Journey.
           </h2>
         </div>
 
         {/* 2-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start overflow-hidden">
           
           {/* Left Column (Details & Map) */}
           <motion.div
@@ -61,45 +61,48 @@ export default function Contact({ prefilledProgram }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col items-start text-left w-full"
+            className="lg:col-span-6 flex flex-col items-start text-left w-full"
           >
-            <h3 className="font-sans font-semibold text-[20px] text-[#1a1a1a] mb-6 leading-tight">
+            <h3 className="font-sans font-semibold text-[18px] text-[#1a1a1a] mb-2 leading-tight">
               Ocean Blue Education
             </h3>
             
-            <div className="flex flex-col gap-6 w-full mb-8">
-              {/* Vastral Branch */}
-              <div>
-                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-brand-navy block mb-1">
+            <div className="flex flex-col w-full mb-6">
+              
+              {/* Vastral Head Office Card */}
+              <div className="bg-[#f3f2ee] border border-[#dddbd4] border-l-[3px] border-l-brand-yellow rounded-xl p-5 md:p-6 text-left shadow-sm">
+                <span className="font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-brand-navy block mb-2 select-none">
                   Vastral Branch (Head Office)
                 </span>
-                <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
-                  Radhe Chamber, 110, Vastral, Ahmedabad, Gujarat 382418
+                <p className="font-sans font-light text-[14px] text-[#555555] leading-relaxed mb-4">
+                  107-114 First Floor, 220-228 Second Floor, Radhe Chamber, Opp. Madhav Part-4, Nr. Karnavati Cross Road, Vastral, Ahmedabad &ndash; 382418
                 </p>
-                <span className="font-sans font-medium text-[15px] text-[#1a1a1a]">
-                  +91 90335 52048
-                </span>
+                <div className="flex flex-col gap-1 text-[13px] font-sans font-light text-[#555555]">
+                  <div>Dhananjay Rajput: <strong className="font-semibold text-brand-navy">+91 80003 28054</strong></div>
+                  <div>Niraj Rajput: <strong className="font-semibold text-brand-navy">+91 90335 52048</strong></div>
+                  <div>Office: <strong className="font-semibold text-brand-navy">+91 99090 41161</strong></div>
+                </div>
               </div>
 
-              {/* Nikol Branch */}
-              <div>
-                <span className="font-sans font-semibold text-[13px] uppercase tracking-[0.1em] text-brand-navy block mb-1">
+              {/* Nikol Branch Card */}
+              <div className="bg-[#f3f2ee] border border-[#dddbd4] border-l-[3px] border-l-brand-yellow rounded-xl p-5 md:p-6 text-left shadow-sm mt-4">
+                <span className="font-sans font-semibold text-[11px] uppercase tracking-[0.1em] text-brand-navy block mb-2 select-none">
                   Nikol Branch
                 </span>
-                <p className="font-sans font-light text-[15px] text-[#888888] leading-relaxed max-w-sm mb-1">
-                  Nikol Main Road, Nikol, Ahmedabad, Gujarat 382350
+                <p className="font-sans font-light text-[14px] text-[#555555] leading-relaxed mb-3">
+                  Nikol, Ahmedabad
                 </p>
-                <span className="font-sans font-medium text-[15px] text-[#1a1a1a]">
-                  +91 80003 28054
-                </span>
+                <div className="text-[13px] font-sans font-light text-[#555555]">
+                  Phone: <strong className="font-semibold text-brand-navy">+91 80003 28054</strong>
+                </div>
               </div>
             </div>
 
-            <p className="font-sans font-light text-[14px] text-[#888888] mb-8 leading-none">
-              Timing: 7:00 AM – 9:00 PM
+            <p className="font-sans font-light text-[13px] text-[#888888] mb-6 leading-none">
+              Open: 7:00 AM &ndash; 9:00 PM &middot; Mon &ndash; Sat
             </p>
 
-            {/* Real Interactive Google Map */}
+            {/* Google Map */}
             <div className="w-full rounded-[12px] overflow-hidden border border-[#dddbd4] h-[180px] relative">
               <iframe
                 title="Ocean Blue Vastral Location Map"
@@ -118,11 +121,11 @@ export default function Contact({ prefilledProgram }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="w-full"
+            className="lg:col-span-6 w-full"
           >
             {submitted ? (
-              <div className="flex flex-col items-center justify-center text-center py-12 bg-[#f3f2ee] border border-[#dddbd4] rounded-[12px]">
-                <div className="w-12 h-12 rounded-full bg-brand-yellow text-brand-navy flex items-center justify-center mb-4">
+              <div className="flex flex-col items-center justify-center text-center py-16 bg-[#f3f2ee] border border-[#dddbd4] rounded-[24px] shadow-sm select-none">
+                <div className="w-12 h-12 rounded-full bg-brand-yellow text-brand-navy flex items-center justify-center mb-4 shadow-sm">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -134,6 +137,7 @@ export default function Contact({ prefilledProgram }) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full">
+                
                 {/* Name Field */}
                 <div className="flex flex-col items-start w-full">
                   <input
@@ -160,17 +164,36 @@ export default function Contact({ prefilledProgram }) {
                   />
                 </div>
 
-                {/* Program Interest Field */}
+                {/* Program Selector Dropdown */}
                 <div className="flex flex-col items-start w-full">
-                  <input
+                  <select
                     required
-                    type="text"
                     name="program"
                     value={formData.program}
                     onChange={handleChange}
-                    placeholder="Program of Interest (e.g. Class 10 Tuition, JEE/NEET, IELTS)"
-                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] placeholder-[#999999] focus:border-brand-yellow transition-colors duration-200 outline-none"
-                  />
+                    className="w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[10px] p-[14px_16px] font-sans font-light text-[15px] text-[#1a1a1a] focus:border-brand-yellow transition-colors duration-200 outline-none appearance-none cursor-pointer"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 16px center',
+                      backgroundSize: '16px'
+                    }}
+                  >
+                    <option value="" disabled hidden>Select Program of Interest</option>
+                    <option value="4th–10th Tuition (GSEB)">4th–10th Tuition (GSEB)</option>
+                    <option value="4th–10th Tuition (CBSE/ICSE)">4th–10th Tuition (CBSE/ICSE)</option>
+                    <option value="11th–12th Science">11th–12th Science</option>
+                    <option value="11th–12th Commerce">11th–12th Commerce</option>
+                    <option value="JEE Preparation">JEE Preparation</option>
+                    <option value="NEET Preparation">NEET Preparation</option>
+                    <option value="Foundation Courses">Foundation Courses</option>
+                    <option value="IELTS Preparation">IELTS Preparation</option>
+                    <option value="PTE Preparation">PTE Preparation</option>
+                    <option value="Spoken English">Spoken English</option>
+                    <option value="Basic English">Basic English</option>
+                    <option value="Reading & Writing">Reading & Writing</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
 
                 {/* Message Field */}

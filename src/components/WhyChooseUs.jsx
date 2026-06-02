@@ -1,102 +1,253 @@
-import { motion } from 'framer-motion';
-import { BookOpen, Calendar, MessageSquare, Users, Award, Clock } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  IconHome, 
+  IconFileText, 
+  IconClock, 
+  IconBook, 
+  IconAward 
+} from '@tabler/icons-react';
 
 export default function WhyChooseUs() {
-  const cards = [
+  const [activeTab, setActiveTab] = useState(0);
+
+  const sections = [
     {
-      Icon: BookOpen,
-      title: "Expert Faculty",
-      desc: "Specialized science & commerce mentors alongside certified IELTS & language experts."
+      num: "01",
+      Icon: IconHome,
+      title: "No Homework Policy",
+      desc: "We believe real learning happens inside the classroom — not as a burden carried home. Every session is designed to be self-contained. Students leave with clarity, not pending tasks.",
+      details: [
+        "Complete learning within class hours",
+        "No exam pressure outside coaching",
+        "Designed for students balancing school and coaching"
+      ]
     },
     {
-      Icon: Calendar,
-      title: "Structured Batches",
-      desc: "Goal-oriented academic tracks with comprehensive mock exams and progress trackers."
+      num: "02",
+      Icon: IconFileText,
+      title: "Physical Question Banks",
+      desc: "We've designed and printed our own question banks for 4th to 12th standard — not borrowed from publishers. Built from 15 years of board exam patterns, these books are handed to every enrolled student.",
+      details: [
+        "Printed and distributed to every enrolled student",
+        "Board-pattern focused from 4th to 12th standard",
+        "Updated every academic year based on syllabus changes"
+      ]
     },
     {
-      Icon: MessageSquare,
-      title: "Real-World Practice",
-      desc: "Conceptual problem-solving, active debates, and interactive classroom discussions."
+      num: "03",
+      Icon: IconClock,
+      title: "3-Hour Structured Session",
+      desc: "Every class follows a precise rhythm — 2 hours of focused concept teaching followed by 1 hour of in-class test and revision on exactly what was just taught. Doubt solving happens in that same third hour.",
+      details: [
+        "Hour 1 & 2: New concept teaching",
+        "Hour 3: In-class exam + revision",
+        "Doubt solving within every single session"
+      ]
     },
     {
-      Icon: Users,
-      title: "Small Batch Sizes",
-      desc: "Strict 12-to-15 student cap per batch. Guaranteed individual focus and attention."
+      num: "04",
+      Icon: IconBook,
+      title: "Library For All Students",
+      desc: "A dedicated library is available to every enrolled student at no extra cost. Reference books, past papers, NCERT guides, and study material — all accessible throughout the academic year.",
+      details: [
+        "Open to all enrolled students at no charge",
+        "Past papers and board reference books stocked",
+        "Available throughout the full academic year"
+      ]
     },
     {
-      Icon: Award,
-      title: "Proven Success",
-      desc: "4.7★ rated across 147+ verified Google reviews by Vastral & Nikol families."
-    },
-    {
-      Icon: Clock,
-      title: "Flexible Timings",
-      desc: "Batch options from 7:00 AM to 9:00 PM to fit school, college, and coaching routines."
+      num: "05",
+      Icon: IconAward,
+      title: "15+ Years of Experience",
+      desc: "Established in Vastral, Ahmedabad in 2009. We've seen board patterns change, syllabi evolve, and entrance exams transform — and we've adapted every time. That institutional knowledge benefits every student.",
+      details: [
+        "Founded in Vastral, Ahmedabad in 2009",
+        "Hundreds of board toppers and JEE/NEET qualifiers",
+        "Trusted by families across Vastral and Nikol for 15+ years"
+      ]
     }
   ];
 
   return (
-    <section id="about" className="w-full bg-[#f3f2ee] py-[120px] relative border-b border-[#dddbd4] overflow-hidden">
-      {/* Subtle tiled background doodle overlay for visual continuity (2.5% opacity) */}
+    <section id="why-choose-us" className="relative w-full bg-[#fafaf8] py-[120px] border-b border-brand-border overflow-hidden select-none">
+      {/* High-visibility education doodle background sketch layer */}
       <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-[0.025]"
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.06] mix-blend-multiply"
         style={{
           backgroundImage: "url('/doodle_bg.png')",
           backgroundRepeat: "repeat",
           backgroundSize: "360px auto",
         }}
       />
-      
+
       <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none">
-          <span className="font-sans font-light text-[11px] text-[#999999] tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ WHY CHOOSE US ]
           </span>
-          <h2 className="font-serif text-[42px] sm:text-[52px] text-[#1a1a1a] font-normal leading-[1.15] max-w-3xl">
-            Built Around One Thing.<br />
-            Your Success.
+          <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
+            Built Around One Thing. Your Success.
           </h2>
         </div>
 
-        {/* 3-Column Grid on Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card, idx) => {
-            const IconComponent = card.Icon;
+        {/* Desktop Layout (Split-Screen Swapper) */}
+        <div className="hidden md:grid grid-cols-12 gap-12 items-stretch min-h-[480px]">
+          
+          {/* Left Column: Navigation Buttons */}
+          <div className="col-span-5 flex flex-col justify-start gap-3">
+            {sections.map((section, idx) => {
+              const IconComponent = section.Icon;
+              const isActive = activeTab === idx;
+              return (
+                <button
+                  key={section.num}
+                  onClick={() => setActiveTab(idx)}
+                  className={`group w-full text-left p-6 rounded-[16px] border transition-all duration-300 flex items-center justify-between cursor-pointer outline-none select-none ${
+                    isActive 
+                      ? 'bg-brand-secondaryBg border-brand-border border-l-[4px] border-l-brand-yellow shadow-sm'
+                      : 'bg-transparent border-transparent hover:bg-brand-secondaryBg/40 hover:border-brand-border/40'
+                  }`}
+                >
+                  <div className="flex items-center gap-5">
+                    <span className={`font-sans font-medium text-[13px] transition-colors duration-200 ${
+                      isActive ? 'text-brand-navy font-bold' : 'text-[#888888]'
+                    }`}>
+                      {section.num}
+                    </span>
+                    <span className={`font-sans text-[16px] transition-all duration-200 ${
+                      isActive ? 'text-brand-charcoal font-semibold translate-x-1' : 'text-[#555555]'
+                    }`}>
+                      {section.title}
+                    </span>
+                  </div>
+                  <div className={`transition-all duration-300 ${
+                    isActive 
+                      ? 'text-brand-navy scale-110' 
+                      : 'text-[#888888]/80 group-hover:text-brand-navy'
+                  }`}>
+                    <IconComponent size={18} stroke={isActive ? 2 : 1.5} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right Column: Display Card with Fade & Slide Animation */}
+          <div className="col-span-7">
+            <div className="bg-[#f3f2ee] border border-brand-border rounded-[24px] p-10 lg:p-12 h-full flex flex-col justify-between shadow-sm relative overflow-hidden">
+              {/* Subtle light yellow accent glow background */}
+              <div className="absolute top-0 right-0 w-[240px] h-[240px] rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
+              
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex flex-col justify-between h-full"
+                >
+                  {/* Content Area */}
+                  <div>
+                    {/* Large Icon Box */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#fafaf8] border border-brand-border flex items-center justify-center text-brand-navy mb-8 shadow-sm">
+                      {(() => {
+                        const ActiveIcon = sections[activeTab].Icon;
+                        return <ActiveIcon size={24} stroke={1.8} />;
+                      })()}
+                    </div>
+
+                    <h3 className="font-serif text-[28px] text-brand-charcoal font-normal mb-4 leading-tight">
+                      {sections[activeTab].title}
+                    </h3>
+                    
+                    <p className="font-sans font-light text-[15px] sm:text-[16px] text-[#555555] leading-relaxed max-w-xl">
+                      {sections[activeTab].desc}
+                    </p>
+                  </div>
+
+                  {/* Bullet points */}
+                  <div className="flex flex-col gap-3.5 mt-8 pt-8 border-t border-brand-border/60">
+                    {sections[activeTab].details.map((detail, dIdx) => (
+                      <div 
+                        key={dIdx} 
+                        className="font-sans font-light text-[14px] text-brand-charcoal/80 leading-relaxed flex items-start gap-2.5"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow mt-2 flex-shrink-0" />
+                        <span>{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Mobile Layout (Clean Vertical Accordions) */}
+        <div className="md:hidden flex flex-col gap-4 w-full">
+          {sections.map((section, idx) => {
+            const IconComponent = section.Icon;
+            const isOpen = activeTab === idx;
             return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5, 
-                  ease: [0.16, 1, 0.3, 1], 
-                  delay: idx * 0.08 
-                }}
-                whileHover={{ 
-                  y: -8,
-                  borderColor: "var(--color-brand-navy)",
-                  boxShadow: "0 12px 40px rgba(10, 22, 40, 0.04)",
-                }}
-                className="bg-[#fafaf8] border border-[#dddbd4] rounded-[20px] p-8 flex flex-col items-start text-left cursor-default transition-all duration-300 group"
+              <div 
+                key={section.num}
+                className="bg-[#f3f2ee] border border-brand-border rounded-[16px] overflow-hidden"
               >
-                {/* Icon Container with subtle scale animation on card hover */}
-                <div className="w-12 h-12 rounded-[14px] bg-[#f3f2ee] border border-[#dddbd4] flex items-center justify-center text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-yellow group-hover:border-brand-navy transition-all duration-300">
-                  <IconComponent className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-                </div>
+                {/* Header button */}
+                <button
+                  onClick={() => setActiveTab(isOpen ? -1 : idx)}
+                  className="w-full flex items-center justify-between p-5 text-left select-none cursor-pointer outline-none"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className={`font-sans font-semibold text-[12px] ${
+                      isOpen ? 'text-brand-navy' : 'text-[#888888]'
+                    }`}>
+                      {section.num}
+                    </span>
+                    <span className={`font-sans font-semibold text-[15px] ${
+                      isOpen ? 'text-brand-charcoal' : 'text-[#555555]'
+                    }`}>
+                      {section.title}
+                    </span>
+                  </div>
+                  <div className={`transition-colors duration-200 ${
+                    isOpen ? 'text-brand-navy' : 'text-[#888888]'
+                  }`}>
+                    <IconComponent size={18} stroke={1.5} />
+                  </div>
+                </button>
 
-                {/* Title */}
-                <h3 className="font-sans font-semibold text-[18px] text-[#1a1a1a] mt-6 leading-tight">
-                  {card.title}
-                </h3>
-
-                {/* Description */}
-                <p className="font-sans font-light text-[14px] text-[#666666] leading-relaxed mt-3">
-                  {card.desc}
-                </p>
-              </motion.div>
+                {/* Smooth Expandable Body */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="px-5 pb-6 pt-1 border-t border-brand-border/60">
+                        <p className="font-sans font-light text-[14px] text-[#555555] leading-relaxed mb-5">
+                          {section.desc}
+                        </p>
+                        <div className="flex flex-col gap-2.5">
+                          {section.details.map((detail, dIdx) => (
+                            <div key={dIdx} className="font-sans font-light text-[13px] text-[#555555] flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow mt-1.5 flex-shrink-0" />
+                              <span>{detail}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             );
           })}
         </div>

@@ -1,46 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar({ activeProgram, closeProgram }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
-    if (activeProgram) return; // don't track scroll sections if program details page is active
-    
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 20);
-
-      const sections = ['home', 'courses', 'about', 'contact'];
-      const scrollPosition = window.scrollY + 160;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeProgram]);
+  }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Courses', href: '#courses' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'HOME', to: '/' },
+    { label: 'COURSES', to: '/courses' },
+    { label: 'IELTS', to: '/ielts' },
+    { label: 'ABOUT US', to: '/about' },
+    { label: 'RESULTS', to: '/results' },
   ];
 
   const handleNavClick = () => {
+    if (activeProgram) {
+      closeProgram();
+    }
+  };
+
+  const handleEnquiryClick = () => {
+    setMobileMenuOpen(false);
     if (activeProgram) {
       closeProgram();
     }
@@ -54,117 +46,144 @@ export default function Navbar({ activeProgram, closeProgram }) {
         }`}
       >
         {/* Left Side: Brand Logo */}
-        <a
-          href="#home"
+        <Link
+          to="/"
           onClick={handleNavClick}
-          className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none"
+          className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none cursor-pointer"
         >
           Ocean Blue
           <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
-        </a>
+        </Link>
 
         {/* Center: Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => {
-            const isActive = !activeProgram && activeSection === item.href.slice(1);
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={handleNavClick}
-                className={`font-sans text-[15px] transition-colors duration-300 relative group py-1 ${
-                  isActive ? 'text-brand-charcoal font-semibold' : 'text-brand-grey hover:text-brand-charcoal font-light'
-                }`}
-              >
-                {item.label}
-                {/* Premium micro-animation: Hover underline expand in yellow */}
-                <span className="absolute bottom-[-2px] left-0 w-0 h-[1px] bg-brand-yellow transition-all duration-300 group-hover:w-full" />
-                {/* Active nav dot indicator: small #f5c800 dot below active link */}
-                {isActive && (
-                  <motion.span
-                    layoutId="activeDot"
-                    className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-yellow"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </a>
-            );
-          })}
+          {navItems.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              onClick={handleNavClick}
+              className={({ isActive }) => 
+                `font-sans text-[13px] tracking-widest font-semibold transition-colors duration-300 relative group py-1 select-none cursor-pointer ${
+                  isActive ? 'text-brand-charcoal' : 'text-brand-grey hover:text-brand-charcoal'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  {item.label}
+                  {/* Hover underline expand in yellow */}
+                  <span className="absolute bottom-[-2px] left-0 w-0 h-[1px] bg-brand-yellow transition-all duration-300 group-hover:w-full" />
+                  {/* Active nav dot indicator centered below */}
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeDot"
+                      className="absolute bottom-[-7px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] rounded-full bg-brand-yellow"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </>
+              )}
+            </NavLink>
+          ))}
         </nav>
 
-        {/* Right Side: Enroll Now Pill */}
+        {/* Right Side: Enquiry Pill CTA */}
         <div className="hidden md:flex items-center">
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             onClick={handleNavClick}
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-yellow text-brand-navy font-sans text-[14px] font-semibold hover:bg-brand-yellowDeep transition-all duration-300"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-yellow text-[#1a1a1a] font-sans text-[14px] font-medium hover:bg-brand-yellowDeep transition-all duration-300 select-none shadow-sm cursor-pointer"
           >
-            Enroll Now
-          </a>
+            Enquiry
+          </Link>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
+        {/* Mobile Hamburger Toggle (Visible on Mobile Only) */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden flex flex-col justify-between w-6 h-4 text-brand-charcoal focus:outline-none"
-          aria-label="Toggle Menu"
+          onClick={() => setMobileMenuOpen(true)}
+          className="md:hidden flex flex-col justify-between w-6 h-4 text-brand-charcoal focus:outline-none cursor-pointer"
+          aria-label="Open Menu"
         >
-          <span
-            className={`w-full h-[1px] bg-brand-charcoal transition-all duration-300 ${
-              mobileMenuOpen ? 'rotate-45 translate-y-[7.5px]' : ''
-            }`}
-          />
-          <span
-            className={`w-full h-[1px] bg-brand-charcoal transition-all duration-300 ${
-              mobileMenuOpen ? 'opacity-0' : 'opacity-100'
-            }`}
-          />
-          <span
-            className={`w-full h-[1px] bg-brand-charcoal transition-all duration-300 ${
-              mobileMenuOpen ? '-rotate-45 -translate-y-[7.5px]' : ''
-            }`}
-          />
+          <span className="w-full h-[1.5px] bg-brand-charcoal" />
+          <span className="w-full h-[1.5px] bg-brand-charcoal" />
+          <span className="w-full h-[1.5px] bg-brand-charcoal" />
         </button>
       </header>
 
-      {/* Mobile Drawer Menu Overlay */}
+      {/* Full-Screen Sliding Mobile Drawer Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="fixed top-[88px] left-4 right-4 bg-brand-primaryBg/95 backdrop-blur-xl border border-brand-border/40 rounded-[24px] shadow-[0_16px_40px_rgba(10,22,40,0.08)] flex flex-col p-8 gap-6 md:hidden z-40"
+            initial={{ y: '-100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-100%' }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 bg-brand-primaryBg z-50 flex flex-col justify-between p-8 md:hidden"
           >
-            {navItems.map((item) => {
-              const isActive = !activeProgram && activeSection === item.href.slice(1);
-              return (
-                <a
+            {/* Header / Top Row */}
+            <div className="flex items-center justify-between w-full h-[64px]">
+              <Link
+                to="/"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  handleNavClick();
+                }}
+                className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none"
+              >
+                Ocean Blue
+                <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
+              </Link>
+
+              {/* Close Button X */}
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center w-8 h-8 focus:outline-none cursor-pointer"
+                aria-label="Close Menu"
+              >
+                <svg className="w-6 h-6 text-brand-charcoal" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Centered Navigation Links */}
+            <nav className="flex flex-col items-center justify-center gap-8 my-auto select-none">
+              {navItems.map((item) => (
+                <NavLink
                   key={item.label}
-                  href={item.href}
+                  to={item.to}
                   onClick={() => {
                     setMobileMenuOpen(false);
                     handleNavClick();
                   }}
-                  className={`font-sans text-[18px] transition-colors duration-300 ${
-                    isActive ? 'text-brand-charcoal font-semibold' : 'text-brand-grey hover:text-brand-charcoal font-light'
-                  }`}
+                  className={({ isActive }) => 
+                    `font-sans text-[18px] font-medium tracking-widest transition-colors duration-300 relative py-1 cursor-pointer ${
+                      isActive ? 'text-brand-charcoal font-semibold' : 'text-brand-grey'
+                    }`
+                  }
                 >
-                  {item.label}
-                </a>
-              );
-            })}
-            <a
-              href="#contact"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                handleNavClick();
-              }}
-              className="inline-flex items-center justify-center w-full py-3 rounded-full bg-brand-yellow text-brand-navy font-sans text-[15px] font-semibold hover:bg-brand-yellowDeep transition-all duration-300 mt-2"
-            >
-              Enroll Now
-            </a>
+                  {({ isActive }) => (
+                    <>
+                      {item.label}
+                      {isActive && (
+                        <span className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-yellow" />
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              ))}
+            </nav>
+
+            {/* Bottom Actions - Full Width Enquiry */}
+            <div className="w-full pb-8">
+              <Link
+                to="/#contact"
+                onClick={handleEnquiryClick}
+                className="inline-flex items-center justify-center w-full py-4 rounded-full bg-brand-yellow text-[#1a1a1a] font-sans text-[15px] font-semibold hover:bg-brand-yellowDeep transition-all duration-300 select-none shadow-md cursor-pointer text-center"
+              >
+                Enquiry
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

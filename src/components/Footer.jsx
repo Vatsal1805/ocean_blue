@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -18,22 +19,51 @@ export default function Footer() {
         {/* Main 4-Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* Column 1: Brand & Mission */}
+          {/* Column 1: Brand, Mission & Partners */}
           <div className="flex flex-col items-start text-left">
-            <a
-              href="#home"
-              className="flex items-center gap-1.5 font-sans font-medium text-[20px] text-white tracking-tight mb-5"
+            <Link
+              to="/"
+              className="flex items-center gap-1.5 font-sans font-medium text-[20px] text-white tracking-tight mb-5 hover:text-brand-yellow transition-colors duration-200"
             >
               Ocean Blue Education
-              <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
-            </a>
+              <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow animate-pulse" />
+            </Link>
             <p className="font-sans font-light text-[14px] text-[#cccccc] leading-relaxed mb-6 max-w-xs">
               An elite academic sanctuary in Ahmedabad, dedicated to 4th to 12th tuition excellence, entrance prep success (JEE/NEET), and global language mastery.
             </p>
-            <div className="flex flex-col gap-3 font-sans font-light text-[13px] text-[#888888]">
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-white/40" />
+            
+            {/* Director Contact details */}
+            <div className="flex flex-col gap-2.5 font-sans font-light text-[13px] text-[#cccccc] mb-6 w-full">
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
+                <span>Dhananjay Rajput: <strong className="font-semibold text-white">+91 80003 28054</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
+                <span>Niraj Rajput: <strong className="font-semibold text-white">+91 90335 52048</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
+                <span>Office: <strong className="font-semibold text-white">+91 99090 41161</strong></span>
+              </div>
+              <div className="flex items-center gap-2.5 mt-1 pt-1 border-t border-white/[0.05]">
+                <Mail className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
                 <span>info@oceanblue.education</span>
+              </div>
+            </div>
+
+            {/* IDP & Pearson Authorized Partner badges */}
+            <div className="flex flex-col gap-2 w-full pt-1">
+              <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-white/40 block">
+                Official Partner Placeholders:
+              </span>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-[9px] font-sans font-semibold uppercase tracking-wider text-brand-yellow px-2 py-1 bg-white/[0.06] rounded border border-white/[0.1] select-none hover:bg-white/[0.1] transition-colors duration-200">
+                  IDP IELTS Partner
+                </span>
+                <span className="text-[9px] font-sans font-semibold uppercase tracking-wider text-brand-yellow px-2 py-1 bg-white/[0.06] rounded border border-white/[0.1] select-none hover:bg-white/[0.1] transition-colors duration-200">
+                  Pearson PTE Partner
+                </span>
               </div>
             </div>
           </div>
@@ -44,24 +74,24 @@ export default function Footer() {
               Our Tracks
             </h4>
             <nav className="flex flex-col gap-3.5 font-sans font-light text-[14px] text-[#cccccc]">
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
-                4-10 Secondary Tutions
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
+              <Link to="/courses#primary" className="hover:text-brand-yellow transition-colors duration-200">
+                4-10 Secondary Tuitions
+              </Link>
+              <Link to="/courses#senior" className="hover:text-brand-yellow transition-colors duration-200">
                 11th–12th Sci & Com Cohorts
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
+              </Link>
+              <Link to="/courses#jee-neet" className="hover:text-brand-yellow transition-colors duration-200">
                 JEE Main & Advanced Prep
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
+              </Link>
+              <Link to="/courses#jee-neet" className="hover:text-brand-yellow transition-colors duration-200">
                 NEET UG Medical Coaching
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
+              </Link>
+              <Link to="/courses#language" className="hover:text-brand-yellow transition-colors duration-200">
                 IELTS & PTE Academic
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
+              </Link>
+              <Link to="/courses#language" className="hover:text-brand-yellow transition-colors duration-200">
                 Spoken English & Fluency
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -71,21 +101,24 @@ export default function Footer() {
               Quick Links
             </h4>
             <nav className="flex flex-col gap-3.5 font-sans font-light text-[14px] text-[#cccccc]">
-              <a href="#home" className="hover:text-brand-yellow transition-colors duration-200">
-                Home Banner
-              </a>
-              <a href="#courses" className="hover:text-brand-yellow transition-colors duration-200">
-                Our Programs
-              </a>
-              <a href="#about" className="hover:text-brand-yellow transition-colors duration-200">
-                Why Choose Us
-              </a>
-              <a href="#testimonials" className="hover:text-brand-yellow transition-colors duration-200">
-                Student Testimonials
-              </a>
-              <a href="#contact" className="hover:text-brand-yellow transition-colors duration-200">
-                Book Free Audit
-              </a>
+              <Link to="/" className="hover:text-brand-yellow transition-colors duration-200">
+                Home
+              </Link>
+              <Link to="/courses" className="hover:text-brand-yellow transition-colors duration-200">
+                Programs
+              </Link>
+              <Link to="/ielts" className="hover:text-brand-yellow transition-colors duration-200">
+                IELTS & PTE
+              </Link>
+              <Link to="/#why-choose-us" className="hover:text-brand-yellow transition-colors duration-200">
+                Why Us
+              </Link>
+              <Link to="/results" className="hover:text-brand-yellow transition-colors duration-200">
+                Results
+              </Link>
+              <Link to="/#contact" className="hover:text-brand-yellow transition-colors duration-200">
+                Demo
+              </Link>
             </nav>
           </div>
 
@@ -102,11 +135,11 @@ export default function Footer() {
                 </span>
                 <div className="flex items-start gap-2 text-[13px] text-[#cccccc] leading-relaxed">
                   <MapPin className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" />
-                  <span>Radhe Chamber, 110, Vastral, Ahmedabad</span>
+                  <span>107-114 First Floor, 220-228 Second Floor, Radhe Chamber, Vastral, Ahmedabad - 382418</span>
                 </div>
                 <div className="flex items-center gap-2 text-[13px] text-[#cccccc] mt-1.5">
                   <Phone className="w-3.5 h-3.5 text-white/40" />
-                  <span>+91 90335 52048</span>
+                  <span>+91 80003 28054</span>
                 </div>
               </div>
 
@@ -117,7 +150,7 @@ export default function Footer() {
                 </span>
                 <div className="flex items-start gap-2 text-[13px] text-[#cccccc] leading-relaxed">
                   <MapPin className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" />
-                  <span>Nikol Main Road, Nikol, Ahmedabad</span>
+                  <span>Nikol Main Road, Nikol, Ahmedabad - 382350</span>
                 </div>
                 <div className="flex items-center gap-2 text-[13px] text-[#cccccc] mt-1.5">
                   <Phone className="w-3.5 h-3.5 text-white/40" />
