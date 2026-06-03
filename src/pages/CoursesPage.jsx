@@ -140,7 +140,7 @@ export default function CoursesPage() {
           variants={heroContainerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center select-none"
+          className="w-full max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center select-none"
         >
           <motion.span 
             variants={heroItemVariants}
@@ -151,7 +151,7 @@ export default function CoursesPage() {
           
           <motion.h1 
             variants={heroItemVariants}
-            className="font-serif text-[38px] sm:text-[64px] text-brand-charcoal font-normal leading-tight tracking-tight max-w-2xl animate-fade-in"
+            className="font-serif text-[30px] sm:text-[38px] md:text-[64px] text-brand-charcoal font-normal leading-tight tracking-tight max-w-2xl animate-fade-in"
           >
             Every Standard. <span className="text-brand-navy font-light italic relative inline-block">Every Stream.<span className="absolute bottom-2 left-0 right-0 h-[2.5px] bg-[#f5c800]/50 rounded-full hidden sm:block" /></span>
           </motion.h1>
@@ -1297,7 +1297,7 @@ export default function CoursesPage() {
           }}
         />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center select-none">
+        <div className="w-full max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center select-none">
           <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block select-none">
             [ PERSONALIZED GUIDANCE ]
           </span>
