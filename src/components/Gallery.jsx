@@ -14,40 +14,45 @@ export default function Gallery() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const getAssetImgUrl = (filename) => {
+    return new URL(`../../Assets/${filename}`, import.meta.url).href;
+  };
+
   const images = [
     {
-      label: "Standard Classroom",
-      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80"
+      label: "Independence Day Celebration",
+      src: getAssetImgUrl("IMG-20220815-WA0026.jpg")
     },
     {
-      label: "JEE Physics Lecture",
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80"
+      label: "Interactive Classroom Session",
+      src: getAssetImgUrl("IMG-20230215-WA0003(1).jpg")
     },
     {
-      label: "NEET Biology Cohort",
-      src: "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?w=600&q=80"
+      label: "Doubt Clearing Session",
+      src: getAssetImgUrl("IMG-20231109-WA0054(1).jpg")
     },
     {
-      label: "Mathematics Doubt Clinic",
-      src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80"
+      label: "Annual Student Meetup",
+      src: getAssetImgUrl("IMG-20231231-WA0007(1).jpg")
     },
     {
-      label: "Board Exam Study Room",
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
+      label: "Republic Day Event",
+      src: getAssetImgUrl("IMG-20240126-WA0008.jpg")
     },
     {
-      label: "IELTS Mock Speaking",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+      label: "Flag Hoisting Ceremony",
+      src: getAssetImgUrl("IMG-20240126-WA0010.jpg")
     },
     {
-      label: "Interactive Group Debate",
-      src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80"
+      label: "Republic Day Celebration",
+      src: getAssetImgUrl("IMG-20240126-WA0012.jpg")
     },
     {
-      label: "Vocal Articulation Drill",
-      src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80"
+      label: "Classroom Learning Environment",
+      src: getAssetImgUrl("IMG_20200125_141006.jpg")
     }
   ];
+
 
   return (
     <section id="gallery" className="w-full bg-[#f3f2ee] py-[100px] border-b border-[#dddbd4] overflow-hidden relative">

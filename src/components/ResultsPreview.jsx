@@ -20,20 +20,26 @@ export default function ResultsPreview() {
     }
   };
 
+  const getResultImgUrl = (filename) => {
+    return new URL(`../../Assets/Results/${filename}`, import.meta.url).href;
+  };
+
   const toppers = [
     {
       badge: "JEE MAINS 2024",
       name: "Dev Patel",
       score: "AIR 2847",
       exam: "JEE Mains · 2024 Batch",
-      quote: "The Physics and Maths coaching here completely changed how I approach problems."
+      quote: "The Physics and Maths coaching here completely changed how I approach problems.",
+      image: getResultImgUrl("IMG_9096.JPG.jpeg")
     },
     {
       badge: "IELTS 2024",
       name: "Sneha Vyas",
       score: "Band 7.5",
       exam: "IELTS Academic · 2024 Batch",
-      quote: "I went from band 5.5 to 7.5 in one attempt. The mock tests made all the difference."
+      quote: "I went from band 5.5 to 7.5 in one attempt. The mock tests made all the difference.",
+      image: getResultImgUrl("IMG_9101.JPG.jpeg")
     }
   ];
 
@@ -87,10 +93,18 @@ export default function ResultsPreview() {
               </span>
 
               {/* Photo Placeholder Circle */}
-              <div className="w-16 h-16 rounded-full bg-white/[0.06] border-2 border-white/[0.12] flex items-center justify-center mt-6 text-white/20 select-none">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                </svg>
+              <div className="w-16 h-16 rounded-full bg-white/[0.06] border-2 border-white/[0.12] flex items-center justify-center mt-6 text-white/20 select-none overflow-hidden relative">
+                {topper.image ? (
+                  <img 
+                    src={topper.image} 
+                    alt={topper.name} 
+                    className="w-full h-full object-cover object-center" 
+                  />
+                ) : (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                )}
               </div>
 
               {/* Student Name */}

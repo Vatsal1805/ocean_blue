@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Assets Folder
+Assets/
+assets/
+OCEAN_BLUE_PROJECT_CONTEXT.md
+

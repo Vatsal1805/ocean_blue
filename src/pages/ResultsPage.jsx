@@ -77,6 +77,19 @@ function CountUp({ end, duration = 1500, suffix = "" }) {
   );
 }
 
+const getResultImgUrl = (filename) => {
+  return new URL(`../../Assets/Results/${filename}`, import.meta.url).href;
+};
+
+const resultPhotos = [
+  "IMG_9096.JPG.jpeg", "IMG_9097.JPG.jpeg", "IMG_9101.JPG.jpeg", "IMG_9102.JPG.jpeg",
+  "IMG_9103.JPG.jpeg", "IMG_9104.JPG.jpeg", "IMG_9106.JPG.jpeg", "IMG_9107.JPG.jpeg",
+  "IMG_9111.JPG.jpeg", "IMG_9114.JPG.jpeg", "IMG_9115.JPG.jpeg", "IMG_9116.JPG.jpeg",
+  "IMG_9117.JPG.jpeg", "IMG_9120.JPG.jpeg", "IMG_9121.JPG.jpeg", "IMG_9123.JPG.jpeg",
+  "IMG_9126.JPG.jpeg", "IMG_9127.JPG.jpeg", "IMG_9128.JPG.jpeg", "IMG_9133.JPG.jpeg",
+  "IMG_9136.JPG.jpeg", "IMG_9137.JPG.jpeg"
+];
+
 export default function ResultsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -148,23 +161,26 @@ export default function ResultsPage() {
     {
       badge: "JEE MAINS 2024",
       score: "AIR 2847",
-      name: "Student Placeholder",
+      name: "Student Topper",
       program: "JEE Mains · 2024 Batch",
-      quote: "The Physics and Maths coaching here completely changed how I approach problems."
+      quote: "The Physics and Maths coaching here completely changed how I approach problems.",
+      image: getResultImgUrl("IMG_9096.JPG.jpeg")
     },
     {
       badge: "NEET UG 2024",
       score: "620 / 720",
-      name: "Student Placeholder",
+      name: "Student Topper",
       program: "NEET UG · 2024 Batch",
-      quote: "Biology sessions and NCERT focus at Ocean Blue gave me the clarity I needed to crack NEET."
+      quote: "Biology sessions and NCERT focus at Ocean Blue gave me the clarity I needed to crack NEET.",
+      image: getResultImgUrl("IMG_9097.JPG.jpeg")
     },
     {
       badge: "IELTS 2024",
       score: "Band 7.5",
-      name: "Student Placeholder",
+      name: "Student Topper",
       program: "IELTS Academic · 2024 Batch",
-      quote: "From band 5.5 to 7.5 in one attempt. The mock tests made all the difference."
+      quote: "From band 5.5 to 7.5 in one attempt. The mock tests made all the difference.",
+      image: getResultImgUrl("IMG_9101.JPG.jpeg")
     }
   ];
 
@@ -219,7 +235,10 @@ export default function ResultsPage() {
     { id: 38, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 7.0", name: "Rishi Prajapati", program: "IELTS Prep · 2023 Batch" },
     { id: 39, category: "IELTS / PTE", badge: "IELTS GENERAL", score: "Band 7.0", name: "Jatin Solanki", program: "IELTS Prep · 2022 Batch" },
     { id: 40, category: "IELTS / PTE", badge: "PTE ACADEMIC", score: "Score 72", name: "Nisha Patel", program: "PTE Prep · 2023 Batch" }
-  ];
+  ].map((r, idx) => ({
+    ...r,
+    image: getResultImgUrl(resultPhotos[idx % resultPhotos.length])
+  }));
 
   // Filtering & Pagination Logic
   const handleFilterChange = (filterId) => {
@@ -452,7 +471,15 @@ export default function ResultsPage() {
               >
                 {/* Circular Student Photo Placeholder */}
                 <div className="w-20 h-20 rounded-full bg-[#f3f2ee] border border-brand-border flex items-center justify-center text-brand-navy/30 shadow-inner relative overflow-hidden select-none">
-                  <IconUser size={36} stroke={1.5} />
+                  {topper.image ? (
+                    <img 
+                      src={topper.image} 
+                      alt={topper.name} 
+                      className="w-full h-full object-cover object-center" 
+                    />
+                  ) : (
+                    <IconUser size={36} stroke={1.5} />
+                  )}
                 </div>
 
                 {/* Exam Badge */}
@@ -542,7 +569,15 @@ export default function ResultsPage() {
                       <div className="flex items-center justify-between w-full select-none">
                         {/* Circular Student Photo Placeholder */}
                         <div className="w-12 h-12 rounded-full bg-[#f3f2ee] border border-brand-border flex items-center justify-center text-brand-navy/30 shadow-inner relative overflow-hidden">
-                          <IconUser size={22} stroke={1.5} />
+                          {topper.image ? (
+                            <img 
+                              src={topper.image} 
+                              alt={topper.name} 
+                              className="w-full h-full object-cover object-center" 
+                            />
+                          ) : (
+                            <IconUser size={22} stroke={1.5} />
+                          )}
                         </div>
                         <span className={`px-3 py-1 font-sans text-[10.5px] font-semibold tracking-wider uppercase rounded-full select-none ${getBadgeStyles(topper.category)}`}>
                           {topper.badge}
