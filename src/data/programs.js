@@ -25,11 +25,11 @@ export const PROGRAMS = [
   },
   {
     id: 'jee-neet',
-    title: 'JEE Mains & NEET Prep',
-    badge: 'Competitive Prep',
+    title: 'JEE, NEET & Foundation',
+    badge: 'Entrance & Foundation',
     icon: 'Target',
-    summary: 'Result-driven objective coaching led by specialized science & medical entrance mentors.',
-    description: 'A high-yield, elite test-prep system designed to crack IIT JEE and NEET UG. Our coaches provide daily practice problems (DPPs), weekly mock OMR tests, strict time-management coaching, and targeted doubt-solving panels to secure top national ranks.',
+    summary: 'Result-driven entrance prep along with Class 8–10 Science & Maths Foundation classes.',
+    description: 'Specialized scientific coaching for JEE and NEET competitive exams, alongside our rigorous Foundation program for Class 8–10 to build early analytical and problem-solving skills.',
     streams: [
       {
         id: 'jee-mains',
@@ -54,23 +54,35 @@ export const PROGRAMS = [
           'Mechanics, Waves & Modern Physics',
           'Organic Reactions & Numerical Chemistry'
         ]
+      },
+      {
+        id: 'foundation-science-maths',
+        title: 'Science & Maths Foundation',
+        subtitle: 'Class 8-10 Prep Track',
+        badge: 'Foundation (Class 8–10)',
+        description: 'Building rock-solid conceptual clarity and logical thinking early on to prepare students for school excellence and future competitive exam success.',
+        subjects: [
+          'Conceptual Mathematics & Numerical logic',
+          'Applied Physics & Chemical Reactions',
+          'Basic Life Sciences & Logic Aptitude'
+        ]
       }
     ],
-    subjects: ['JEE Physics & Calculus-based Mechanics', 'JEE Chemistry (Physical & Inorganic)', 'IIT-Level Advanced Mathematics', 'NEET Biology (Zoology & Botany spec)'],
+    subjects: ['JEE Physics & Calculus-based Mechanics', 'JEE Chemistry (Physical & Inorganic)', 'IIT-Level Advanced Mathematics', 'NEET Biology (Zoology & Botany spec)', 'Class 8-10 Science & Maths Foundation'],
     timings: ['Morning: 5:30 AM – 8:00 AM', 'Evening: 7:00 PM – 9:30 PM'],
     batchLimit: 10,
     letter: 'C'
   },
   {
     id: 'language',
-    title: 'Fluent English & IELTS',
-    badge: 'IELTS / PTE / Spoken',
-    icon: 'Globe',
-    summary: 'International study abroad exam coaching and premium spoken English fluency training.',
-    description: 'A premium communicative coaching hub designed to build stage presence, public speaking confidence, and international board band scores. From IELTS/PTE exam module preparation to everyday conversational articulacy and accent coaching.',
-    subjects: ['IELTS Speaking & Listening Practice', 'IELTS Academic Writing & Reading', 'PTE General & Study Abroad Prep', 'Spoken English & Professional Vocabulary'],
+    title: 'Spoken English & Communication',
+    badge: 'Spoken English',
+    icon: 'MessageSquare',
+    summary: 'Comprehensive spoken English, public speaking, personality development, and conversational fluency coaching.',
+    description: 'A premium communicative coaching hub designed to build public speaking confidence, everyday conversational fluency, professional vocabulary, and personality enhancement.',
+    subjects: ['Conversational Fluency & Accent training', 'Public Speaking & Presentation skills', 'Grammar & Sentence Construction', 'Professional Vocabulary & Interview Prep'],
     timings: ['Morning: 8:00 AM – 9:30 AM', 'Evening: 5:00 PM – 6:30 PM'],
     batchLimit: 12,
-    letter: 'E'
+    letter: 'S'
   }
 ];

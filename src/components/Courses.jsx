@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PROGRAMS } from '../data/programs';
 import * as Icons from 'lucide-react';
 
-function CourseCard({ program, openProgram }) {
+function CourseCard({ program }) {
+  const navigate = useNavigate();
   const cardRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +41,23 @@ function CourseCard({ program, openProgram }) {
         setMousePosition({ x: 0, y: 0 });
       }}
       onMouseMove={handleMouseMove}
-      onClick={() => openProgram(program.id)}
+      onClick={() => {
+        const getProgramAnchor = (id) => {
+          switch (id) {
+            case 'school':
+              return 'primary';
+            case 'secondary':
+              return 'senior';
+            case 'jee-neet':
+              return 'jee-neet';
+            case 'language':
+              return 'language';
+            default:
+              return '';
+          }
+        };
+        navigate(`/courses#${getProgramAnchor(program.id)}`);
+      }}
       style={{ 
         position: 'relative', 
         overflow: 'hidden', 
@@ -146,7 +164,6 @@ export default function Courses({ openProgram }) {
             <CourseCard
               key={program.id}
               program={program}
-              openProgram={openProgram}
             />
           ))}
         </div>

@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import { 
   IconBook, 
-  IconHome, 
   IconFileText, 
   IconClipboardCheck, 
-  IconMessages, 
-  IconMapPin 
+  IconDeviceLaptop,
+  IconShield
 } from '@tabler/icons-react';
 
 export default function Facilities() {
@@ -34,11 +33,6 @@ export default function Facilities() {
       desc: "Open to all enrolled students. Reference books, past papers, and study material — no extra cost."
     },
     {
-      Icon: IconHome,
-      title: "No Homework Policy",
-      desc: "Learning is completed in class. Students leave with clarity, not pending tasks."
-    },
-    {
       Icon: IconFileText,
       title: "Physical Question Banks",
       desc: "Printed question banks for 4th to 12th — built from 15 years of board exam patterns, given to every student."
@@ -49,14 +43,14 @@ export default function Facilities() {
       desc: "Board exam simulation with Paper 1, 2, and 3 — followed by dedicated doubt solving sessions."
     },
     {
-      Icon: IconMessages,
-      title: "In-Class Doubt Solving",
-      desc: "Every 3-hour session includes doubt solving in the third hour — right after teaching and revision."
+      Icon: IconDeviceLaptop,
+      title: "Smart Classrooms",
+      desc: "Modern technology-equipped classrooms for interactive and audio-visual learning experiences."
     },
     {
-      Icon: IconMapPin,
-      title: "Two Branch Locations",
-      desc: "Conveniently located in Vastral and Nikol, Ahmedabad. Walk in at either branch."
+      Icon: IconShield,
+      title: "Security & CCTV",
+      desc: "Security guard and CCTV surveillance throughout the premises to ensure every student's safety."
     }
   ];
 
@@ -90,7 +84,7 @@ export default function Facilities() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-[1100px]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl"
         >
           {facilities.map((fac, idx) => {
             const IconComponent = fac.Icon;

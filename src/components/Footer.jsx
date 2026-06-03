@@ -166,9 +166,12 @@ export default function Footer() {
         <div className="w-full h-[1px] bg-white/[0.08] mb-8" />
 
         {/* Bottom Bar: Copyright & Terms */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 font-sans font-light text-[12px] text-[#888888]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 font-sans font-light text-[12px] text-[#888888] relative z-10">
           <div>
             © 2026 Ocean Blue Education. All rights reserved.
+          </div>
+          <div className="font-sans font-light italic text-[13px] text-white/40 my-2 sm:my-0">
+            "Where Education Meets Success"
           </div>
           <div className="flex items-center gap-6">
             <span>Vastral & Nikol, Ahmedabad</span>

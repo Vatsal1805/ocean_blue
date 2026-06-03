@@ -21,9 +21,9 @@ export default function BriefOB() {
   };
 
   const highlightCards = [
+    { value: "10,000+", label: "Students & Alumni Guided" },
     { value: "Est. 2009", label: "15+ Years of Trust" },
-    { value: "Vastral & Nikol", label: "2 Branches in Ahmedabad" },
-    { value: "500+", label: "Students Trained" }
+    { value: "Vastral & Nikol", label: "2 Branches in Ahmedabad" }
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function BriefOB() {
             Ocean Blue Education.
           </h2>
           <p className="font-sans font-light text-[16px] md:text-[17px] text-[#555555] leading-relaxed mt-5 max-w-2xl">
-            A trusted destination for academic excellence in Ahmedabad since 2009. Under the leadership of Mr. Dhananjay Rajput, we provide expert coaching for 4th to 12th standards across CBSE, ICSE, and GSEB boards — alongside JEE, NEET, IELTS, PTE, and Spoken English programs. Two branches. One mission.
+            Established in 2009, Ocean Blue Education & Spoken English has emerged as one of Ahmedabad's most trusted and result-oriented educational institutions. With a mission to provide quality education, skill development, and personality enhancement, we have successfully guided more than 10,000 students and alumni towards academic excellence and career success.
           </p>
           <Link 
             to="/about"

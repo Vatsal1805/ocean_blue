@@ -4,8 +4,8 @@ import {
   IconHome, 
   IconFileText, 
   IconClock, 
-  IconBook, 
-  IconAward 
+  IconAward,
+  IconDeviceLaptop
 } from '@tabler/icons-react';
 
 export default function WhyChooseUs() {
@@ -15,56 +15,56 @@ export default function WhyChooseUs() {
     {
       num: "01",
       Icon: IconHome,
-      title: "No Homework Policy",
-      desc: "We believe real learning happens inside the classroom — not as a burden carried home. Every session is designed to be self-contained. Students leave with clarity, not pending tasks.",
+      title: "No Homework Concept",
+      desc: "We believe real learning happens inside the classroom. Every session is designed to be complete — students leave with clarity, not pending tasks. No academic stress carried home.",
       details: [
         "Complete learning within class hours",
-        "No exam pressure outside coaching",
-        "Designed for students balancing school and coaching"
+        "No pending assignments outside coaching",
+        "Designed for students balancing school and coaching schedules"
       ]
     },
     {
       num: "02",
-      Icon: IconFileText,
-      title: "Physical Question Banks",
-      desc: "We've designed and printed our own question banks for 4th to 12th standard — not borrowed from publishers. Built from 15 years of board exam patterns, these books are handed to every enrolled student.",
+      Icon: IconClock,
+      title: "No Time Limit Learning Support",
+      desc: "Students can approach teachers for guidance and doubt-solving whenever required — before class, after class, or between sessions. There is no time limit on learning support at Ocean Blue.",
       details: [
-        "Printed and distributed to every enrolled student",
-        "Board-pattern focused from 4th to 12th standard",
-        "Updated every academic year based on syllabus changes"
+        "Doubt solving available beyond class hours",
+        "Teachers accessible for personal guidance",
+        "No question left unanswered"
       ]
     },
     {
       num: "03",
-      Icon: IconClock,
-      title: "3-Hour Structured Session",
-      desc: "Every class follows a precise rhythm — 2 hours of focused concept teaching followed by 1 hour of in-class test and revision on exactly what was just taught. Doubt solving happens in that same third hour.",
+      Icon: IconFileText,
+      title: "Exclusive Study Material",
+      desc: "Every enrolled student receives Ocean Blue's specially designed modules, notes, worksheets, and practice papers — built from 15 years of teaching experience. Not borrowed from publishers. Printed and distributed to every student.",
       details: [
-        "Hour 1 & 2: New concept teaching",
-        "Hour 3: In-class exam + revision",
-        "Doubt solving within every single session"
+        "Custom modules and notes by our faculty",
+        "Chapter-wise worksheets and practice papers",
+        "Updated every academic year based on board changes"
       ]
     },
     {
       num: "04",
-      Icon: IconBook,
-      title: "Library For All Students",
-      desc: "A dedicated library is available to every enrolled student at no extra cost. Reference books, past papers, NCERT guides, and study material — all accessible throughout the academic year.",
+      Icon: IconDeviceLaptop,
+      title: "Smart Classrooms",
+      desc: "Our classrooms are equipped with modern technology for interactive learning — audio-visual tools, digital boards, and structured learning environments that make complex concepts simple and engaging.",
       details: [
-        "Open to all enrolled students at no charge",
-        "Past papers and board reference books stocked",
-        "Available throughout the full academic year"
+        "Modern audio-visual teaching tools",
+        "Interactive digital classroom environment",
+        "Technology-enabled concept delivery"
       ]
     },
     {
       num: "05",
       Icon: IconAward,
-      title: "15+ Years of Experience",
-      desc: "Established in Vastral, Ahmedabad in 2009. We've seen board patterns change, syllabi evolve, and entrance exams transform — and we've adapted every time. That institutional knowledge benefits every student.",
+      title: "Award-Winning Institute",
+      desc: "Honored with the Best Education Institute in Gujarat Award by Divya Bhaskar News & Media Group. Presented by Shri Balvantsinh Rajput, Honorable Minister of Gujarat — recognizing our commitment to educational excellence.",
       details: [
-        "Founded in Vastral, Ahmedabad in 2009",
-        "Hundreds of board toppers and JEE/NEET qualifiers",
-        "Trusted by families across Vastral and Nikol for 15+ years"
+        "Best Education Institute in Gujarat — Divya Bhaskar",
+        "Recognized by Honorable Minister of Gujarat",
+        "15+ years of consistent academic results"
       ]
     }
   ];

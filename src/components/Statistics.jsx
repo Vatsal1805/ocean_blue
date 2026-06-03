@@ -47,10 +47,10 @@ export default function Statistics() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const stats = [
-    { target: "500", suffix: "+", label: "Students Trained", isDecimal: false },
+    { target: "10000", suffix: "+", label: "Students & Alumni", isDecimal: false },
     { target: "4.7", suffix: "★", label: "Google Rating", isDecimal: true },
-    { target: "147", suffix: "", label: "Reviews", isDecimal: false },
-    { target: "15", suffix: "+", label: "Years of Trust (Since 2009)", isDecimal: false },
+    { target: "8", suffix: "+", label: "Programs Offered", isDecimal: false },
+    { target: "2", suffix: "", label: "Branches in Ahmedabad", isDecimal: false },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Statistics() {
               >
                 {/* Stat Number */}
                 <div className="font-serif text-[28px] sm:text-[42px] md:text-[52px] font-bold text-brand-charcoal leading-none tracking-tight select-none">
-                  {displayVal}
+                  {typeof displayVal === 'number' ? displayVal.toLocaleString() : displayVal}
                   {stat.suffix}
                 </div>
                 {/* Stat Label */}
