@@ -52,20 +52,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* IDP & Pearson Authorized Partner badges */}
-            <div className="flex flex-col gap-2 w-full pt-1">
-              <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-white/40 block">
-                Official Partner Placeholders:
-              </span>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-[9px] font-sans font-semibold uppercase tracking-wider text-brand-yellow px-2 py-1 bg-white/[0.06] rounded border border-white/[0.1] select-none hover:bg-white/[0.1] transition-colors duration-200">
-                  IDP IELTS Partner
-                </span>
-                <span className="text-[9px] font-sans font-semibold uppercase tracking-wider text-brand-yellow px-2 py-1 bg-white/[0.06] rounded border border-white/[0.1] select-none hover:bg-white/[0.1] transition-colors duration-200">
-                  Pearson PTE Partner
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Academic Programs */}
@@ -87,10 +73,10 @@ export default function Footer() {
                 NEET UG Medical Coaching
               </Link>
               <Link to="/courses#language" className="hover:text-brand-yellow transition-colors duration-200">
-                IELTS & PTE Academic
+                Spoken English & Fluency
               </Link>
               <Link to="/courses#language" className="hover:text-brand-yellow transition-colors duration-200">
-                Spoken English & Fluency
+                IELTS & PTE Academic
               </Link>
             </nav>
           </div>
@@ -117,7 +103,7 @@ export default function Footer() {
                 Results
               </Link>
               <Link to="/#contact" className="hover:text-brand-yellow transition-colors duration-200">
-                Demo
+                Enquiry
               </Link>
             </nav>
           </div>

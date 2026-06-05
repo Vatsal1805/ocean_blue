@@ -48,7 +48,7 @@ export default function BriefOB() {
           viewport={{ once: true, margin: "-100px" }}
           className="lg:col-span-7 flex flex-col items-start text-left w-full"
         >
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ ABOUT US ]
           </span>
           <h2 className="font-serif text-[36px] md:text-[48px] text-brand-charcoal font-normal leading-tight">

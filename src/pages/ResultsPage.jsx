@@ -308,31 +308,43 @@ export default function ResultsPage() {
     {
       year: "2024-25",
       count: "12 Results",
+      stats: [
+        "100% Pass Rate in 10th & 12th Board Exams",
+        "94% of JEE candidates qualified for JEE Advanced",
+        "88% of IELTS/PTE candidates achieved 7.0+ Band"
+      ],
       items: [
         { name: "Student Placeholder", score: "AIR 2847", badge: "JEE Mains" },
         { name: "Student Placeholder", score: "620 / 720", badge: "NEET UG" },
-        { name: "Student Placeholder", score: "Band 7.5", badge: "IELTS Academic" },
-        { name: "Student Placeholder", score: "99.1 PR", badge: "Board 12th" }
+        { name: "Student Placeholder", score: "Band 7.5", badge: "IELTS Academic" }
       ]
     },
     {
       year: "2023-24",
       count: "15 Results",
+      stats: [
+        "100% GSEB & CBSE Board Pass Rate",
+        "90% NEET students secured top medical college seats",
+        "82% IELTS candidates achieved 7.5+ Band Score"
+      ],
       items: [
         { name: "Student Placeholder", score: "634 / 720", badge: "NEET UG" },
         { name: "Student Placeholder", score: "Band 8.0", badge: "IELTS Academic" },
-        { name: "Student Placeholder", score: "96.4 PR", badge: "Board 10th" },
-        { name: "Student Placeholder", score: "97.8 PR", badge: "Board 12th" }
+        { name: "Student Placeholder", score: "96.4 PR", badge: "Board 10th" }
       ]
     },
     {
       year: "2022-23",
       count: "18 Results",
+      stats: [
+        "99.4% Board student success & satisfaction rate",
+        "88% JEE qualification rate across batches",
+        "80% IELTS candidates got visa approvals on first attempt"
+      ],
       items: [
         { name: "Student Placeholder", score: "AIR 3105", badge: "JEE Advanced" },
         { name: "Student Placeholder", score: "601 / 720", badge: "NEET UG" },
-        { name: "Student Placeholder", score: "96.2 PR", badge: "Board 12th" },
-        { name: "Student Placeholder", score: "Band 7.0", badge: "IELTS Academic" }
+        { name: "Student Placeholder", score: "96.2 PR", badge: "Board 12th" }
       ]
     }
   ];
@@ -388,7 +400,7 @@ export default function ResultsPage() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
           >
             [ STUDENT ACHIEVEMENTS ]
           </motion.span>
@@ -447,7 +459,7 @@ export default function ResultsPage() {
           
           {/* Header */}
           <div className="flex flex-col items-center text-center mb-16 select-none max-w-2xl">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
               [ FEATURED ACHIEVEMENTS ]
             </span>
             <h2 className="font-serif text-[clamp(32px,6vw,52px)] text-[#1a1a1a] font-normal leading-tight">
@@ -524,7 +536,7 @@ export default function ResultsPage() {
           
           {/* Header */}
           <div className="flex flex-col items-center text-center mb-6 select-none max-w-2xl">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
               [ ALL RESULTS ]
             </span>
             <h2 className="font-serif text-[clamp(28px,5vw,48px)] text-[#1a1a1a] font-normal leading-tight">
@@ -535,7 +547,7 @@ export default function ResultsPage() {
           {/* Filter tabs row - scrollable on mobile */}
           <div className="w-full flex justify-center mt-6 mb-12 px-2 overflow-hidden">
             <div className="flex flex-row overflow-x-auto whitespace-nowrap scrollbar-none gap-2 max-w-full pb-3 md:pb-0 px-2 justify-start md:justify-center">
-              {["All", "JEE", "NEET", "Board 10th", "Board 12th", "IELTS / PTE"].map((tab) => (
+              {["All", "Board 10th", "Board 12th", "JEE", "NEET", "IELTS / PTE"].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => handleFilterChange(tab)}
@@ -670,7 +682,7 @@ export default function ResultsPage() {
           
           {/* Header */}
           <div className="flex flex-col items-start mb-12 select-none">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
               [ YEAR BY YEAR ]
             </span>
             <h2 className="font-serif text-[clamp(28px,5vw,48px)] text-[#1a1a1a] font-normal leading-tight">
@@ -721,22 +733,37 @@ export default function ResultsPage() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pb-6 pt-2 text-left">
-                          {item.items.map((subItem, sIdx) => (
-                            <div key={sIdx} className="bg-brand-secondaryBg border border-brand-border/60 rounded-xl p-4.5 flex flex-col justify-between shadow-sm">
-                              <div>
-                                <span className="text-[10px] font-sans font-bold text-brand-navy/60 tracking-wider uppercase block mb-1">
-                                  {subItem.badge}
+                        <div className="pb-6 pt-2 text-left flex flex-col gap-6 w-full">
+                          {/* Cards row - 3 columns */}
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+                            {item.items.map((subItem, sIdx) => (
+                              <div key={sIdx} className="bg-brand-secondaryBg border border-brand-border/60 rounded-xl p-4.5 flex flex-col justify-between shadow-sm">
+                                <div>
+                                  <span className="text-[10px] font-sans font-bold text-brand-navy/60 tracking-wider uppercase block mb-1">
+                                    {subItem.badge}
+                                  </span>
+                                  <h5 className="font-sans font-semibold text-[14px] text-[#1a1a1a]">
+                                    {subItem.name}
+                                  </h5>
+                                </div>
+                                <div className="font-serif text-[20px] text-brand-navy font-bold mt-2.5 leading-none">
+                                  {subItem.score}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          
+                          {/* Stats text block (inline list below cards) */}
+                          <div className="bg-[#f3f2ee]/50 border border-brand-border/40 rounded-xl p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4.5 select-none w-full">
+                            {item.stats.map((stat, stIdx) => (
+                              <div key={stIdx} className="flex items-center gap-2.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow flex-shrink-0" />
+                                <span className="font-sans font-light text-[13.5px] text-[#555555]">
+                                  {stat}
                                 </span>
-                                <h5 className="font-sans font-semibold text-[14px] text-[#1a1a1a]">
-                                  {subItem.name}
-                                </h5>
                               </div>
-                              <div className="font-serif text-[20px] text-brand-navy font-bold mt-2.5 leading-none">
-                                {subItem.score}
-                              </div>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
                         </div>
                       </motion.div>
                     )}

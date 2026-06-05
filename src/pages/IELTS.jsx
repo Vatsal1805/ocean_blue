@@ -158,7 +158,7 @@ export default function IELTS() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
           >
             [ IELTS · PTE · VISA ]
           </motion.span>
@@ -224,7 +224,7 @@ export default function IELTS() {
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col items-start text-left mb-14">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ OUR PROGRAMS ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -336,7 +336,7 @@ export default function IELTS() {
           
           {/* Section Header */}
           <div className="flex flex-col items-start text-left mb-16 select-none">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ IELTS TEST MODULES ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -656,7 +656,7 @@ export default function IELTS() {
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col items-center text-center mb-16 select-none">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ BAND SCORE GUIDE ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -732,7 +732,7 @@ export default function IELTS() {
 
         <div className="max-w-7xl mx-auto text-center relative z-10 flex flex-col items-center">
           
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
             [ STEP BY STEP ]
           </span>
           <h2 className="font-serif text-[34px] sm:text-[52px] text-white font-normal leading-tight">
@@ -795,7 +795,7 @@ export default function IELTS() {
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col items-start text-left mb-12">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ PTE ACADEMIC & CORE ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -806,20 +806,20 @@ export default function IELTS() {
           {/* Types of PTE row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left mb-16">
             {/* PTE 1 */}
-            <div className="bg-[#1a237e] rounded-[16px] p-6 text-white shadow-sm flex flex-col justify-between">
+            <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[16px] p-6 text-[#1a1a1a] shadow-sm flex flex-col justify-between">
               <div>
-                <h4 className="font-serif text-[20px] mb-2 leading-tight">PTE Academic</h4>
-                <p className="font-sans font-light text-[13px] text-white/70 leading-relaxed">
+                <h4 className="font-serif text-[20px] mb-2 leading-tight text-[#1a237e]">PTE Academic</h4>
+                <p className="font-sans font-light text-[13px] text-[#666666] leading-relaxed">
                   Accepted by universities and colleges worldwide. Especially in Australia, New Zealand, UK, Canada, and more.
                 </p>
               </div>
-              <span className="font-sans font-semibold text-[11px] uppercase tracking-wider text-[#f5c800] mt-4 block">
+              <span className="font-sans font-semibold text-[11px] uppercase tracking-wider text-brand-navy mt-4 block">
                 Duration: ~2 hours
               </span>
             </div>
 
             {/* PTE 2 */}
-            <div className="bg-[#fafaf8] border-t-[4px] border-t-[#f5c800] border border-[#dddbd4] rounded-[16px] p-6 text-[#1a1a1a] shadow-sm flex flex-col justify-between">
+            <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[16px] p-6 text-[#1a1a1a] shadow-sm flex flex-col justify-between">
               <div>
                 <h4 className="font-serif text-[20px] mb-2 leading-tight text-[#1a237e]">PTE Core</h4>
                 <p className="font-sans font-light text-[13px] text-[#666666] leading-relaxed">
@@ -862,19 +862,19 @@ export default function IELTS() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left items-stretch">
             
             {/* Part 1 */}
-            <div className="bg-[#1a237e] rounded-[20px] p-8 text-white shadow-sm flex flex-col justify-between">
+            <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[20px] p-8 text-[#1a1a1a] shadow-sm flex flex-col justify-between">
               <div>
-                <span className="font-sans font-semibold text-[11px] text-[#f5c800] tracking-wider uppercase block mb-1.5 select-none">
+                <span className="font-sans font-semibold text-[11px] text-[#999999] tracking-wider uppercase block mb-1.5 select-none">
                   PART 1
                 </span>
-                <h3 className="font-serif text-[24px] mb-1 font-normal">
+                <h3 className="font-serif text-[24px] text-[#1a237e] mb-1 font-normal">
                   Speaking & Writing
                 </h3>
-                <span className="font-sans font-light text-[12.5px] text-white/50 block mb-6">
+                <span className="font-sans font-light text-[12.5px] text-[#888888] block mb-6">
                   ~54 – 67 Minutes
                 </span>
                 
-                <ul className="flex flex-col gap-3 font-sans font-light text-[13.5px] text-white/80">
+                <ul className="flex flex-col gap-3 font-sans font-light text-[13.5px] text-[#555555]">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#f5c800] rounded-full" /> Personal Introduction</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#f5c800] rounded-full" /> Read Aloud</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#f5c800] rounded-full" /> Repeat Sentence</li>
@@ -945,7 +945,7 @@ export default function IELTS() {
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col items-center text-center mb-16">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ SUCCESS STORIES ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[48px] text-white font-normal leading-tight">
@@ -1070,7 +1070,7 @@ export default function IELTS() {
 
         <div className="max-w-xl mx-auto relative z-10 text-center">
           
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block select-none">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block select-none">
             [ GET IN TOUCH ]
           </span>
           <h2 className="font-serif text-[32px] sm:text-[44px] text-[#1a1a1a] font-normal leading-tight mb-10">

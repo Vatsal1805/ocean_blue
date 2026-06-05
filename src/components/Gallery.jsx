@@ -70,7 +70,7 @@ export default function Gallery() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12 px-6 select-none">
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ OUR INSTITUTE ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">

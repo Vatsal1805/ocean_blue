@@ -71,7 +71,7 @@ export default function Testimonials() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 px-6 select-none">
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ WHAT OUR STUDENTS SAY ]
           </span>
           <h2 className="font-serif text-[42px] sm:text-[52px] text-white font-normal leading-tight">

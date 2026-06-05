@@ -5,7 +5,9 @@ import {
   IconFileText, 
   IconClock, 
   IconAward,
-  IconDeviceLaptop
+  IconDeviceLaptop,
+  IconLeaf,
+  IconMicrophone2
 } from '@tabler/icons-react';
 
 export default function WhyChooseUs() {
@@ -58,6 +60,28 @@ export default function WhyChooseUs() {
     },
     {
       num: "05",
+      Icon: IconLeaf,
+      title: "Stress-Free Study Material",
+      desc: "Our study material is designed with one principle — no unnecessary load on students. Clear language, structured layouts, and progressive difficulty. Students can read, understand, and revise without feeling overwhelmed.",
+      details: [
+        "Designed for easy self-reading at home",
+        "Progressive difficulty across all chapters",
+        "No unnecessary content load on students"
+      ]
+    },
+    {
+      num: "06",
+      Icon: IconMicrophone2,
+      title: "Everyday Spoken English Practice",
+      desc: "Regardless of which academic program a student is enrolled in, daily spoken English practice is integrated into every student's experience at Ocean Blue. Communication confidence is built alongside board and entrance exam preparation — every single day.",
+      details: [
+        "Daily practice sessions for all enrolled students",
+        "Fluency built alongside academic programs",
+        "Real conversation practice, not just textbook exercises"
+      ]
+    },
+    {
+      num: "07",
       Icon: IconAward,
       title: "Award-Winning Institute",
       desc: "Honored with the Best Education Institute in Gujarat Award by Divya Bhaskar News & Media Group. Presented by Shri Balvantsinh Rajput, Honorable Minister of Gujarat — recognizing our commitment to educational excellence.",
@@ -68,6 +92,8 @@ export default function WhyChooseUs() {
       ]
     }
   ];
+
+  const activeSection = sections[activeTab] || sections[0];
 
   return (
     <section id="why-choose-us" className="relative w-full bg-[#fafaf8] py-[120px] border-b border-brand-border overflow-hidden select-none">
@@ -85,7 +111,7 @@ export default function WhyChooseUs() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none">
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ WHY CHOOSE US ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -155,23 +181,23 @@ export default function WhyChooseUs() {
                     {/* Large Icon Box */}
                     <div className="w-14 h-14 rounded-2xl bg-[#fafaf8] border border-brand-border flex items-center justify-center text-brand-navy mb-8 shadow-sm">
                       {(() => {
-                        const ActiveIcon = sections[activeTab].Icon;
+                        const ActiveIcon = activeSection.Icon;
                         return <ActiveIcon size={24} stroke={1.8} />;
                       })()}
                     </div>
 
                     <h3 className="font-serif text-[28px] text-brand-charcoal font-normal mb-4 leading-tight">
-                      {sections[activeTab].title}
+                      {activeSection.title}
                     </h3>
                     
                     <p className="font-sans font-light text-[15px] sm:text-[16px] text-[#555555] leading-relaxed max-w-xl">
-                      {sections[activeTab].desc}
+                      {activeSection.desc}
                     </p>
                   </div>
 
                   {/* Bullet points */}
                   <div className="flex flex-col gap-3.5 mt-8 pt-8 border-t border-brand-border/60">
-                    {sections[activeTab].details.map((detail, dIdx) => (
+                    {activeSection.details.map((detail, dIdx) => (
                       <div 
                         key={dIdx} 
                         className="font-sans font-light text-[14px] text-brand-charcoal/80 leading-relaxed flex items-start gap-2.5"

@@ -21,6 +21,8 @@ import {
 export default function CoursesPage() {
   const { hash } = useLocation();
   const [activeStream, setActiveStream] = useState('science');
+  const [activeCareerStream, setActiveCareerStream] = useState('pcm');
+  const [activeScienceGroup, setActiveScienceGroup] = useState('pcm');
 
   // Dynamic SEO Meta Tags injection
   useEffect(() => {
@@ -144,7 +146,7 @@ export default function CoursesPage() {
         >
           <motion.span 
             variants={heroItemVariants}
-            className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
           >
             [ OUR PROGRAMS ]
           </motion.span>
@@ -168,7 +170,7 @@ export default function CoursesPage() {
             variants={heroItemVariants}
             className="w-full max-w-4xl mt-9 select-none z-10"
           >
-            <div className="flex items-center justify-start md:justify-center gap-2.5 overflow-x-auto pb-2.5 px-2 scrollbar-none whitespace-nowrap -mx-4 md:mx-0 select-none">
+            <div className="flex flex-wrap items-center justify-center gap-2.5 px-2 select-none">
               <a href="#primary" className="inline-block bg-white/80 backdrop-blur-md border border-[#dddbd4] hover:border-brand-yellow hover:bg-[#f3f2ee] hover:text-brand-navy rounded-full px-5 py-2 font-sans font-light text-[13px] text-[#555555] hover:scale-[1.03] transition-all duration-300 cursor-pointer shadow-sm">
                 4th – 10th
               </a>
@@ -198,7 +200,7 @@ export default function CoursesPage() {
           
           {/* Headline block */}
           <div className="flex flex-col items-start text-left mb-12">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ 4TH TO 10TH STANDARD ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -236,17 +238,50 @@ export default function CoursesPage() {
                 </div>
               </div>
 
-              {/* Subjects tags */}
-              <div>
-                <span className="font-sans font-semibold text-[13.5px] uppercase tracking-wider text-[#1a1a1a] block mb-3.5 select-none">
-                  Subjects Covered:
+              {/* Subjects Covered Card */}
+              <div className="bg-white border border-[#dddbd4] rounded-[20px] p-6 md:p-8 text-left shadow-sm mt-4">
+                <span className="font-sans font-semibold text-[11px] text-[#999999] tracking-[0.12em] block uppercase mb-6 select-none">
+                  SUBJECTS COVERED
                 </span>
-                <div className="flex flex-wrap gap-2">
-                  {["Mathematics", "Science", "English", "Social Studies", "Hindi", "Gujarati", "Computer Science"].map((sub) => (
-                    <span key={sub} className="bg-[#f3f2ee] border border-[#dddbd4] rounded-[8px] px-3.5 py-1.5 font-sans font-light text-[13px] text-[#555555]">
-                      {sub}
-                    </span>
-                  ))}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                  
+                  {/* Classes 4th - 6th Group */}
+                  <div className="flex flex-col gap-4">
+                    <div className="border-l-3 border-[#f5c800] pl-3 select-none">
+                      <span className="font-sans font-semibold text-[14px] text-[#1a1a1a] block">Classes 4th – 6th</span>
+                      <span className="font-sans font-light text-[11px] text-[#888888] block mt-0.5">Foundational Primary Stream</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["Maths", "EVS", "English", "Hindi", "Sanskrit", "Gujarati"].map((sub) => (
+                        <span 
+                          key={sub} 
+                          className="bg-[#fafaf8] border border-[#dddbd4] rounded-full px-3 py-1.5 font-sans font-medium text-[12.5px] text-[#555555] shadow-2xs hover:border-[#1a237e] hover:text-[#1a237e] hover:scale-[1.02] cursor-default transition-all duration-200 select-none"
+                        >
+                          {sub}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Classes 7th - 10th Group */}
+                  <div className="flex flex-col gap-4">
+                    <div className="border-l-3 border-[#1a237e] pl-3 select-none">
+                      <span className="font-sans font-semibold text-[14px] text-[#1a1a1a] block">Classes 7th – 10th</span>
+                      <span className="font-sans font-light text-[11px] text-[#888888] block mt-0.5">Secondary School Board Prep</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["Maths", "Science", "Social Studies", "English", "Hindi", "Gujarati", "Sanskrit", "English Grammar"].map((sub) => (
+                        <span 
+                          key={sub} 
+                          className="bg-[#fafaf8] border border-[#dddbd4] rounded-full px-3 py-1.5 font-sans font-medium text-[12.5px] text-[#555555] shadow-2xs hover:border-[#1a237e] hover:text-[#1a237e] hover:scale-[1.02] cursor-default transition-all duration-200 select-none"
+                        >
+                          {sub}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -438,7 +473,7 @@ export default function CoursesPage() {
           
           {/* Header */}
           <div className="flex flex-col items-start text-left mb-12">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ 11TH & 12TH STANDARD ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -486,107 +521,108 @@ export default function CoursesPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="w-full"
+                  className="w-full text-left"
                 >
-                  <span className="font-sans font-semibold text-[13.5px] uppercase tracking-wider text-[#1a1a1a] block mb-4 select-none">
+                  <span className="font-sans font-semibold text-[13.5px] uppercase tracking-wider text-[#1a1a1a] block mb-6 select-none">
                     Subjects Covered ({activeStream === 'science' ? 'Science' : 'Commerce'}):
                   </span>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {activeStream === 'science' ? (
-                      <>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
+                  {activeStream === 'science' ? (
+                    <div>
+                      {/* Sub-group switcher */}
+                      <div className="flex gap-2.5 mb-6 select-none">
+                        {[
+                          { id: 'pcm', label: 'PCM (Group A)' },
+                          { id: 'pcb', label: 'PCB (Group B)' }
+                        ].map((group) => (
+                          <button
+                            key={group.id}
+                            onClick={() => setActiveScienceGroup(group.id)}
+                            className={`rounded-full px-5 py-2 font-sans font-semibold text-[12.5px] transition-all duration-300 outline-none cursor-pointer ${
+                              activeScienceGroup === group.id
+                                ? 'bg-[#1a237e] text-white shadow-sm'
+                                : 'bg-white border border-[#dddbd4] text-[#888888] hover:text-[#1a1a1a] hover:border-[#1a237e]'
+                            }`}
+                          >
+                            {group.label}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Animated Science Group Subjects */}
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={activeScienceGroup}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.25, ease: "easeOut" }}
+                          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                        >
+                          {(activeScienceGroup === 'pcm' ? [
+                            { title: "Physics & Mechanics", desc: "CBSE & GSEB" },
+                            { title: "Chemistry", desc: "CBSE & GSEB" },
+                            { title: "Higher Mathematics", desc: "CBSE & GSEB" },
+                            { title: "English", desc: "CBSE & GSEB" }
+                          ] : [
+                            { title: "Physics", desc: "CBSE & GSEB" },
+                            { title: "Chemistry", desc: "CBSE & GSEB" },
+                            { title: "Biology (Zoology & Botany)", desc: "CBSE & GSEB" },
+                            { title: "English", desc: "CBSE & GSEB" }
+                          ]).map((sub) => (
+                            <div 
+                              key={sub.title} 
+                              className="bg-white border border-[#dddbd4] rounded-[16px] p-5 flex items-center gap-4 hover:border-[#1a237e] hover:shadow-2xs transition-all duration-300"
+                            >
+                              <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
+                                <IconBook size={20} stroke={1.5} />
+                              </div>
+                              <div>
+                                <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">{sub.title}</span>
+                                <span className="font-sans font-light text-[12px] text-[#888888]">{sub.desc}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <div>
+                      {/* Commerce subjects */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {[
+                          { title: "Accounts", desc: "CBSE & GSEB" },
+                          { title: "Statistics", desc: "CBSE & GSEB" },
+                          { title: "Economics", desc: "CBSE & GSEB" },
+                          { title: "Business Administration", desc: "CBSE & GSEB" },
+                          { title: "English", desc: "CBSE & GSEB" }
+                        ].map((sub, idx) => (
+                          <div 
+                            key={sub.title} 
+                            className={`bg-white border border-[#dddbd4] rounded-[16px] p-5 flex items-center gap-4 hover:border-[#1a237e] hover:shadow-2xs transition-all duration-300 ${
+                              idx === 4 ? 'sm:col-span-2' : ''
+                            }`}
+                          >
+                            <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
+                              <IconBook size={20} stroke={1.5} />
+                            </div>
+                            <div>
+                              <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">{sub.title}</span>
+                              <span className="font-sans font-light text-[12px] text-[#888888]">{sub.desc}</span>
+                            </div>
                           </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Physics & Mechanics</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Chemistry (Org/Inorg)</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Higher Mathematics</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Biology (Zoology/Botany)</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Accountancy</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Economics</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Business Studies</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">English Core</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                        <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-[12px] p-5 flex items-center gap-4 sm:col-span-2">
-                          <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] flex items-center justify-center text-[#1a237e] flex-shrink-0">
-                            <IconTrendingUp size={20} stroke={1.5} />
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-[15px] text-[#1a1a1a] block">Commerce Statistics</span>
-                            <span className="font-sans font-light text-[12px] text-[#888888]">CBSE & GSEB</span>
-                          </div>
-                        </div>
-                      </>
-                    )}
-                  </div>
+                        ))}
+                      </div>
+                      <p className="font-sans font-light text-[12.5px] text-[#999999] mt-5 select-none text-left">
+                        * Pathway includes CA Foundation, BBA, and B.Com preparation.
+                      </p>
+                    </div>
+                  )}
 
                   {/* Dynamic Stream Board labels */}
-                  <div className="flex gap-2 mt-5">
+                  <div className="flex gap-2 mt-6">
                     {["CBSE", "GSEB"].map((board) => (
-                      <span key={board} className="bg-white border border-[#dddbd4] rounded-full px-3 py-1 font-sans font-medium text-[11px] text-[#1a237e] select-none">
+                      <span key={board} className="bg-white border border-[#dddbd4] rounded-full px-3.5 py-1 font-sans font-medium text-[11px] text-[#1a237e] select-none">
                         {board}
                       </span>
                     ))}
@@ -712,6 +748,248 @@ export default function CoursesPage() {
 
           </div>
 
+          {/* Career Opportunities Interactive Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="bg-[#fafaf8] border border-[#dddbd4] rounded-[24px] p-6 md:p-12 mt-16 md:mt-24 text-left relative overflow-hidden shadow-sm"
+          >
+            {/* Header */}
+            <div className="max-w-3xl">
+              <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] block uppercase">
+                [ CAREER ROADMAPS AFTER 10TH ]
+              </span>
+              <h3 className="font-serif text-[32px] md:text-[42px] text-[#1a1a1a] font-normal leading-tight mt-3">
+                What Can You Become?
+              </h3>
+              <p className="font-sans font-light text-[15px] text-[#888888] mt-3 leading-relaxed">
+                Choosing the right stream after 10th is one of the most critical decisions parents and students make. Compare preparation focus, target entrance exams, and potential career paths below.
+              </p>
+            </div>
+
+            {/* Stream Selector Interactive Tabs */}
+            <div className="flex flex-col sm:flex-row gap-3 mt-10 border-b border-[#dddbd4] pb-6">
+              {[
+                { id: 'pcm', label: 'PCM (Group A)', desc: 'Engineering & Technology', dot: 'bg-blue-600' },
+                { id: 'pcb', label: 'PCB (Group B)', desc: 'Medical & Life Sciences', dot: 'bg-emerald-600' },
+                { id: 'commerce', label: 'Commerce', desc: 'Business & Finance', dot: 'bg-amber-500' }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveCareerStream(tab.id)}
+                  className={`flex-1 rounded-[16px] p-5 border text-left transition-all duration-300 outline-none cursor-pointer ${
+                    activeCareerStream === tab.id
+                      ? 'bg-[#1a237e] border-[#1a237e] text-white shadow-md'
+                      : 'bg-white border-[#dddbd4] text-[#555555] hover:border-[#1a237e] hover:text-[#1a1a1a]'
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className={`w-2.5 h-2.5 rounded-full ${tab.dot}`} />
+                    <span className="font-sans font-semibold text-[16px] tracking-wide block">
+                      {tab.label}
+                    </span>
+                  </div>
+                  <span className={`font-sans font-light text-[13px] block mt-1 ${
+                    activeCareerStream === tab.id ? 'text-white/80' : 'text-[#888888]'
+                  }`}>
+                    {tab.desc}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Dynamic Stream Content with AnimatePresence */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCareerStream}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-10 items-stretch"
+              >
+                {/* Column 1: Preparation Focus & Target Exams (4 Cols) */}
+                <div className="lg:col-span-4 flex flex-col gap-6">
+                  {/* Preparation Box */}
+                  <div className="bg-[#f3f2ee] rounded-[16px] p-6 border border-[#dddbd4]">
+                    <span className="font-sans font-bold text-[11px] text-[#1a237e] tracking-wider uppercase block mb-3 select-none">
+                      1. Preparation & Focus (11th & 12th)
+                    </span>
+                    <p className="font-sans font-light text-[14px] text-[#555555] leading-relaxed">
+                      {activeCareerStream === 'pcm' && "Focus on Core Mathematics, Physics, and Chemistry. Develop analytical thinking, problem-solving speed, and logical reasoning for engineering entrance exams."}
+                      {activeCareerStream === 'pcb' && "Focus on Biology (Botany & Zoology), Chemistry, and Physics. Build strong conceptual recall, diagrammatic precision, and scientific vocabulary."}
+                      {activeCareerStream === 'commerce' && "Focus on Accountancy, Economics, Business Studies, and Statistics. Develop understanding of corporate finances, market dynamics, and auditing concepts."}
+                    </p>
+                  </div>
+
+                  {/* Target Exams Box */}
+                  <div className="bg-[#f3f2ee]/50 rounded-[16px] p-6 border border-[#dddbd4]">
+                    <span className="font-sans font-bold text-[11px] text-[#1a237e] tracking-wider uppercase block mb-4 select-none">
+                      2. Target Entrance Exams
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {activeCareerStream === 'pcm' && ["JEE Mains & Advanced", "GUJCET", "NATA (Architecture)", "NDA (Defense)", "BITSAT"].map((exam) => (
+                        <span key={exam} className="bg-white border border-[#dddbd4] rounded-full px-3.5 py-1.5 font-sans font-medium text-[12px] text-[#1a1a1a] shadow-xs">
+                          {exam}
+                        </span>
+                      ))}
+                      {activeCareerStream === 'pcb' && ["NEET-UG", "GUJCET (Pharmacy)", "AIIMS B.Sc Nursing", "ICAR Agriculture", "IISER Aptitude Test"].map((exam) => (
+                        <span key={exam} className="bg-white border border-[#dddbd4] rounded-full px-3.5 py-1.5 font-sans font-medium text-[12px] text-[#1a1a1a] shadow-xs">
+                          {exam}
+                        </span>
+                      ))}
+                      {activeCareerStream === 'commerce' && ["CA Foundation", "CSEET (Company Sec.)", "CMA Foundation", "CUET (Top Commerce Colleges)", "IPMAT (IIM Integrated MBA)"].map((exam) => (
+                        <span key={exam} className="bg-white border border-[#dddbd4] rounded-full px-3.5 py-1.5 font-sans font-medium text-[12px] text-[#1a1a1a] shadow-xs">
+                          {exam}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2: Career Destinations - Core vs. New-Age (8 Cols) */}
+                <div className="lg:col-span-8 bg-[#f3f2ee]/30 border border-[#dddbd4] rounded-[20px] p-6 md:p-8 flex flex-col justify-between">
+                  <div>
+                    <span className="font-sans font-bold text-[11px] text-[#1a237e] tracking-wider uppercase block mb-6 select-none">
+                      3. Career Outcomes & Destinations
+                    </span>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {/* Sub-column 1: Core / Traditional Careers */}
+                      <div>
+                        <div className="flex items-center gap-2 border-b border-[#dddbd4] pb-3 mb-4">
+                          <IconAward size={18} className="text-[#1a237e]" />
+                          <span className="font-sans font-semibold text-[15px] text-[#1a1a1a]">Core & Traditional Careers</span>
+                        </div>
+                        <ul className="flex flex-col gap-3">
+                          {activeCareerStream === 'pcm' && [
+                            "Mechanical / Electrical / Civil Engineer",
+                            "Software Developer & IT Consultant",
+                            "Research Scientist (ISRO, DRDO)",
+                            "Professional Architect (B.Arch)",
+                            "Commercial Pilot / Aviation Officer"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#1a237e] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                          {activeCareerStream === 'pcb' && [
+                            "General Physician & Surgeon (MBBS)",
+                            "Dental Surgeon & Specialist (BDS)",
+                            "Pharmacist & Drug Inspector",
+                            "Registered Nurse & Healthcare Expert",
+                            "Veterinary Doctor & Animal Surgeon"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#1a237e] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                          {activeCareerStream === 'commerce' && [
+                            "Chartered Accountant (CA)",
+                            "Company Secretary (CS)",
+                            "Investment Banker & Asset Manager",
+                            "Statutory Auditor & Finance Controller",
+                            "Tax Consultant & Corporate Legal Advisor"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#1a237e] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Sub-column 2: New-Age / Emerging Careers */}
+                      <div>
+                        <div className="flex items-center gap-2 border-b border-[#dddbd4] pb-3 mb-4">
+                          <IconGlobe size={18} className="text-[#f5c800]" />
+                          <span className="font-sans font-semibold text-[15px] text-[#1a1a1a]">New-Age & Emerging Careers</span>
+                        </div>
+                        <ul className="flex flex-col gap-3">
+                          {activeCareerStream === 'pcm' && [
+                            "AI & Machine Learning Specialist",
+                            "Cybersecurity & Forensic Analyst",
+                            "Data Scientist & Analytics Expert",
+                            "Robotics & Automation Engineer",
+                            "Full-Stack Web3 & Blockchain Engineer"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#f5c800] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                          {activeCareerStream === 'pcb' && [
+                            "Biotechnology Researcher",
+                            "Geneticist & Genomics Analyst",
+                            "Bioinformatics Data Scientist",
+                            "Clinical Trial Manager & Virologist",
+                            "Agricultural & Food Technologist"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#f5c800] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                          {activeCareerStream === 'commerce' && [
+                            "FinTech Product Analyst",
+                            "Data Analyst & Business Intelligence Lead",
+                            "Corporate Law & Mergers Consultant",
+                            "Digital Brand Manager & Strategist",
+                            "Behavioral Economist & Market Researcher"
+                          ].map((career) => (
+                            <li key={career} className="flex items-start gap-2.5 text-left">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#f5c800] mt-2 flex-shrink-0" />
+                              <span className="font-sans font-light text-[14px] text-[#555555]">{career}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Flagship Counselling CTA Banner */}
+            <div className="bg-[#1a237e] rounded-[20px] p-6 md:p-10 mt-12 text-left text-white flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+              {/* Background decorative touch */}
+              <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-[#f5c800]/5 rounded-l-full pointer-events-none" />
+
+              <div className="max-w-2xl relative z-10">
+                <h4 className="font-sans font-semibold text-[20px] md:text-[24px] text-[#f5c800]">
+                  Unsure which stream fits your child's aptitude?
+                </h4>
+                <p className="font-sans font-light text-[14px] text-white/80 mt-2.5 leading-relaxed">
+                  Choosing between PCM, PCB, and Commerce shouldn't be based on guesswork. Our senior academic counsellors guide hundreds of parents and students in Ahmedabad through professional stream selection and planning every year.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto relative z-10 flex-shrink-0">
+                <a
+                  href="https://wa.me/919033552048"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-[#f5c800] hover:bg-[#e6b800] text-[#1a1a1a] font-sans font-semibold text-[14.5px] rounded-full px-7 py-4 shadow-sm transition-all duration-300 gap-2 text-center"
+                >
+                  <IconPhone size={17} />
+                  Chat with Counsellor
+                </a>
+                <Link
+                  to="/#contact"
+                  className="inline-flex items-center justify-center border border-white/40 hover:border-white text-white font-sans font-medium text-[14.5px] rounded-full px-7 py-4 transition-all duration-300 text-center"
+                >
+                  Book Free Visit &rarr;
+                </Link>
+              </div>
+            </div>
+
+          </motion.div>
+
         </div>
       </section>
 
@@ -721,7 +999,7 @@ export default function CoursesPage() {
           
           {/* Header */}
           <div className="flex flex-col items-start text-left mb-16">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ ENTRANCE EXAM PREP ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -859,7 +1137,7 @@ export default function CoursesPage() {
           
           {/* Header */}
           <div className="flex flex-col items-start text-left mb-16">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ FOUNDATION PROGRAMS ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -962,7 +1240,7 @@ export default function CoursesPage() {
           
           {/* Header */}
           <div className="flex flex-col items-start text-left mb-16">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ LANGUAGE & COMMUNICATION ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
@@ -1189,7 +1467,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col items-center text-center mb-16 select-none">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
               [ OUR MATERIAL ]
             </span>
             <h2 className="font-serif text-[34px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -1298,7 +1576,7 @@ export default function CoursesPage() {
         />
 
         <div className="w-full max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center select-none">
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block select-none">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block select-none">
             [ PERSONALIZED GUIDANCE ]
           </span>
           

@@ -51,7 +51,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-6 block"
+          className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-6 block"
         >
           [ ADMISSIONS COHORT ]
         </motion.span>

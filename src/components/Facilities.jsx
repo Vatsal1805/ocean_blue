@@ -4,7 +4,8 @@ import {
   IconFileText, 
   IconClipboardCheck, 
   IconDeviceLaptop,
-  IconShield
+  IconShield,
+  IconMicrophone2
 } from '@tabler/icons-react';
 
 export default function Facilities() {
@@ -51,6 +52,11 @@ export default function Facilities() {
       Icon: IconShield,
       title: "Security & CCTV",
       desc: "Security guard and CCTV surveillance throughout the premises to ensure every student's safety."
+    },
+    {
+      Icon: IconMicrophone2,
+      title: "Daily English Practice",
+      desc: "Every enrolled student receives daily spoken English practice sessions — building communication confidence alongside academics, every single day."
     }
   ];
 
@@ -70,7 +76,7 @@ export default function Facilities() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16 select-none max-w-3xl">
-          <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ OUR FACILITIES ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-brand-charcoal font-normal leading-tight">

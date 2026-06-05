@@ -84,5 +84,18 @@ export const PROGRAMS = [
     timings: ['Morning: 8:00 AM – 9:30 AM', 'Evening: 5:00 PM – 6:30 PM'],
     batchLimit: 12,
     letter: 'S'
+  },
+  {
+    id: 'ielts',
+    title: 'Global Programs',
+    badge: 'IELTS · PTE · VISA',
+    icon: 'Globe',
+    summary: 'IELTS and PTE preparation with complete Visa guidance. IDP and Pearson authorised partner — helping students reach global universities since 2009.',
+    description: 'Specialized international language test training (IELTS Academic/General, PTE) coupled with end-to-end student visa guidance and admissions counseling for global universities.',
+    subjects: ['IELTS Academic & General Training', 'PTE Academic preparation', 'Visa counseling & file representation', 'University admissions profiling'],
+    timings: ['Morning: 9:00 AM – 11:30 AM', 'Evening: 6:00 PM – 8:30 PM'],
+    batchLimit: 10,
+    letter: 'G'
   }
 ];
+

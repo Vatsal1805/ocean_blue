@@ -6,7 +6,7 @@ export default function ResultsPreview() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.12,
       }
     }
   };
@@ -20,26 +20,38 @@ export default function ResultsPreview() {
     }
   };
 
-  const getResultImgUrl = (filename) => {
-    return new URL(`../../Assets/Results/${filename}`, import.meta.url).href;
-  };
-
   const toppers = [
     {
       badge: "JEE MAINS 2024",
-      name: "Dev Patel",
+      initials: "AR",
       score: "AIR 2847",
+      name: "Student Placeholder",
       exam: "JEE Mains · 2024 Batch",
-      quote: "The Physics and Maths coaching here completely changed how I approach problems.",
-      image: getResultImgUrl("IMG_9096.JPG.jpeg")
+      quote: "The Physics and Maths coaching here completely changed how I approach problems."
     },
     {
-      badge: "IELTS 2024",
-      name: "Sneha Vyas",
+      badge: "BOARD 10TH 2024",
+      initials: "PM",
+      score: "94.6%",
+      name: "Student Placeholder",
+      exam: "10th Board · GSEB · 2024",
+      quote: "The 3-hour structured sessions and practice papers made sure I was fully prepared for boards."
+    },
+    {
+      badge: "IELTS ACADEMIC 2024",
+      initials: "TR",
       score: "Band 7.5",
+      name: "Student Placeholder",
       exam: "IELTS Academic · 2024 Batch",
-      quote: "I went from band 5.5 to 7.5 in one attempt. The mock tests made all the difference.",
-      image: getResultImgUrl("IMG_9101.JPG.jpeg")
+      quote: "Ocean Blue's IELTS coaching is structured and thorough. I achieved my target band score in the first attempt."
+    },
+    {
+      badge: "IELTS GENERAL 2024",
+      initials: "NP",
+      score: "Band 7.0",
+      name: "Student Placeholder",
+      exam: "IELTS General · 2024 Batch",
+      quote: "The writing task coaching and mock tests at Ocean Blue helped me improve from band 5.5 to 7.0."
     }
   ];
 
@@ -61,15 +73,15 @@ export default function ResultsPreview() {
       <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10 flex flex-col items-center">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16 select-none max-w-2xl">
-          <span className="font-sans font-medium text-[11px] text-white/40 tracking-[0.25em] uppercase mb-4 block">
+        <div className="flex flex-col items-center text-center mb-16 select-none max-w-3xl">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
             [ OUR TOPPERS ]
           </span>
           <h2 className="font-serif text-[42px] sm:text-[52px] text-white font-normal leading-tight">
-            Our Students Deliver.
+            Results Across Every Program.
           </h2>
-          <p className="font-sans font-light text-[15px] sm:text-[16px] text-white/60 leading-relaxed mt-4 max-w-xl">
-            15+ years of results across boards, entrance exams, and language tests.
+          <p className="font-sans font-light text-[15px] sm:text-[16px] text-white/60 leading-relaxed mt-4 max-w-2xl text-center">
+            JEE · NEET · Board Exams · IELTS · PTE — 15 years of student success across every program.
           </p>
         </div>
 
@@ -79,41 +91,36 @@ export default function ResultsPreview() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full max-w-[1200px] mx-auto"
         >
           {toppers.map((topper, idx) => (
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="bg-white/[0.04] border border-white/[0.1] rounded-[24px] p-8 md:p-10 flex flex-col items-start text-left relative z-10 overflow-hidden shadow-xl"
+              className="bg-white/[0.06] border border-white/[0.12] rounded-[20px] px-6 py-7 lg:px-7 lg:py-6 flex flex-col items-start text-left relative z-10 overflow-hidden shadow-xl"
             >
               {/* Exam Badge Pill */}
               <span className="inline-flex px-3.5 py-1 bg-brand-yellow text-brand-navy font-sans text-[10px] font-bold tracking-[0.1em] uppercase rounded-full select-none">
                 {topper.badge}
               </span>
 
-              {/* Photo Placeholder Circle */}
-              <div className="w-16 h-16 rounded-full bg-white/[0.06] border-2 border-white/[0.12] flex items-center justify-center mt-6 text-white/20 select-none overflow-hidden relative">
-                {topper.image ? (
-                  <img 
-                    src={topper.image} 
-                    alt={topper.name} 
-                    className="w-full h-full object-cover object-center" 
-                  />
-                ) : (
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                  </svg>
-                )}
+              {/* Photo / Initials Circle (72px) */}
+              <div 
+                className="w-18 h-18 rounded-full border border-white/[0.12] flex items-center justify-center mt-6 text-white select-none overflow-hidden relative"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
+              >
+                <span className="font-sans font-semibold text-[18px] text-white">
+                  {topper.initials}
+                </span>
               </div>
 
               {/* Student Name */}
-              <h3 className="font-sans font-semibold text-[18px] text-white mt-5 leading-tight">
+              <h3 className="font-sans font-semibold text-[16px] lg:text-[15px] text-white mt-5 leading-tight">
                 {topper.name}
               </h3>
 
               {/* Score Highlight */}
-              <div className="font-serif text-[36px] md:text-[40px] text-brand-yellow font-bold mt-2 leading-none tracking-tight select-none">
+              <div className="font-serif text-[36px] lg:text-[32px] text-brand-yellow font-bold mt-2 leading-none tracking-tight select-none">
                 {topper.score}
               </div>
 
@@ -123,7 +130,7 @@ export default function ResultsPreview() {
               </span>
 
               {/* Quote Review */}
-              <p className="font-sans font-light text-[14px] text-white/60 leading-relaxed mt-5 pt-5 border-t border-white/[0.06] w-full italic">
+              <p className="font-sans font-light text-[13px] lg:text-[12px] text-white/60 leading-relaxed mt-5 pt-5 border-t border-white/[0.06] w-full italic">
                 "{topper.quote}"
               </p>
             </motion.div>

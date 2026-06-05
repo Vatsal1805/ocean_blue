@@ -118,7 +118,7 @@ export default function About() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
           >
             [ OUR STORY ]
           </motion.span>
@@ -176,7 +176,7 @@ export default function About() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-7 flex flex-col items-start text-left"
             >
-              <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+              <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
                 [ ABOUT US ]
               </span>
               <h2 className="font-serif text-[34px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight mb-6">
@@ -348,7 +348,7 @@ export default function About() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
               className="md:col-span-7 lg:col-span-7 flex flex-col items-start text-left w-full"
             >
-              <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+              <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
                 [ FOUNDER ]
               </span>
               <h3 className="font-serif text-[34px] sm:text-[42px] text-[#1a1a1a] font-normal leading-tight select-none">
@@ -409,7 +409,7 @@ export default function About() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="md:col-span-7 lg:col-span-7 flex flex-col items-start text-left w-full order-2 md:order-1"
             >
-              <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
+              <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
                 [ DIRECTOR ]
               </span>
               <h3 className="font-serif text-[34px] sm:text-[42px] text-[#1a1a1a] font-normal leading-tight select-none">
@@ -501,7 +501,7 @@ export default function About() {
           
           {/* Section Header */}
           <div className="flex flex-col items-center text-center mb-16 select-none max-w-2xl">
-            <span className="font-sans font-medium text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
+            <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block">
               [ OUR FACULTY ]
             </span>
             <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
@@ -586,7 +586,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
           
           {/* Section Header */}
-          <span className="font-sans font-medium text-[11px] text-white/40 tracking-[0.25em] uppercase mb-3 block">
+          <span className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-3 block">
             [ OUR COMMITMENT ]
           </span>
           <h2 className="font-serif text-[34px] sm:text-[48px] text-white font-normal leading-tight text-center">
