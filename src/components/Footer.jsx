@@ -1,6 +1,8 @@
 import { MapPin, Phone, Mail, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const logoUrl = new URL('../../Assets/our team/logo.png', import.meta.url).href;
+
 export default function Footer() {
   return (
     <footer className="w-full bg-brand-navy border-t border-white/[0.08] relative overflow-hidden select-none pt-16 pb-8">
@@ -23,10 +25,14 @@ export default function Footer() {
           <div className="flex flex-col items-start text-left">
             <Link
               to="/"
-              className="flex items-center gap-1.5 font-sans font-medium text-[20px] text-white tracking-tight mb-5 hover:text-brand-yellow transition-colors duration-200"
+              className="flex items-center gap-2.5 font-sans font-medium text-[20px] text-white tracking-tight mb-5 hover:text-brand-yellow transition-colors duration-200"
             >
-              Ocean Blue Education
-              <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow animate-pulse" />
+              <img
+                src={logoUrl}
+                alt="Ocean Blue Education & Spoken English Logo"
+                className="w-10 h-10 object-contain flex-shrink-0"
+              />
+              Ocean Blue Education & Spoken English
             </Link>
             <p className="font-sans font-light text-[14px] text-[#cccccc] leading-relaxed mb-6 max-w-xs">
               An elite academic sanctuary in Ahmedabad, dedicated to 4th to 12th tuition excellence, entrance prep success (JEE/NEET), and global language mastery.
@@ -154,13 +160,22 @@ export default function Footer() {
         {/* Bottom Bar: Copyright & Terms */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 font-sans font-light text-[12px] text-[#888888] relative z-10">
           <div>
-            © 2026 Ocean Blue Education. All rights reserved.
+            © 2026 Ocean Blue Education & Spoken English. All rights reserved.
           </div>
           <div className="font-sans font-light italic text-[13px] text-white/40 my-2 sm:my-0">
             "Where Education Meets Success"
           </div>
           <div className="flex items-center gap-6">
             <span>Vastral & Nikol, Ahmedabad</span>
+            <span className="text-white/25">|</span>
+            <a 
+              href="https://convergedigitals.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-brand-yellow hover:underline transition-all duration-200"
+            >
+              Made by Converge Digitals
+            </a>
           </div>
         </div>
 

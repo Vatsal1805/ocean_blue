@@ -64,7 +64,7 @@ export default function Contact({ prefilledProgram }) {
             className="lg:col-span-6 flex flex-col items-start text-left w-full"
           >
             <h3 className="font-sans font-semibold text-[18px] text-[#1a1a1a] mb-2 leading-tight">
-              Ocean Blue Education
+              Ocean Blue Education & Spoken English
             </h3>
             
             <div className="flex flex-col w-full mb-6">
@@ -105,7 +105,7 @@ export default function Contact({ prefilledProgram }) {
             {/* Google Map */}
             <div className="w-full rounded-[12px] overflow-hidden border border-[#dddbd4] h-[180px] relative">
               <iframe
-                title="Ocean Blue Vastral Location Map"
+                title="Ocean Blue Education & Spoken English Vastral Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1189445422894!2d72.65651527606132!3d22.99920151676646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87178cb7194f%3A0xb3de38ea346bd400!2sRadhe%20Chamber%2C%20Vastral%2C%20Ahmedabad%2C%20Gujarat%20382418!5e0!3m2!1sen!2sin!4v1716548000000!5m2!1sen!2sin"
                 className="w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 allowFullScreen=""

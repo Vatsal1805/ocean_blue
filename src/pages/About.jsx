@@ -14,12 +14,12 @@ export default function About() {
   
   // Dynamic SEO Meta Tags
   useEffect(() => {
-    document.title = "About Us — Ocean Blue Education | Est. 2009 | Vastral & Nikol Ahmedabad";
+    document.title = "About Us — Ocean Blue Education & Spoken English | Est. 2009 | Vastral & Nikol Ahmedabad";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Learn about Ocean Blue Education — established in 2009 by Mr. Dhananjay Rajput. Award-winning coaching institute in Ahmedabad with 10,000+ students guided across boards, JEE, NEET, IELTS, and language programs."
+        "Learn about Ocean Blue Education & Spoken English — established in 2009 by Mr. Dhananjay Rajput. Award-winning coaching institute in Ahmedabad with 10,000+ students guided across boards, JEE, NEET, IELTS, and language programs."
       );
     }
   }, []);
@@ -134,7 +134,7 @@ export default function About() {
             variants={itemVariants}
             className="font-sans font-light text-[15px] sm:text-[18px] text-brand-grey leading-relaxed mt-5 max-w-xl text-center"
           >
-            From a single classroom in Vastral to 10,000+ students guided — this is Ocean Blue.
+            From a single classroom in Vastral to 10,000+ students guided — this is Ocean Blue Education & Spoken English.
           </motion.p>
 
           {/* Quick Stats Row */}
@@ -180,7 +180,7 @@ export default function About() {
                 [ ABOUT US ]
               </span>
               <h2 className="font-serif text-[34px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight mb-6">
-                Ocean Blue Education.
+                Ocean Blue Education & Spoken English.
               </h2>
               
               <div className="flex flex-col gap-6 font-sans font-light text-[16px] sm:text-[17px] text-[#555555] leading-relaxed">
@@ -188,7 +188,7 @@ export default function About() {
                   Established in 2009, Ocean Blue Education & Spoken English has emerged as one of Ahmedabad's most trusted and result-oriented educational institutions. With a mission to provide quality education, skill development, and personality enhancement, we have successfully guided more than 10,000 students and alumni towards academic excellence and career success.
                 </p>
                 <p>
-                  At Ocean Blue, we believe that every student is unique and deserves personalized attention. Our experienced faculty members focus on concept-based learning, regular assessments, and individual mentoring to help students achieve outstanding results.
+                  At Ocean Blue Education & Spoken English, we believe that every student is unique and deserves personalized attention. Our experienced faculty members focus on concept-based learning, regular assessments, and individual mentoring to help students achieve outstanding results.
                 </p>
               </div>
             </motion.div>
@@ -321,15 +321,18 @@ export default function About() {
               className="md:col-span-5 lg:col-span-5 flex flex-col items-center text-center w-full"
             >
               {/* Photo Placeholder */}
-              <div className="w-56 h-56 rounded-full bg-[#f3f2ee] border border-[#dddbd4] flex flex-col items-center justify-center gap-2 select-none shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto">
-                <IconUser size={48} className="text-[#dddbd4]" stroke={1} />
-                <span className="font-sans font-light text-[12px] text-[#999999]">Founder Photo</span>
+              <div className="w-56 h-56 rounded-full bg-[#f3f2ee] border border-[#dddbd4] overflow-hidden flex flex-col items-center justify-center select-none shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto">
+                <img 
+                  src={new URL('../../Assets/our team/Founder.png', import.meta.url).href} 
+                  alt="Mr. Dhananjay Rajput - Founder & Director" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Title & Name */}
               <div className="mt-6 select-none">
                 <h4 className="font-sans font-semibold text-[17px] text-[#1a1a1a]">Mr. Dhananjay Rajput</h4>
-                <p className="font-sans font-light text-[13.5px] text-[#888888] mt-1">Founder & Director</p>
+                <p className="font-sans font-light text-[13.5px] text-[#888888] mt-1">Founder </p>
                 <a 
                   href="tel:+918000328054" 
                   className="inline-flex items-center gap-1.5 font-sans font-light text-[13px] text-brand-navy hover:underline mt-2 cursor-pointer"
@@ -355,12 +358,12 @@ export default function About() {
                 Mr. Dhananjay Rajput
               </h3>
               <p className="font-sans font-light text-[15px] sm:text-[16px] text-brand-grey mt-2 block select-none">
-                Founder & Director, Ocean Blue Education
+                Founder, Ocean Blue Education & Spoken English
               </p>
 
               {/* Biography paragraph */}
               <p className="font-sans font-light text-[16px] sm:text-[17px] text-[#555555] leading-relaxed mt-6">
-                Under the leadership of Mr. Dhananjay Rajput, Ocean Blue Education has grown from a vision of accessible, quality education into one of Ahmedabad's most trusted coaching institutions. Since founding Ocean Blue in 2009, he has guided the institute through 15 years of consistent academic results, student success stories, and community impact.
+                Under the leadership of Mr. Dhananjay Rajput, Ocean Blue Education & Spoken English has grown from a vision of accessible, quality education into one of Ahmedabad's most trusted coaching institutions. Since founding Ocean Blue Education & Spoken English in 2009, he has guided the institute through 15 years of consistent academic results, student success stories, and community impact.
               </p>
 
               {/* Founder Stats Grid */}
@@ -370,7 +373,7 @@ export default function About() {
                     2009
                   </span>
                   <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Founded Ocean Blue
+                    Founded Ocean Blue Education & Spoken English
                   </span>
                 </div>
                 <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4.5 text-center">
@@ -416,12 +419,12 @@ export default function About() {
                 Mr. Niraj Rajput
               </h3>
               <p className="font-sans font-light text-[15px] sm:text-[16px] text-brand-grey mt-2 block select-none">
-                Co-Founder & Director, Ocean Blue Education
+                Managing Director, Ocean Blue Education & Spoken English
               </p>
 
               {/* Biography paragraph */}
               <p className="font-sans font-light text-[16px] sm:text-[17px] text-[#555555] leading-relaxed mt-6">
-                Mr. Niraj Rajput co-leads Ocean Blue Education alongside the founder, overseeing academic operations, student welfare, and institutional growth. His dedication to personalized student attention and quality teaching standards has been central to Ocean Blue's reputation across Vastral and Nikol.
+                Mr. Niraj Rajput co-leads Ocean Blue Education & Spoken English alongside the founder, overseeing academic operations, student welfare, and institutional growth. His dedication to personalized student attention and quality teaching standards has been central to Ocean Blue Education & Spoken English's reputation across Vastral and Nikol.
               </p>
 
               {/* Co-founder Stats Grid */}
@@ -470,7 +473,7 @@ export default function About() {
               {/* Title & Name */}
               <div className="mt-6 select-none">
                 <h4 className="font-sans font-semibold text-[17px] text-[#1a1a1a]">Mr. Niraj Rajput</h4>
-                <p className="font-sans font-light text-[13.5px] text-[#888888] mt-1">Co-Founder & Director</p>
+                <p className="font-sans font-light text-[13.5px] text-[#888888] mt-1">Managing Director</p>
                 <a 
                   href="tel:+919033552048" 
                   className="inline-flex items-center gap-1.5 font-sans font-light text-[13px] text-brand-navy hover:underline mt-2 cursor-pointer"
@@ -593,7 +596,7 @@ export default function About() {
             Education Beyond Classrooms.
           </h2>
           <p className="font-sans font-light text-[15px] sm:text-[17px] text-white/70 mt-4 leading-relaxed max-w-xl text-center">
-            Ocean Blue actively participates in social welfare initiatives — because education is not limited to classrooms.
+            Ocean Blue Education & Spoken English actively participates in social welfare initiatives — because education is not limited to classrooms.
           </p>
 
           {/* Cards Grid */}
@@ -677,7 +680,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto flex flex-col items-center relative z-10">
           <h2 className="font-serif text-[34px] sm:text-[48px] text-brand-navy font-normal leading-tight">
-            Join the Ocean Blue Family.
+            Join the Ocean Blue Education & Spoken English Family.
           </h2>
           <p className="font-sans font-light text-[15px] sm:text-[17px] text-brand-navy/80 mt-3 max-w-xl text-center leading-relaxed">
             10,000+ students have trusted us. Be the next success story.

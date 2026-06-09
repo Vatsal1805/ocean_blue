@@ -6,34 +6,34 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "The conceptual depth in physics and mathematics classes is unmatched. The systematic test-prep strategy and daily doubt clinics gave me the edge I needed to succeed.",
-      name: "Aarav Sharma",
-      track: "IIT JEE Aspirant"
+      quote: "My experience at Ocean Blue Education was exceptional! The highly experienced instructors provided tailored guidance, making complex concepts easy to understand. Their specialized approach fostered a supportive learning environment that truly elevated my skills and confidence.",
+      name: "Hardik",
+      track: "GSEB Class X Student"
     },
     {
-      quote: "The biology lectures and weekly mock OMR diagnostics are exceptional. The coaching team gave me absolute clarity on complex zoology and anatomy concepts.",
-      name: "Meera Patel",
-      track: "NEET UG Candidate"
+      quote: "My experience was exceptional at Ocean Blue Education & Spoken English. Highly experienced instructors, tailored guidance, and supportive learning environment that elevated my confidence in spoken English. Highly recommended!",
+      name: "Mansi Bhatt",
+      track: "Spoken English Student"
     },
     {
-      quote: "The IELTS preparation and personalized vocabulary feedback sessions were incredible. I went from feeling stuck to securing my target band score for study abroad.",
-      name: "Kabir Mehta",
+      quote: "The structured preparation for IELTS, custom speaking slots, and IDP-partner level mock tests helped me secure my required band in the first attempt. Excellent guidance from all mentors!",
+      name: "Rohan Patel",
       track: "IELTS Academy Student"
     },
     {
-      quote: "As a Class 10 board student, the conceptual clarity in Science and Mathematics was a game-changer. The teachers bridge the gap between textbook formulas and real-world logic.",
-      name: "Ishaan Desai",
-      track: "Class 10 Board Topper"
+      quote: "Best coaching for JEE and NEET in Vastral. Detailed concept sheets, rigorous test series, and constant mentoring by Rajput sir helped me build problem-solving confidence.",
+      name: "Aayushi Shah",
+      track: "JEE Aspirant"
     },
     {
-      quote: "The Senior Secondary Science lectures are highly detailed. With dedicated NCERT sheets and parent-teacher tracking, they ensure excellent preparation for board exams.",
-      name: "Riya Sen",
-      track: "Class 12 Science Student"
+      quote: "Ocean Blue Education & Spoken English provides a perfect study atmosphere. The customized notes, regular evaluation sheets, and interactive board preparation classes were super helpful for my Class 12 boards.",
+      name: "Karan Rajput",
+      track: "Class 12 Commerce Student"
     },
     {
-      quote: "The spoken English modules and public speaking drills completely cured my stage fright. I can now converse, debate, and present in public with complete fluency.",
-      name: "Devang Vyas",
-      track: "Fluent English Alumni"
+      quote: "The concept-first lectures and library facilities are outstanding. Teachers are always available for doubt-solving, even after class hours. I highly recommend it to everyone!",
+      name: "Pooja Vaghela",
+      track: "Class 10 Student"
     }
   ];
 
@@ -60,7 +60,7 @@ export default function Testimonials() {
 
       {/* Subtitle */}
       <p className="font-sans font-light text-[12px] text-white/40 mt-1 leading-tight">
-        {item.track} · Ocean Blue Academy
+        {item.track} · Ocean Blue Education & Spoken English
       </p>
     </div>
   );

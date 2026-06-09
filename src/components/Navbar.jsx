@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
+const logoUrl = new URL('../../Assets/our team/logo.png', import.meta.url).href;
+
 export default function Navbar({ activeProgram, closeProgram }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -49,10 +51,15 @@ export default function Navbar({ activeProgram, closeProgram }) {
         <Link
           to="/"
           onClick={handleNavClick}
-          className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none cursor-pointer"
+          className="flex items-center gap-2 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none cursor-pointer"
         >
-          Ocean Blue
-          <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
+          <img
+            src={logoUrl}
+            alt="Ocean Blue Education & Spoken English Logo"
+            className="w-8 h-8 object-contain flex-shrink-0"
+          />
+          <span className="hidden sm:inline">Ocean Blue Education & Spoken English</span>
+          <span className="sm:hidden">Ocean Blue</span>
         </Link>
 
         {/* Center: Desktop Navigation Links */}
@@ -128,10 +135,15 @@ export default function Navbar({ activeProgram, closeProgram }) {
                   setMobileMenuOpen(false);
                   handleNavClick();
                 }}
-                className="flex items-center gap-1.5 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none"
+                className="flex items-center gap-2 font-sans font-medium text-[18px] text-brand-charcoal tracking-tight select-none"
               >
-                Ocean Blue
-                <span className="w-[8px] h-[8px] rounded-full bg-brand-yellow" />
+                <img
+                  src={logoUrl}
+                  alt="Ocean Blue Education & Spoken English Logo"
+                  className="w-8 h-8 object-contain flex-shrink-0"
+                />
+                <span className="hidden sm:inline">Ocean Blue Education & Spoken English</span>
+                <span className="sm:hidden">Ocean Blue</span>
               </Link>
 
               {/* Close Button X */}

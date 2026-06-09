@@ -68,8 +68,8 @@ function CourseCard({ program, idx, totalCards, isFullWidth }) {
       }}
       className={`bg-[#fafaf8] border border-[#dddbd4] border-l-[4px] border-l-brand-yellow rounded-[24px] p-8 flex transition-all duration-300 relative group cursor-pointer ${
         isFullWidth 
-          ? 'flex-col md:flex-row md:items-stretch md:justify-between min-h-[220px]' 
-          : 'flex-col items-start justify-between min-h-[220px]'
+          ? 'flex-col md:flex-row md:items-stretch md:justify-between min-h-[220px] md:min-h-[280px]' 
+          : 'flex-col items-start justify-between min-h-[220px] md:min-h-[280px]'
       }`}
     >
       {/* 1. Custom Hover Cursor Circle */}

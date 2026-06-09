@@ -23,8 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Assets Folder
-Assets/
-assets/
+# Assets & Utilities
+scratch/
 OCEAN_BLUE_PROJECT_CONTEXT.md
 

@@ -52,7 +52,7 @@ export default function BriefOB() {
             [ ABOUT US ]
           </span>
           <h2 className="font-serif text-[36px] md:text-[48px] text-brand-charcoal font-normal leading-tight">
-            Ocean Blue Education.
+            Ocean Blue Education & Spoken English.
           </h2>
           <p className="font-sans font-light text-[16px] md:text-[17px] text-[#555555] leading-relaxed mt-5 max-w-2xl">
             Established in 2009, Ocean Blue Education & Spoken English has emerged as one of Ahmedabad's most trusted and result-oriented educational institutions. With a mission to provide quality education, skill development, and personality enhancement, we have successfully guided more than 10,000 students and alumni towards academic excellence and career success.

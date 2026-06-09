@@ -15,41 +15,41 @@ export default function Gallery() {
   }, []);
 
   const getAssetImgUrl = (filename) => {
-    return new URL(`../../Assets/${filename}`, import.meta.url).href;
+    return new URL(`../../Assets/Gallary/${filename}`, import.meta.url).href;
   };
 
   const images = [
     {
-      label: "Independence Day Celebration",
-      src: getAssetImgUrl("IMG-20220815-WA0026.jpg")
+      label: "Celebrations",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.44 PM (1).jpeg")
     },
     {
-      label: "Interactive Classroom Session",
-      src: getAssetImgUrl("IMG-20230215-WA0003(1).jpg")
+      label: "Interactive Classroom Learning",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.30 PM (1).jpeg")
     },
     {
-      label: "Doubt Clearing Session",
-      src: getAssetImgUrl("IMG-20231109-WA0054(1).jpg")
+      label: "Concept Lectures",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.33 PM.jpeg")
     },
     {
-      label: "Annual Student Meetup",
-      src: getAssetImgUrl("IMG-20231231-WA0007(1).jpg")
+      label: "Group Discussions",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.30 PM.jpeg")
     },
     {
-      label: "Republic Day Event",
-      src: getAssetImgUrl("IMG-20240126-WA0008.jpg")
+      label: "Doubt Solving Clinics",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.31 PM.jpeg")
     },
     {
-      label: "Flag Hoisting Ceremony",
-      src: getAssetImgUrl("IMG-20240126-WA0010.jpg")
+      label: "Board Exam Seminars",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.35 PM.jpeg")
     },
     {
-      label: "Republic Day Celebration",
-      src: getAssetImgUrl("IMG-20240126-WA0012.jpg")
+      label: "Language Labs",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.39 PM.jpeg")
     },
     {
-      label: "Classroom Learning Environment",
-      src: getAssetImgUrl("IMG_20200125_141006.jpg")
+      label: "Republic Day Gatherings",
+      src: getAssetImgUrl("WhatsApp Image 2026-06-08 at 6.29.45 PM.jpeg")
     }
   ];
 
@@ -74,7 +74,7 @@ export default function Gallery() {
             [ OUR INSTITUTE ]
           </span>
           <h2 className="font-serif text-[38px] sm:text-[48px] text-[#1a1a1a] font-normal leading-tight">
-            Inside Ocean Blue.
+            Inside Ocean Blue Education & Spoken English.
           </h2>
         </div>
 

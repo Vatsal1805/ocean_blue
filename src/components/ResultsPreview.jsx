@@ -43,7 +43,7 @@ export default function ResultsPreview() {
       score: "Band 7.5",
       name: "Student Placeholder",
       exam: "IELTS Academic · 2024 Batch",
-      quote: "Ocean Blue's IELTS coaching is structured and thorough. I achieved my target band score in the first attempt."
+      quote: "Ocean Blue Education & Spoken English's IELTS coaching is structured and thorough. I achieved my target band score in the first attempt."
     },
     {
       badge: "IELTS GENERAL 2024",
@@ -51,7 +51,7 @@ export default function ResultsPreview() {
       score: "Band 7.0",
       name: "Student Placeholder",
       exam: "IELTS General · 2024 Batch",
-      quote: "The writing task coaching and mock tests at Ocean Blue helped me improve from band 5.5 to 7.0."
+      quote: "The writing task coaching and mock tests at Ocean Blue Education & Spoken English helped me improve from band 5.5 to 7.0."
     }
   ];
 

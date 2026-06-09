@@ -32,10 +32,10 @@ export default function IELTS() {
 
   // Dynamic SEO Meta Tags
   useEffect(() => {
-    document.title = "IELTS · PTE · Study Abroad Visa — Ocean Blue Education Ahmedabad";
+    document.title = "IELTS · PTE · Study Abroad Visa — Ocean Blue Education & Spoken English Ahmedabad";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Ocean Blue Education is an IDP and Pearson Authorised Partner in Ahmedabad. Expert IELTS, PTE preparation, and complete Visa assistance. Book your free assessment today.");
+      metaDesc.setAttribute("content", "Ocean Blue Education & Spoken English is an IDP and Pearson Authorised Partner in Ahmedabad. Expert IELTS, PTE preparation, and complete Visa assistance. Book your free assessment today.");
     }
   }, []);
 
@@ -167,7 +167,7 @@ export default function IELTS() {
             variants={itemVariants}
             className="font-serif text-[38px] sm:text-[64px] text-brand-charcoal font-normal leading-tight tracking-tight max-w-3xl"
           >
-            Your Global Future <span className="text-brand-navy font-light italic relative inline-block">Starts Here.<span className="absolute bottom-2 left-0 right-0 h-[2.5px] bg-[#f5c800]/50 rounded-full hidden sm:block" /></span>
+            Your Global Future <span className="text-brand-navy font-light italic relative inline-block">Starts Here.</span>
           </motion.h1>
           
           <motion.p 
@@ -971,7 +971,7 @@ export default function IELTS() {
                   Band 7.5
                 </h4>
                 <p className="font-sans font-light text-[13.5px] text-white/60 leading-relaxed italic">
-                  "Ocean Blue's speaking sessions and mock tests helped me achieve my target band in the first attempt."
+                  "Ocean Blue Education & Spoken English's speaking sessions and mock tests helped me achieve my target band in the first attempt."
                 </p>
               </div>
               <div className="pt-4 border-t border-white/[0.08] select-none">
@@ -1019,7 +1019,7 @@ export default function IELTS() {
                   79 / 90
                 </h4>
                 <p className="font-sans font-light text-[13.5px] text-white/60 leading-relaxed italic">
-                  "PTE preparation at Ocean Blue is structured and thorough. I felt completely ready on exam day."
+                  "PTE preparation at Ocean Blue Education & Spoken English is structured and thorough. I felt completely ready on exam day."
                 </p>
               </div>
               <div className="pt-4 border-t border-white/[0.08] select-none">
@@ -1031,7 +1031,7 @@ export default function IELTS() {
           </div>
 
           <div className="font-sans font-light text-[12px] text-white/30 italic text-center select-none">
-            * Results shown are placeholders. Actual student results will be updated by Ocean Blue Education.
+            * Results shown are placeholders. Actual student results will be updated by Ocean Blue Education & Spoken English.
           </div>
 
         </div>

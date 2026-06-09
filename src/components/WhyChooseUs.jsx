@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
       num: "02",
       Icon: IconClock,
       title: "No Time Limit Learning Support",
-      desc: "Students can approach teachers for guidance and doubt-solving whenever required — before class, after class, or between sessions. There is no time limit on learning support at Ocean Blue.",
+      desc: "Students can approach teachers for guidance and doubt-solving whenever required — before class, after class, or between sessions. There is no time limit on learning support at Ocean Blue Education & Spoken English.",
       details: [
         "Doubt solving available beyond class hours",
         "Teachers accessible for personal guidance",
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
       num: "03",
       Icon: IconFileText,
       title: "Exclusive Study Material",
-      desc: "Every enrolled student receives Ocean Blue's specially designed modules, notes, worksheets, and practice papers — built from 15 years of teaching experience. Not borrowed from publishers. Printed and distributed to every student.",
+      desc: "Every enrolled student receives Ocean Blue Education & Spoken English's specially designed modules, notes, worksheets, and practice papers — built from 15 years of teaching experience. Not borrowed from publishers. Printed and distributed to every student.",
       details: [
         "Custom modules and notes by our faculty",
         "Chapter-wise worksheets and practice papers",
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
       num: "06",
       Icon: IconMicrophone2,
       title: "Everyday Spoken English Practice",
-      desc: "Regardless of which academic program a student is enrolled in, daily spoken English practice is integrated into every student's experience at Ocean Blue. Communication confidence is built alongside board and entrance exam preparation — every single day.",
+      desc: "Regardless of which academic program a student is enrolled in, daily spoken English practice is integrated into every student's experience at Ocean Blue Education & Spoken English. Communication confidence is built alongside board and entrance exam preparation — every single day.",
       details: [
         "Daily practice sessions for all enrolled students",
         "Fluency built alongside academic programs",

@@ -97,12 +97,12 @@ export default function ResultsPage() {
 
   // Dynamic SEO Meta Tags
   useEffect(() => {
-    document.title = "Student Results & Toppers — Ocean Blue Education Ahmedabad | JEE NEET IELTS Board";
+    document.title = "Student Results & Toppers — Ocean Blue Education & Spoken English Ahmedabad | JEE NEET IELTS Board";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "See the results of Ocean Blue Education students across JEE, NEET, Board 10th & 12th, and IELTS programs. 10,000+ students guided since 2009. Vastral & Nikol, Ahmedabad."
+        "See the results of Ocean Blue Education & Spoken English students across JEE, NEET, Board 10th & 12th, and IELTS programs. 10,000+ students guided since 2009. Vastral & Nikol, Ahmedabad."
       );
     }
   }, []);
@@ -171,7 +171,7 @@ export default function ResultsPage() {
       score: "620 / 720",
       name: "Student Topper",
       program: "NEET UG · 2024 Batch",
-      quote: "Biology sessions and NCERT focus at Ocean Blue gave me the clarity I needed to crack NEET.",
+      quote: "Biology sessions and NCERT focus at Ocean Blue Education & Spoken English gave me the clarity I needed to crack NEET.",
       image: getResultImgUrl("IMG_9097.JPG.jpeg")
     },
     {
@@ -524,7 +524,7 @@ export default function ResultsPage() {
 
           {/* Bottom Disclaimer */}
           <p className="font-sans font-light text-[12px] text-brand-grey italic mt-12 text-center select-none">
-            * All results shown are placeholders. Actual student data will be updated by Ocean Blue Education.
+            * All results shown are placeholders. Actual student data will be updated by Ocean Blue Education & Spoken English.
           </p>
 
         </div>
@@ -689,7 +689,7 @@ export default function ResultsPage() {
               Results by Academic Year.
             </h2>
             <p className="font-sans font-light text-[15px] sm:text-[16px] text-brand-grey mt-2">
-              Ocean Blue's track record since 2009 — updated every academic year.
+              Ocean Blue Education & Spoken English's track record since 2009 — updated every academic year.
             </p>
           </div>
 
@@ -775,7 +775,7 @@ export default function ResultsPage() {
 
           {/* Archive Footer Note */}
           <div className="font-sans font-light text-[13px] text-[#999999] italic mt-8 text-center select-none">
-            * Previous year results will be added progressively. Contact Ocean Blue for complete results.
+            * Previous year results will be added progressively. Contact Ocean Blue Education & Spoken English for complete results.
           </div>
 
         </div>
@@ -816,7 +816,7 @@ export default function ResultsPage() {
           </motion.h2>
 
           <p className="font-sans font-light text-[16px] sm:text-[17px] text-brand-navy/80 mt-3 max-w-xl text-center leading-relaxed">
-            10,000+ students have trusted Ocean Blue since 2009. Join them.
+            10,000+ students have trusted Ocean Blue Education & Spoken English since 2009. Join them.
           </p>
 
           <div className="mt-10">

@@ -26,10 +26,10 @@ export default function CoursesPage() {
 
   // Dynamic SEO Meta Tags injection
   useEffect(() => {
-    document.title = "Our Programs — Ocean Blue Education | 4th–12th, JEE, NEET, Spoken English, Ahmedabad";
+    document.title = "Our Programs — Ocean Blue Education & Spoken English | 4th–12th, JEE, NEET, Spoken English, Ahmedabad";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Explore all coaching programs at Ocean Blue Education — 4th to 12th tuition (CBSE/ICSE/GSEB), JEE, NEET, Foundation, Spoken English, Basic English, and Reading & Writing. Vastral & Nikol, Ahmedabad.");
+      metaDesc.setAttribute("content", "Explore all coaching programs at Ocean Blue Education & Spoken English — 4th to 12th tuition (CBSE/ICSE/GSEB), JEE, NEET, Foundation, Spoken English, Basic English, and Reading & Writing. Vastral & Nikol, Ahmedabad.");
     }
   }, []);
 
@@ -155,7 +155,7 @@ export default function CoursesPage() {
             variants={heroItemVariants}
             className="font-serif text-[30px] sm:text-[38px] md:text-[64px] text-brand-charcoal font-normal leading-tight tracking-tight max-w-2xl animate-fade-in"
           >
-            Every Standard. <span className="text-brand-navy font-light italic relative inline-block">Every Stream.<span className="absolute bottom-2 left-0 right-0 h-[2.5px] bg-[#f5c800]/50 rounded-full hidden sm:block" /></span>
+            Every Standard. <span className="text-brand-navy font-light italic relative inline-block">Every Stream.</span>
           </motion.h1>
           
           <motion.p 
@@ -1118,7 +1118,7 @@ export default function CoursesPage() {
           {/* Full-width bottom highlight strip */}
           <div className="mt-12 w-full bg-[#f3f2ee] border border-[#dddbd4] rounded-[16px] p-7 md:p-9 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
             <span className="font-sans font-light text-[15px] sm:text-[17px] text-[#555555] text-center md:text-left leading-relaxed">
-              ⭐ <strong>10,000+ Students</strong> have trusted Ocean Blue Education for academic and entrance prep success since 2009.
+              ⭐ <strong>10,000+ Students</strong> have trusted Ocean Blue Education & Spoken English for academic and entrance prep success since 2009.
             </span>
             <Link 
               to="/#contact"
@@ -1474,7 +1474,7 @@ export default function CoursesPage() {
               Exclusive Study Material.
             </h2>
             <p className="font-sans font-light text-[15px] sm:text-[17px] text-[#888888] max-w-xl mt-4 leading-relaxed">
-              Every enrolled student receives Ocean Blue's specially designed modules, notes, worksheets, and practice papers — built from 15 years of teaching experience.
+              Every enrolled student receives Ocean Blue Education & Spoken English's specially designed modules, notes, worksheets, and practice papers — built from 15 years of teaching experience.
             </p>
           </div>
 
