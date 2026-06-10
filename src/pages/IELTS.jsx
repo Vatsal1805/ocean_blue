@@ -158,7 +158,7 @@ export default function IELTS() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 hidden sm:block"
           >
             [ IELTS · PTE · VISA ]
           </motion.span>
@@ -1039,7 +1039,16 @@ export default function IELTS() {
 
       {/* SECTION 8 — BROCHURE DOWNLOAD STRIP */}
       <section className="relative w-full bg-[#f5c800] py-14 px-5 md:px-16 overflow-hidden text-center select-none">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
+        {/* Sketch Background */}
+        <div 
+          className="absolute inset-0 pointer-events-none z-0 opacity-[0.06] mix-blend-multiply"
+          style={{
+            backgroundImage: "url('/doodle_bg.png')",
+            backgroundRepeat: "repeat",
+            backgroundSize: "360px auto",
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
           <h2 className="font-serif text-[32px] sm:text-[40px] text-[#1a237e] font-normal leading-tight">
             Get the Complete IELTS & PTE Guide.
           </h2>

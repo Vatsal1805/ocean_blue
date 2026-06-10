@@ -118,7 +118,7 @@ export default function About() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 hidden sm:block"
           >
             [ OUR STORY ]
           </motion.span>
@@ -367,28 +367,28 @@ export default function About() {
               </p>
 
               {/* Founder Stats Grid */}
-              <div className="grid grid-cols-3 gap-3.5 mt-8 w-full select-none">
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 w-full select-none">
+                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     2009
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Founded Ocean Blue Education & Spoken English
                   </span>
                 </div>
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     15+
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Years Leading
                   </span>
                 </div>
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     10,000+
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Students Guided
                   </span>
                 </div>
@@ -428,28 +428,28 @@ export default function About() {
               </p>
 
               {/* Co-founder Stats Grid */}
-              <div className="grid grid-cols-3 gap-3.5 mt-8 w-full select-none">
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 w-full select-none">
+                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     Est. 2009
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Joined Directorship
                   </span>
                 </div>
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     2 Branches
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Academic Expansion
                   </span>
                 </div>
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4.5 text-center">
+                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
                   <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
                     15+ Years
                   </span>
-                  <span className="font-sans font-light text-[11px] sm:text-[12px] text-[#888888] leading-tight block">
+                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
                     Of Trust & Results
                   </span>
                 </div>

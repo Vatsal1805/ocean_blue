@@ -105,29 +105,6 @@ export default function Hero() {
             View Courses
           </a>
         </motion.div>
-
-        {/* trust indicator bar */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3.5"
-        >
-          {/* Overlapping monochrome dark circles */}
-          <div className="flex -space-x-3 select-none">
-            <div className="w-8 h-8 rounded-full border border-brand-border bg-brand-secondaryBg flex items-center justify-center text-[10px] text-brand-grey font-mono">
-              01
-            </div>
-            <div className="w-8 h-8 rounded-full border border-brand-border bg-brand-primaryBg flex items-center justify-center text-[10px] text-brand-grey font-mono">
-              02
-            </div>
-            <div className="w-8 h-8 rounded-full border border-brand-border bg-brand-secondaryBg flex items-center justify-center text-[10px] text-brand-grey font-mono">
-              03
-            </div>
-          </div>
-          {/* trust details copy */}
-          <span className="font-sans font-light text-[14px] text-brand-grey tracking-wide">
-            15+ Years of Trust (Since 2009) &middot; 10,000+ Students &middot; 4.7★ (147 Google Reviews)
-          </span>
-        </motion.div>
       </motion.div>
     </section>
   );

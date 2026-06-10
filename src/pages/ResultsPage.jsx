@@ -400,7 +400,7 @@ export default function ResultsPage() {
         >
           <motion.span 
             variants={itemVariants}
-            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 hidden sm:block"
           >
             [ STUDENT ACHIEVEMENTS ]
           </motion.span>

@@ -60,10 +60,10 @@ export default function Statistics() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full bg-brand-secondaryBg border-b border-brand-border py-[60px]"
+      className="w-full bg-brand-secondaryBg border-b border-brand-border py-10 md:py-[60px]"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-16">
-        <div className="grid grid-cols-4 divide-x divide-brand-border items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x-0 md:divide-x divide-brand-border gap-y-8 md:gap-y-0 items-center">
           {stats.map((stat, idx) => {
             const displayVal = useCountUp(stat.target, 1500, stat.isDecimal, isInView);
 

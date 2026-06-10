@@ -146,7 +146,7 @@ export default function CoursesPage() {
         >
           <motion.span 
             variants={heroItemVariants}
-            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 block"
+            className="font-sans font-bold text-[11px] text-brand-label tracking-[0.25em] uppercase mb-4 hidden sm:block"
           >
             [ OUR PROGRAMS ]
           </motion.span>
@@ -1013,13 +1013,12 @@ export default function CoursesPage() {
           {/* Two Columns Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             
-            {/* Column 1: JEE Prep */}
-            <div className="bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[24px] p-8 md:p-10 text-left shadow-sm flex flex-col gap-6">
-              <div className="flex items-center justify-between border-b border-[#dddbd4] pb-5 select-none">
-                <span className="bg-[#1a237e] text-white font-sans font-bold text-[10px] tracking-wider uppercase rounded-full px-4 py-1.5">
+            <div className="bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[24px] p-5 sm:p-8 md:p-10 text-left shadow-sm flex flex-col gap-6">
+              <div className="flex items-center justify-between border-b border-[#dddbd4] pb-5 select-none gap-2">
+                <span className="bg-[#1a237e] text-white font-sans font-bold text-[9px] sm:text-[10px] tracking-wider uppercase rounded-full px-3 py-1.5 sm:px-4 sm:py-1.5 whitespace-nowrap flex-shrink-0">
                   JEE MAINS & ADVANCED
                 </span>
-                <span className="font-sans font-light text-[13px] text-[#888888]">Engineering Core</span>
+                <span className="font-sans font-light text-[12px] sm:text-[13px] text-[#888888] whitespace-nowrap">Engineering Core</span>
               </div>
 
               {/* Subjects tags */}
@@ -1027,10 +1026,10 @@ export default function CoursesPage() {
                 <span className="font-sans font-semibold text-[13px] uppercase tracking-wider text-[#1a1a1a] block mb-3.5 select-none">
                   Core Subjects:
                 </span>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="flex flex-wrap gap-2.5">
                   {["Physics", "Chemistry", "Mathematics"].map((sub) => (
-                    <div key={sub} className="bg-white border-l-[3px] border-l-[#1a237e] border border-[#dddbd4] border-l-3 rounded-lg p-3 text-center">
-                      <span className="font-sans font-semibold text-[13.5px] text-[#1a1a1a]">{sub}</span>
+                    <div key={sub} className="flex-1 min-w-[95px] sm:min-w-0 bg-white border-l-[3px] border-l-[#1a237e] border border-[#dddbd4] rounded-lg py-2.5 px-3 text-center shadow-xs">
+                      <span className="font-sans font-semibold text-[13px] sm:text-[13.5px] text-[#1a1a1a] whitespace-nowrap">{sub}</span>
                     </div>
                   ))}
                 </div>
@@ -1063,13 +1062,12 @@ export default function CoursesPage() {
               </div>
             </div>
 
-            {/* Column 2: NEET Prep */}
-            <div className="bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[24px] p-8 md:p-10 text-left shadow-sm flex flex-col gap-6">
-              <div className="flex items-center justify-between border-b border-[#dddbd4] pb-5 select-none">
-                <span className="bg-[#1a237e] text-white font-sans font-bold text-[10px] tracking-wider uppercase rounded-full px-4 py-1.5">
+            <div className="bg-[#f3f2ee]/50 border border-[#dddbd4] rounded-[24px] p-5 sm:p-8 md:p-10 text-left shadow-sm flex flex-col gap-6">
+              <div className="flex items-center justify-between border-b border-[#dddbd4] pb-5 select-none gap-2">
+                <span className="bg-[#1a237e] text-white font-sans font-bold text-[9px] sm:text-[10px] tracking-wider uppercase rounded-full px-3 py-1.5 sm:px-4 sm:py-1.5 whitespace-nowrap flex-shrink-0">
                   NEET UG
                 </span>
-                <span className="font-sans font-light text-[13px] text-[#888888]">Medical Core</span>
+                <span className="font-sans font-light text-[12px] sm:text-[13px] text-[#888888] whitespace-nowrap">Medical Core</span>
               </div>
 
               {/* Subjects tags */}
@@ -1077,10 +1075,10 @@ export default function CoursesPage() {
                 <span className="font-sans font-semibold text-[13px] uppercase tracking-wider text-[#1a1a1a] block mb-3.5 select-none">
                   Core Subjects:
                 </span>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="flex flex-wrap gap-2.5">
                   {["Physics", "Chemistry", "Biology"].map((sub) => (
-                    <div key={sub} className="bg-white border-l-[3px] border-l-[#1a237e] border border-[#dddbd4] border-l-3 rounded-lg p-3 text-center">
-                      <span className="font-sans font-semibold text-[13.5px] text-[#1a1a1a]">{sub}</span>
+                    <div key={sub} className="flex-1 min-w-[95px] sm:min-w-0 bg-white border-l-[3px] border-l-[#1a237e] border border-[#dddbd4] rounded-lg py-2.5 px-3 text-center shadow-xs">
+                      <span className="font-sans font-semibold text-[13px] sm:text-[13.5px] text-[#1a1a1a] whitespace-nowrap">{sub}</span>
                     </div>
                   ))}
                 </div>
