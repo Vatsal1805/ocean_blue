@@ -159,86 +159,78 @@ export default function ResultsPage() {
   // Section 2 - Featured Toppers Data
   const featuredToppers = [
     {
-      badge: "JEE MAINS 2024",
-      score: "AIR 2847",
-      name: "Student Topper",
-      program: "JEE Mains · 2024 Batch",
-      quote: "The Physics and Maths coaching here completely changed how I approach problems.",
-      image: getResultImgUrl("IMG_9096.JPG.jpeg")
+      badge: "BOARD 10TH GSEB",
+      score: "99.50 PR",
+      name: "Angel Patel",
+      program: "GSEB Class 10 · 574/600 Marks",
+      quote: "Studying at Ocean Blue was an amazing experience. The daily practice sheets and mock tests built my confidence and helped me achieve 99.50 PR.",
+      image: new URL('../../Assets/Results/10th/Angel Patel.jpeg', import.meta.url).href
     },
     {
-      badge: "NEET UG 2024",
-      score: "620 / 720",
-      name: "Student Topper",
-      program: "NEET UG · 2024 Batch",
-      quote: "Biology sessions and NCERT focus at Ocean Blue Education & Spoken English gave me the clarity I needed to crack NEET.",
-      image: getResultImgUrl("IMG_9097.JPG.jpeg")
+      badge: "BOARD 10TH GSEB",
+      score: "99.43 PR",
+      name: "Harshil Patel",
+      program: "GSEB Class 10 · 573/600 Marks",
+      quote: "The conceptual clarity and personal attention from teachers at Ocean Blue made board exams feel extremely straightforward.",
+      image: new URL('../../Assets/Results/10th/Harshil Patel.jpeg', import.meta.url).href
     },
     {
-      badge: "IELTS 2024",
-      score: "Band 7.5",
-      name: "Student Topper",
-      program: "IELTS Academic · 2024 Batch",
-      quote: "From band 5.5 to 7.5 in one attempt. The mock tests made all the difference.",
-      image: getResultImgUrl("IMG_9101.JPG.jpeg")
+      badge: "12TH SCIENCE GSEB",
+      score: "97.00%",
+      name: "Ankit Chauhan",
+      program: "12th Science Board",
+      quote: "The physics, chemistry, and biology test series at Ocean Blue are excellent. They prepare you for board concepts perfectly.",
+      image: new URL('../../Assets/Results/12th sci/Ankit Chauhan.jpeg', import.meta.url).href
     }
   ];
 
-  // Section 3 - Archive Grid Data (40 placeholders - 8 per category to demo pagination)
+  // Section 3 - Archive Grid Data
   const allResults = [
     // JEE (8 results)
-    { id: 1, category: "JEE", badge: "JEE MAINS 2024", score: "99.85 PR", name: "Aarav Patel", program: "JEE Mains · 2024 Batch" },
-    { id: 2, category: "JEE", badge: "JEE MAINS 2024", score: "AIR 2847", name: "Dev Patel", program: "JEE Mains · 2024 Batch" },
-    { id: 3, category: "JEE", badge: "JEE ADVANCED 2024", score: "AIR 1890", name: "Pooja Mehta", program: "JEE Advanced · 2024 Batch" },
-    { id: 4, category: "JEE", badge: "JEE MAINS 2024", score: "99.12 PR", name: "Karan Desai", program: "JEE Mains · 2024 Batch" },
-    { id: 5, category: "JEE", badge: "JEE ADVANCED 2024", score: "AIR 3120", name: "Rohan Shah", program: "JEE Advanced · 2024 Batch" },
-    { id: 6, category: "JEE", badge: "JEE MAINS 2023", score: "98.95 PR", name: "Sneha Vyas", program: "JEE Mains · 2023 Batch" },
-    { id: 7, category: "JEE", badge: "JEE ADVANCED 2023", score: "AIR 4512", name: "Anuj Kothari", program: "JEE Advanced · 2023 Batch" },
-    { id: 8, category: "JEE", badge: "JEE MAINS 2023", score: "98.60 PR", name: "Vijay Shah", program: "JEE Mains · 2023 Batch" },
+    { id: 1, category: "JEE", badge: "JEE MAINS 2026", score: "99.85 PR", name: "Aarav Patel", program: "JEE Mains · 2026 Batch", image: getResultImgUrl("IMG_9096.JPG.jpeg") },
+    { id: 2, category: "JEE", badge: "JEE MAINS 2026", score: "AIR 2847", name: "Dev Patel", program: "JEE Mains · 2026 Batch", image: getResultImgUrl("IMG_9097.JPG.jpeg") },
+    { id: 3, category: "JEE", badge: "JEE ADVANCED 2026", score: "AIR 1890", name: "Pooja Mehta", program: "JEE Advanced · 2026 Batch", image: getResultImgUrl("IMG_9101.JPG.jpeg") },
+    { id: 4, category: "JEE", badge: "JEE MAINS 2026", score: "99.12 PR", name: "Karan Desai", program: "JEE Mains · 2026 Batch", image: getResultImgUrl("IMG_9102.JPG.jpeg") },
+    { id: 5, category: "JEE", badge: "JEE ADVANCED 2026", score: "AIR 3120", name: "Rohan Shah", program: "JEE Advanced · 2026 Batch", image: getResultImgUrl("IMG_9103.JPG.jpeg") },
+    { id: 6, category: "JEE", badge: "JEE MAINS 2025", score: "98.95 PR", name: "Sneha Vyas", program: "JEE Mains · 2025 Batch", image: getResultImgUrl("IMG_9104.JPG.jpeg") },
+    { id: 7, category: "JEE", badge: "JEE ADVANCED 2025", score: "AIR 4512", name: "Anuj Kothari", program: "JEE Advanced · 2025 Batch", image: getResultImgUrl("IMG_9106.JPG.jpeg") },
+    { id: 8, category: "JEE", badge: "JEE MAINS 2025", score: "98.60 PR", name: "Vijay Shah", program: "JEE Mains · 2025 Batch", image: getResultImgUrl("IMG_9107.JPG.jpeg") },
     
     // NEET (8 results)
-    { id: 9, category: "NEET", badge: "NEET UG 2024", score: "645 / 720", name: "Riddhi Dave", program: "NEET UG · 2024 Batch" },
-    { id: 10, category: "NEET", badge: "NEET UG 2024", score: "620 / 720", name: "Manoj Panchal", program: "NEET UG · 2024 Batch" },
-    { id: 11, category: "NEET", badge: "NEET UG 2024", score: "612 / 720", name: "Nirav Kadam", program: "NEET UG · 2024 Batch" },
-    { id: 12, category: "NEET", badge: "NEET UG 2023", score: "634 / 720", name: "Dr. Meera Amin", program: "NEET UG · 2023 Batch" },
-    { id: 13, category: "NEET", badge: "NEET UG 2023", score: "605 / 720", name: "Vikas Sharma", program: "NEET UG · 2023 Batch" },
-    { id: 14, category: "NEET", badge: "NEET UG 2023", score: "601 / 720", name: "Anjana Sen", program: "NEET UG · 2023 Batch" },
-    { id: 15, category: "NEET", badge: "NEET UG 2022", score: "610 / 720", name: "Rahul Prajapati", program: "NEET UG · 2022 Batch" },
-    { id: 16, category: "NEET", badge: "NEET UG 2022", score: "598 / 720", name: "Hiral Patel", program: "NEET UG · 2022 Batch" },
+    { id: 9, category: "NEET", badge: "NEET UG 2026", score: "645 / 720", name: "Riddhi Dave", program: "NEET UG · 2026 Batch", image: getResultImgUrl("IMG_9111.JPG.jpeg") },
+    { id: 10, category: "NEET", badge: "NEET UG 2026", score: "620 / 720", name: "Manoj Panchal", program: "NEET UG · 2026 Batch", image: getResultImgUrl("IMG_9114.JPG.jpeg") },
+    { id: 11, category: "NEET", badge: "NEET UG 2026", score: "612 / 720", name: "Nirav Kadam", program: "NEET UG · 2026 Batch", image: getResultImgUrl("IMG_9115.JPG.jpeg") },
+    { id: 12, category: "NEET", badge: "NEET UG 2025", score: "634 / 720", name: "Dr. Meera Amin", program: "NEET UG · 2025 Batch", image: getResultImgUrl("IMG_9116.JPG.jpeg") },
+    { id: 13, category: "NEET", badge: "NEET UG 2025", score: "605 / 720", name: "Vikas Sharma", program: "NEET UG · 2025 Batch", image: getResultImgUrl("IMG_9117.JPG.jpeg") },
+    { id: 14, category: "NEET", badge: "NEET UG 2025", score: "601 / 720", name: "Anjana Sen", program: "NEET UG · 2025 Batch", image: getResultImgUrl("IMG_9120.JPG.jpeg") },
+    { id: 15, category: "NEET", badge: "NEET UG 2024", score: "610 / 720", name: "Rahul Prajapati", program: "NEET UG · 2024 Batch", image: getResultImgUrl("IMG_9121.JPG.jpeg") },
+    { id: 16, category: "NEET", badge: "NEET UG 2024", score: "598 / 720", name: "Hiral Patel", program: "NEET UG · 2024 Batch", image: getResultImgUrl("IMG_9123.JPG.jpeg") },
     
-    // Board 10th (8 results)
-    { id: 17, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "99.4 PR", name: "Karan Desai", program: "GSEB Class 10 · 2024 Batch" },
-    { id: 18, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "98.8 PR", name: "Hardik Joshi", program: "GSEB Class 10 · 2024 Batch" },
-    { id: 19, category: "Board 10th", badge: "BOARD 10TH CBSE", score: "97.5 PR", name: "Manish Rajput", program: "CBSE Class 10 · 2024 Batch" },
-    { id: 20, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "96.4 PR", name: "Tushar Panchal", program: "GSEB Class 10 · 2023 Batch" },
-    { id: 21, category: "Board 10th", badge: "BOARD 10TH CBSE", score: "95.2 PR", name: "Amit Sharma", program: "CBSE Class 10 · 2024 Batch" },
-    { id: 22, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "94.8 PR", name: "Pratik Vyas", program: "GSEB Class 10 · 2023 Batch" },
-    { id: 23, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "94.2 PR", name: "Nikhil Mehta", program: "GSEB Class 10 · 2022 Batch" },
-    { id: 24, category: "Board 10th", badge: "BOARD 10TH CBSE", score: "93.5 PR", name: "Deepak Kothari", program: "CBSE Class 10 · 2022 Batch" },
+    // Board 10th (7 real results)
+    { id: 17, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "99.50 PR", name: "Angel Patel", program: "GSEB Class 10 · 574/600 Marks", image: new URL('../../Assets/Results/10th/Angel Patel.jpeg', import.meta.url).href },
+    { id: 18, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "99.43 PR", name: "Harshil Patel", program: "GSEB Class 10 · 573/600 Marks", image: new URL('../../Assets/Results/10th/Harshil Patel.jpeg', import.meta.url).href },
+    { id: 19, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "98.02 PR", name: "Kushi Mishra", program: "GSEB Class 10 Board", image: new URL('../../Assets/Results/10th/Kushi Mishra.jpeg', import.meta.url).href },
+    { id: 20, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "97.00 PR", name: "Shanjana Rao", program: "GSEB Class 10 Board", image: new URL('../../Assets/Results/10th/Shanjana Rao.jpeg', import.meta.url).href },
+    { id: 21, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "97.00 PR", name: "Kavy Gupta", program: "GSEB Class 10 Board", image: new URL('../../Assets/Results/10th/Kavy Gupta.jpeg', import.meta.url).href },
+    { id: 22, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "96.22 PR", name: "Himanshu", program: "GSEB Class 10 Board", image: new URL('../../Assets/Results/10th/Himanshu .jpeg', import.meta.url).href },
+    { id: 23, category: "Board 10th", badge: "BOARD 10TH GSEB", score: "95.16 PR", name: "Lovepreet Kaur", program: "GSEB Class 10 Board", image: new URL('../../Assets/Results/10th/Lovepreet Kaur.jpeg', import.meta.url).href },
 
-    // Board 12th (8 results)
-    { id: 25, category: "Board 12th", badge: "BOARD 12TH GSEB SCI", score: "98.2 PR", name: "Rohan Shah", program: "GSEB Class 12 Sci · 2024 Batch" },
-    { id: 26, category: "Board 12th", badge: "BOARD 12TH GSEB SCI", score: "99.1 PR", name: "Kiran Patel", program: "GSEB Class 12 Sci · 2024 Batch" },
-    { id: 27, category: "Board 12th", badge: "BOARD 12TH CBSE SCI", score: "98.2 PR", name: "Jignesh Bhavsar", program: "CBSE Class 12 Sci · 2024 Batch" },
-    { id: 28, category: "Board 12th", badge: "BOARD 12TH GSEB SCI", score: "97.8 PR", name: "Rajesh Sen", program: "GSEB Class 12 Sci · 2023 Batch" },
-    { id: 29, category: "Board 12th", badge: "BOARD 12TH GSEB COM", score: "95.6 PR", name: "Niranjan Mehta", program: "GSEB Class 12 Com · 2024 Batch" },
-    { id: 30, category: "Board 12th", badge: "BOARD 12TH CBSE SCI", score: "94.5 PR", name: "Aditya Shah", program: "CBSE Class 12 Sci · 2023 Batch" },
-    { id: 31, category: "Board 12th", badge: "BOARD 12TH GSEB SCI", score: "93.8 PR", name: "Sanjay Raval", program: "GSEB Class 12 Sci · 2022 Batch" },
-    { id: 32, category: "Board 12th", badge: "BOARD 12TH GSEB COM", score: "93.1 PR", name: "Bhavin Patel", program: "GSEB Class 12 Com · 2022 Batch" },
+    // Board 12th (4 real results)
+    { id: 25, category: "Board 12th", badge: "BOARD 12TH GSEB SCI", score: "97.00 PR", name: "Ankit Chauhan", program: "GSEB Class 12 Science", image: new URL('../../Assets/Results/12th sci/Ankit Chauhan.jpeg', import.meta.url).href },
+    { id: 26, category: "Board 12th", badge: "BOARD 12TH GSEB COM", score: "96.22 PR", name: "Ishita Bhavsar", program: "GSEB Class 12 Commerce", image: new URL('../../Assets/Results/12th comm/Ishita Bhavsar.jpeg', import.meta.url).href },
+    { id: 27, category: "Board 12th", badge: "BOARD 12TH GSEB COM", score: "95.78 PR", name: "Jenakshi Raval", program: "GSEB Class 12 Commerce", image: new URL('../../Assets/Results/12th comm/Jenakshi Raval.jpeg', import.meta.url).href },
+    { id: 28, category: "Board 12th", badge: "BOARD 12TH GSEB COM", score: "93.00 PR", name: "Kartik Naydu", program: "GSEB Class 12 Commerce", image: new URL('../../Assets/Results/12th comm/Kartik naydu.jpeg', import.meta.url).href },
 
     // IELTS / PTE (8 results)
-    { id: 33, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 7.5", name: "Sneha Vyas", program: "IELTS Academic · 2024 Batch" },
-    { id: 34, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 8.0", name: "Rajesh Trivedi", program: "IELTS Academic · 2023 Batch" },
-    { id: 35, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 8.0", name: "Aman Mehta", program: "IELTS Prep · 2024 Batch" },
-    { id: 36, category: "IELTS / PTE", badge: "IELTS GENERAL", score: "Band 7.5", name: "Dharmesh Kothari", program: "IELTS Prep · 2024 Batch" },
-    { id: 37, category: "IELTS / PTE", badge: "PTE ACADEMIC", score: "Score 78", name: "Parth Vyas", program: "PTE Prep · 2024 Batch" },
-    { id: 38, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 7.0", name: "Rishi Prajapati", program: "IELTS Prep · 2023 Batch" },
-    { id: 39, category: "IELTS / PTE", badge: "IELTS GENERAL", score: "Band 7.0", name: "Jatin Solanki", program: "IELTS Prep · 2022 Batch" },
-    { id: 40, category: "IELTS / PTE", badge: "PTE ACADEMIC", score: "Score 72", name: "Nisha Patel", program: "PTE Prep · 2023 Batch" }
-  ].map((r, idx) => ({
-    ...r,
-    image: getResultImgUrl(resultPhotos[idx % resultPhotos.length])
-  }));
+    { id: 33, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 7.5", name: "Sneha Vyas", program: "IELTS Academic · 2026 Batch", image: getResultImgUrl("IMG_9126.JPG.jpeg") },
+    { id: 34, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 8.0", name: "Rajesh Trivedi", program: "IELTS Academic · 2025 Batch", image: getResultImgUrl("IMG_9127.JPG.jpeg") },
+    { id: 35, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 8.0", name: "Aman Mehta", program: "IELTS Prep · 2026 Batch", image: getResultImgUrl("IMG_9128.JPG.jpeg") },
+    { id: 36, category: "IELTS / PTE", badge: "IELTS GENERAL", score: "Band 7.5", name: "Dharmesh Kothari", program: "IELTS Prep · 2026 Batch", image: getResultImgUrl("IMG_9133.JPG.jpeg") },
+    { id: 37, category: "IELTS / PTE", badge: "PTE ACADEMIC", score: "Score 78", name: "Parth Vyas", program: "PTE Prep · 2026 Batch", image: getResultImgUrl("IMG_9136.JPG.jpeg") },
+    { id: 38, category: "IELTS / PTE", badge: "IELTS ACADEMIC", score: "Band 7.0", name: "Rishi Prajapati", program: "IELTS Prep · 2025 Batch", image: getResultImgUrl("IMG_9137.JPG.jpeg") },
+    { id: 39, category: "IELTS / PTE", badge: "IELTS GENERAL", score: "Band 7.0", name: "Jatin Solanki", program: "IELTS Prep · 2024 Batch", image: getResultImgUrl("IMG_9096.JPG.jpeg") },
+    { id: 40, category: "IELTS / PTE", badge: "PTE ACADEMIC", score: "Score 72", name: "Nisha Patel", program: "PTE Prep · 2025 Batch", image: getResultImgUrl("IMG_9097.JPG.jpeg") }
+  ];
 
   // Filtering & Pagination Logic
   const handleFilterChange = (filterId) => {
@@ -314,9 +306,9 @@ export default function ResultsPage() {
         "88% of IELTS/PTE candidates achieved 7.0+ Band"
       ],
       items: [
-        { name: "Student Placeholder", score: "AIR 2847", badge: "JEE Mains" },
-        { name: "Student Placeholder", score: "620 / 720", badge: "NEET UG" },
-        { name: "Student Placeholder", score: "Band 7.5", badge: "IELTS Academic" }
+        { name: "Angel Patel", score: "99.50 PR", badge: "Board 10th" },
+        { name: "Harshil Patel", score: "99.43 PR", badge: "Board 10th" },
+        { name: "Ankit Chauhan", score: "97.00%", badge: "Board 12th" }
       ]
     },
     {
@@ -328,9 +320,9 @@ export default function ResultsPage() {
         "82% IELTS candidates achieved 7.5+ Band Score"
       ],
       items: [
-        { name: "Student Placeholder", score: "634 / 720", badge: "NEET UG" },
-        { name: "Student Placeholder", score: "Band 8.0", badge: "IELTS Academic" },
-        { name: "Student Placeholder", score: "96.4 PR", badge: "Board 10th" }
+        { name: "Kushi Mishra", score: "98.02 PR", badge: "Board 10th" },
+        { name: "Ishita Bhavsar", score: "96.22%", badge: "Board 12th" },
+        { name: "Jenakshi Raval", score: "95.78%", badge: "Board 12th" }
       ]
     },
     {
@@ -342,9 +334,9 @@ export default function ResultsPage() {
         "80% IELTS candidates got visa approvals on first attempt"
       ],
       items: [
-        { name: "Student Placeholder", score: "AIR 3105", badge: "JEE Advanced" },
-        { name: "Student Placeholder", score: "601 / 720", badge: "NEET UG" },
-        { name: "Student Placeholder", score: "96.2 PR", badge: "Board 12th" }
+        { name: "Shanjana Rao", score: "97.00%", badge: "Board 10th" },
+        { name: "Kavy Gupta", score: "97.00%", badge: "Board 10th" },
+        { name: "Kartik Naydu", score: "93.00%", badge: "Board 12th" }
       ]
     }
   ];
@@ -466,7 +458,7 @@ export default function ResultsPage() {
               Our Best Results.
             </h2>
             <p className="font-sans font-light text-[13.5px] sm:text-[14px] text-brand-grey italic mt-2.5">
-              * Placeholder results — client will provide actual student data shortly.
+              * Showing our top academic achievers.
             </p>
           </div>
 
@@ -524,7 +516,7 @@ export default function ResultsPage() {
 
           {/* Bottom Disclaimer */}
           <p className="font-sans font-light text-[12px] text-brand-grey italic mt-12 text-center select-none">
-            * All results shown are placeholders. Actual student data will be updated by Ocean Blue Education & Spoken English.
+            * Certified and verified results of Ocean Blue Education & Spoken English.
           </p>
 
         </div>

@@ -48,10 +48,10 @@ export default function Footer() {
                 <Phone className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
                 <span>Niraj Rajput: <strong className="font-semibold text-white">+91 90335 52048</strong></span>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
                 <span>Office: <strong className="font-semibold text-white">+91 99090 41161</strong></span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2.5 mt-1 pt-1 border-t border-white/[0.05]">
                 <Mail className="w-3.5 h-3.5 text-brand-yellow flex-shrink-0" />
                 <span>info@oceanblue.education</span>
@@ -126,12 +126,12 @@ export default function Footer() {
                   Vastral Branch (Head Office)
                 </span>
                 <div className="flex items-start gap-2 text-[13px] text-[#cccccc] leading-relaxed">
-                  <MapPin className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 text-brand-yellow mt-0.5 flex-shrink-0" />
                   <span>107-114 First Floor, 220-228 Second Floor, Radhe Chamber, Vastral, Ahmedabad - 382418</span>
                 </div>
                 <div className="flex items-center gap-2 text-[13px] text-[#cccccc] mt-1.5">
-                  <Phone className="w-3.5 h-3.5 text-white/40" />
-                  <span>+91 80003 28054</span>
+                  <Phone className="w-3.5 h-3.5 text-brand-yellow" />
+                  <span>+91 85114 41138</span>
                 </div>
               </div>
 
@@ -141,12 +141,12 @@ export default function Footer() {
                   Nikol Branch
                 </span>
                 <div className="flex items-start gap-2 text-[13px] text-[#cccccc] leading-relaxed">
-                  <MapPin className="w-4 h-4 text-white/40 mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 text-brand-yellow mt-0.5 flex-shrink-0" />
                   <span>Nikol Main Road, Nikol, Ahmedabad - 382350</span>
                 </div>
                 <div className="flex items-center gap-2 text-[13px] text-[#cccccc] mt-1.5">
-                  <Phone className="w-3.5 h-3.5 text-white/40" />
-                  <span>+91 80003 28054</span>
+                  <Phone className="w-3.5 h-3.5 text-brand-yellow" />
+                  <span>+91 85114 41178</span>
                 </div>
               </div>
             </div>
@@ -158,21 +158,19 @@ export default function Footer() {
         <div className="w-full h-[1px] bg-white/[0.08] mb-8" />
 
         {/* Bottom Bar: Copyright & Terms */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 font-sans font-light text-[12px] text-[#888888] relative z-10">
-          <div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 font-sans font-light text-[12px] text-[#888888] relative z-10 text-center md:text-left w-full">
+          <div className="order-1 md:order-none">
             © 2026 Ocean Blue Education & Spoken English. All rights reserved.
           </div>
-          <div className="font-sans font-light italic text-[13px] text-white/40 my-2 sm:my-0">
+          <div className="font-sans font-light italic text-[13px] text-white/40 order-2 md:order-none">
             "Where Education Meets Success"
           </div>
-          <div className="flex items-center gap-6">
-            <span>Vastral & Nikol, Ahmedabad</span>
-            <span className="text-white/25">|</span>
+          <div className="order-3 md:order-none">
             <a 
               href="https://convergedigitals.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-brand-yellow hover:underline transition-all duration-200"
+              className="font-medium text-brand-yellow hover:underline transition-all duration-200"
             >
               Made by Converge Digitals
             </a>

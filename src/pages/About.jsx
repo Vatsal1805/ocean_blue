@@ -323,7 +323,7 @@ export default function About() {
               {/* Photo Placeholder */}
               <div className="w-56 h-56 rounded-full bg-[#f3f2ee] border border-[#dddbd4] overflow-hidden flex flex-col items-center justify-center select-none shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto">
                 <img 
-                  src={new URL('../../Assets/our team/Founder.png', import.meta.url).href} 
+                  src={new URL('../../Assets/our team/founder1.jpeg', import.meta.url).href} 
                   alt="Mr. Dhananjay Rajput - Founder & Director" 
                   className="w-full h-full object-cover object-top"
                 />
@@ -366,33 +366,7 @@ export default function About() {
                 Under the leadership of Mr. Dhananjay Rajput, Ocean Blue Education & Spoken English has grown from a vision of accessible, quality education into one of Ahmedabad's most trusted coaching institutions. Since founding Ocean Blue Education & Spoken English in 2009, he has guided the institute through 15 years of consistent academic results, student success stories, and community impact.
               </p>
 
-              {/* Founder Stats Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 w-full select-none">
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    2009
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Founded Ocean Blue Education & Spoken English
-                  </span>
-                </div>
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    15+
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Years Leading
-                  </span>
-                </div>
-                <div className="bg-[#f3f2ee] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    10,000+
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Students Guided
-                  </span>
-                </div>
-              </div>
+
             </motion.div>
 
           </div>
@@ -427,33 +401,7 @@ export default function About() {
                 Mr. Niraj Rajput co-leads Ocean Blue Education & Spoken English alongside the founder, overseeing academic operations, student welfare, and institutional growth. His dedication to personalized student attention and quality teaching standards has been central to Ocean Blue Education & Spoken English's reputation across Vastral and Nikol.
               </p>
 
-              {/* Co-founder Stats Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 w-full select-none">
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    Est. 2009
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Joined Directorship
-                  </span>
-                </div>
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    2 Branches
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Academic Expansion
-                  </span>
-                </div>
-                <div className="bg-[#fafaf8] border border-[#dddbd4] rounded-xl p-4 sm:p-5 text-center">
-                  <span className="font-serif text-[24px] sm:text-[28px] text-brand-navy font-bold block leading-none mb-1.5">
-                    15+ Years
-                  </span>
-                  <span className="font-sans font-light text-[11.5px] sm:text-[12px] text-[#888888] leading-tight block">
-                    Of Trust & Results
-                  </span>
-                </div>
-              </div>
+
             </motion.div>
 
             {/* Right Column (Photo & Basic Info - 40% width) */}
@@ -465,9 +413,12 @@ export default function About() {
               className="md:col-span-5 lg:col-span-5 flex flex-col items-center text-center w-full order-1 md:order-2"
             >
               {/* Photo Placeholder */}
-              <div className="w-56 h-56 rounded-full bg-[#f3f2ee] border border-[#dddbd4] flex flex-col items-center justify-center gap-2 select-none shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto">
-                <IconUser size={48} className="text-[#dddbd4]" stroke={1} />
-                <span className="font-sans font-light text-[12px] text-[#999999]">Director Photo</span>
+              <div className="w-56 h-56 rounded-full bg-[#f3f2ee] border border-[#dddbd4] overflow-hidden flex flex-col items-center justify-center select-none shadow-sm hover:shadow-md transition-shadow duration-300 mx-auto">
+                <img 
+                  src={new URL('../../Assets/our team/Director.jpeg', import.meta.url).href} 
+                  alt="Mr. Niraj Rajput - Managing Director" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Title & Name */}

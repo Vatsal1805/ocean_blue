@@ -1216,7 +1216,7 @@ export default function IELTS() {
 
           {/* Bottom helpline text */}
           <div className="mt-8 font-sans font-light text-[14px] text-[#888888] select-none">
-            Or call our helpline directly: <a href="tel:+919033552048" className="font-semibold text-[#1a237e] hover:underline">+91 90335 52048</a> &middot; <a href="tel:+918000328054" className="font-semibold text-[#1a237e] hover:underline">+91 80003 28054</a>
+            Or call our helpline directly: <a href="tel:+918000328054" className="font-semibold text-[#1a237e] hover:underline">+91 80003 28054</a>
           </div>
 
         </div>

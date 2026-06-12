@@ -22,36 +22,40 @@ export default function ResultsPreview() {
 
   const toppers = [
     {
-      badge: "JEE MAINS 2024",
-      initials: "AR",
-      score: "AIR 2847",
-      name: "Student Placeholder",
-      exam: "JEE Mains · 2024 Batch",
-      quote: "The Physics and Maths coaching here completely changed how I approach problems."
+      badge: "BOARD 10TH GSEB",
+      initials: "AP",
+      score: "99.50 PR",
+      name: "Angel Patel",
+      exam: "10th Board · 574/600 Marks",
+      quote: "Studying at Ocean Blue was an amazing experience. The daily practice sheets and mock tests built my confidence and helped me achieve 99.50 PR.",
+      image: new URL('../../Assets/Results/10th/Angel Patel.jpeg', import.meta.url).href
     },
     {
-      badge: "BOARD 10TH 2024",
-      initials: "PM",
-      score: "94.6%",
-      name: "Student Placeholder",
-      exam: "10th Board · GSEB · 2024",
-      quote: "The 3-hour structured sessions and practice papers made sure I was fully prepared for boards."
+      badge: "BOARD 10TH GSEB",
+      initials: "HP",
+      score: "99.43 PR",
+      name: "Harshil Patel",
+      exam: "10th Board · 573/600 Marks",
+      quote: "The conceptual clarity and personal attention from teachers at Ocean Blue made board exams feel extremely straightforward.",
+      image: new URL('../../Assets/Results/10th/Harshil Patel.jpeg', import.meta.url).href
     },
     {
-      badge: "IELTS ACADEMIC 2024",
-      initials: "TR",
-      score: "Band 7.5",
-      name: "Student Placeholder",
-      exam: "IELTS Academic · 2024 Batch",
-      quote: "Ocean Blue Education & Spoken English's IELTS coaching is structured and thorough. I achieved my target band score in the first attempt."
+      badge: "12TH SCIENCE GSEB",
+      initials: "AC",
+      score: "97.00%",
+      name: "Ankit Chauhan",
+      exam: "12th Science Board",
+      quote: "The physics, chemistry, and biology test series at Ocean Blue are excellent. They prepare you for board concepts perfectly.",
+      image: new URL('../../Assets/Results/12th sci/Ankit Chauhan.jpeg', import.meta.url).href
     },
     {
-      badge: "IELTS GENERAL 2024",
-      initials: "NP",
-      score: "Band 7.0",
-      name: "Student Placeholder",
-      exam: "IELTS General · 2024 Batch",
-      quote: "The writing task coaching and mock tests at Ocean Blue Education & Spoken English helped me improve from band 5.5 to 7.0."
+      badge: "12TH COMMERCE GSEB",
+      initials: "IB",
+      score: "96.22%",
+      name: "Ishita Bhavsar",
+      exam: "12th Commerce Board",
+      quote: "Ocean Blue's structured revision plans and regular doubt solving classes helped me score 96.22% in my 12th commerce boards.",
+      image: new URL('../../Assets/Results/12th comm/Ishita Bhavsar.jpeg', import.meta.url).href
     }
   ];
 
@@ -109,9 +113,17 @@ export default function ResultsPreview() {
                 className="w-18 h-18 rounded-full border border-white/[0.12] flex items-center justify-center mt-6 text-white select-none overflow-hidden relative"
                 style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
               >
-                <span className="font-sans font-semibold text-[18px] text-white">
-                  {topper.initials}
-                </span>
+                {topper.image ? (
+                  <img 
+                    src={topper.image} 
+                    alt={topper.name} 
+                    className="w-full h-full object-cover object-center" 
+                  />
+                ) : (
+                  <span className="font-sans font-semibold text-[18px] text-white">
+                    {topper.initials}
+                  </span>
+                )}
               </div>
 
               {/* Student Name */}

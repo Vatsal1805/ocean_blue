@@ -23,6 +23,7 @@ export default function CoursesPage() {
   const [activeStream, setActiveStream] = useState('science');
   const [activeCareerStream, setActiveCareerStream] = useState('pcm');
   const [activeScienceGroup, setActiveScienceGroup] = useState('pcm');
+  const [isMethodologyOpen, setIsMethodologyOpen] = useState(false);
 
   // Dynamic SEO Meta Tags injection
   useEffect(() => {
@@ -1005,8 +1006,8 @@ export default function CoursesPage() {
             <h2 className="font-serif text-[34px] sm:text-[52px] text-[#1a1a1a] font-normal leading-tight">
               JEE & NEET.
             </h2>
-            <p className="font-sans font-light text-[15px] sm:text-[17px] text-[#888888] max-w-2xl mt-4 leading-relaxed">
-              Rigorous coaching for IIT-JEE and NEET. Concept clarity, OMR practice, mock tests, and expert science mentors — designed for students serious about engineering and medical careers.
+            <p className="font-sans font-light text-[15px] sm:text-[17px] text-[#555555] max-w-3xl mt-4 leading-relaxed">
+              At Ocean Blue Education, we believe that success in JEE and NEET is not achieved through long study hours alone — it is achieved through the right strategy, consistent practice, and expert guidance. Our integrated program prepares students simultaneously for CBSE/GSEB Board examinations and competitive entrances.
             </p>
           </div>
 
@@ -1036,7 +1037,7 @@ export default function CoursesPage() {
               </div>
 
               {/* Duration and logistics */}
-              <div className="bg-white border border-[#dddbd4] rounded-[14px] p-5">
+              {/* <div className="bg-white border border-[#dddbd4] rounded-[14px] p-5">
                 <span className="font-sans font-semibold text-[13px] text-[#1a1a1a] flex items-center gap-2 mb-1">
                   <IconClock size={16} className="text-[#1a237e]" />
                   <span>Program Structure</span>
@@ -1044,7 +1045,7 @@ export default function CoursesPage() {
                 <span className="font-sans font-light text-[13px] text-[#555555]">
                   12 Month Comprehensive Prep batched from <strong>5:30 AM – 8:00 AM</strong> or <strong>7:00 PM – 9:30 PM</strong>.
                 </span>
-              </div>
+              </div> */}
 
               {/* Features list */}
               <div>
@@ -1085,7 +1086,7 @@ export default function CoursesPage() {
               </div>
 
               {/* Duration and logistics */}
-              <div className="bg-white border border-[#dddbd4] rounded-[14px] p-5">
+              {/* <div className="bg-white border border-[#dddbd4] rounded-[14px] p-5">
                 <span className="font-sans font-semibold text-[13px] text-[#1a1a1a] flex items-center gap-2 mb-1">
                   <IconClock size={16} className="text-[#1a237e]" />
                   <span>Program Structure</span>
@@ -1093,7 +1094,7 @@ export default function CoursesPage() {
                 <span className="font-sans font-light text-[13px] text-[#555555]">
                   12 Month Intensive Medical Prep batched from <strong>5:30 AM – 8:00 AM</strong> or <strong>7:00 PM – 9:30 PM</strong>.
                 </span>
-              </div>
+              </div> */}
 
               {/* Features list */}
               <div>
@@ -1110,6 +1111,140 @@ export default function CoursesPage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Option 1: Expandable Methodology Accordion */}
+          <div className="mt-8 w-full">
+            <button
+              onClick={() => setIsMethodologyOpen(!isMethodologyOpen)}
+              className="w-full bg-[#f3f2ee] hover:bg-[#eae8e2] border border-[#dddbd4] rounded-[16px] py-5 px-6 flex items-center justify-between transition-all duration-300 shadow-sm cursor-pointer select-none outline-none group"
+            >
+              <div className="flex items-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#f5c800]" />
+                <span className="font-sans font-semibold text-[15px] sm:text-[16px] text-[#1a237e] tracking-wide text-left">
+                  Explore Our Detailed JEE/NEET Prep Methodology & Pillars
+                </span>
+              </div>
+              <span className={`font-sans font-bold text-[14px] text-[#1a237e] transition-transform duration-300 flex-shrink-0 ml-4 ${isMethodologyOpen ? 'rotate-180' : ''}`}>
+                ▼
+              </span>
+            </button>
+
+            <AnimatePresence>
+              {isMethodologyOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="bg-[#fafaf8] border-x border-b border-[#dddbd4] rounded-b-[16px] p-6 sm:p-10 flex flex-col gap-10 mt-[-4px]">
+                    
+                    {/* The Prep Framework Grid (6 Pillars) */}
+                    <div>
+                      <h4 className="font-serif text-[22px] sm:text-[26px] text-[#1a1a1a] font-normal mb-6 text-left border-b border-[#dddbd4]/60 pb-3 select-none">
+                        Our 6-Pillar Academic Prep Framework
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                          {
+                            title: "Daily Practice-Based Learning",
+                            icon: IconFileText,
+                            points: ["Daily Practice Sheets (DPS)", "Chapter-wise MCQ Assignments", "Numerical Problem Sets & NCERT Banks", "Assertion-Reason & Case Study Questions"]
+                          },
+                          {
+                            title: "Extra Study Hours & Practice",
+                            icon: IconClock,
+                            points: ["Dedicated practice sessions", "Concept application drills", "JEE/NEET problem-solving focus", "Tempered exam conditions practice"]
+                          },
+                          {
+                            title: "Weekly Testing System",
+                            icon: IconClipboardCheck,
+                            points: ["Weekly chapter evaluation tests", "Monthly performance assessments", "Full mock exams on JEE/NEET patterns", "Detailed test performance analysis"]
+                          },
+                          {
+                            title: "Personalized Doubt Support",
+                            icon: IconUsers,
+                            points: ["Dedicated 1-on-1 doubt hours", "Direct faculty resolution access", "Small batch attention during revision", "No unresolved concepts carried forward"]
+                          },
+                          {
+                            title: "Expert Faculty Guidance",
+                            icon: IconSchool,
+                            points: ["Concept clarity over memorization", "Shortcut solving techniques", "Time management exam skills", "Continuous tracking & individual focus"]
+                          },
+                          {
+                            title: "Self-Designed Materials",
+                            icon: IconBook,
+                            points: ["Notes prepared by top educators", "JEE Advanced-level problems", "NEET concept-focused modules", "Formula booklets & quick revision sheets"]
+                          }
+                        ].map((pillar, pIdx) => {
+                          const PillarIcon = pillar.icon;
+                          return (
+                            <div key={pIdx} className="bg-white border border-[#dddbd4] rounded-xl p-5 text-left shadow-xs flex flex-col justify-between">
+                              <div>
+                                <div className="w-10 h-10 rounded-lg bg-[#f3f2ee] border border-[#dddbd4] flex items-center justify-center text-[#1a237e] mb-4 shadow-xs select-none">
+                                  <PillarIcon size={20} stroke={1.8} />
+                                </div>
+                                <h5 className="font-sans font-semibold text-[15.5px] text-[#1a1a1a] mb-3 select-none">
+                                  {pillar.title}
+                                </h5>
+                                <ul className="flex flex-col gap-2">
+                                  {pillar.points.map((pt, ptIdx) => (
+                                    <li key={ptIdx} className="font-sans font-light text-[13px] text-[#555555] flex items-start gap-2 leading-relaxed">
+                                      <span className="w-1.5 h-1.5 rounded-full bg-[#f5c800] mt-1.5 flex-shrink-0" />
+                                      <span>{pt}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Why Choose Ocean Blue Checklist */}
+                    <div className="pt-4 border-t border-[#dddbd4]/60">
+                      <h4 className="font-serif text-[22px] sm:text-[26px] text-[#1a1a1a] font-normal mb-6 text-left select-none">
+                        Why Choose Ocean Blue for JEE/NEET?
+                      </h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3.5 gap-x-6">
+                        {[
+                          "Integrated Board + JEE/NEET Prep",
+                          "Daily Practice Sheets & Assignments",
+                          "Smart Classrooms & Advanced Environment",
+                          "Regular Mocks & Performance Analytics",
+                          "Experienced Expert Faculty Team",
+                          "Individual Attention & Doubt Support",
+                          "Self-Designed Custom Study Material",
+                          "No Homework Concept with Guided Practice",
+                          "Proven Academic Excellence Since 2009"
+                        ].map((chk, cIdx) => (
+                          <div key={cIdx} className="flex items-center gap-3 text-left font-sans font-light text-[14px] text-[#444444]">
+                            <div className="w-5 h-5 rounded-full bg-[#1a237e]/5 flex items-center justify-center text-[#1a237e] flex-shrink-0">
+                              <IconCheck size={13} className="text-[#f5c800]" stroke={3} />
+                            </div>
+                            <span>{chk}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Performance Tracking Note */}
+                    <div className="bg-[#f3f2ee]/40 border border-[#dddbd4] rounded-xl p-5 text-left select-none">
+                      <h5 className="font-sans font-semibold text-[14px] text-[#1a1a1a] uppercase tracking-wider mb-2">
+                        Comprehensive Performance Tracking System:
+                      </h5>
+                      <p className="font-sans font-light text-[13.5px] text-[#666666] leading-relaxed">
+                        To keep parents informed and ensure continuous progress, every student's progress is closely monitored through **attendance tracking, assignment completion reports, test performance analysis, parent feedback sessions, and individual improvement plans**.
+                      </p>
+                    </div>
+
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
           </div>
 
@@ -1438,18 +1573,18 @@ export default function CoursesPage() {
               </p>
             </div>
             
-            <div className="flex flex-wrap items-center gap-4 z-10 select-none">
+            <div className="flex flex-row w-full sm:w-auto items-center justify-center gap-3 z-10 select-none">
               <a 
                 href="https://wa.me/919033552048" 
                 target="_blank" 
                 rel="noreferrer"
-                className="bg-white text-[#1a237e] hover:bg-[#f5c800] hover:text-[#1a1a1a] font-sans font-semibold text-[13.5px] rounded-full px-6 py-3 shadow-sm transition-all duration-300 cursor-pointer"
+                className="flex-1 sm:flex-initial bg-white text-[#1a237e] hover:bg-[#f5c800] hover:text-[#1a1a1a] font-sans font-semibold text-[13.5px] rounded-full px-5 py-3 shadow-sm transition-all duration-300 cursor-pointer text-center"
               >
                 WhatsApp Us
               </a>
               <a 
                 href="tel:+919909041161"
-                className="bg-transparent border border-white/40 text-white hover:bg-white/10 font-sans font-medium text-[13.5px] rounded-full px-6 py-3 transition-all duration-300 cursor-pointer flex items-center gap-1.5"
+                className="flex-1 sm:flex-initial bg-transparent border border-white/40 text-white hover:bg-white/10 font-sans font-medium text-[13.5px] rounded-full px-5 py-3 transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5 text-center"
               >
                 <IconPhone size={15} />
                 <span>Call Us</span>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 export default function CTA() {
-  const headlineText = "Your First Class Is Free.";
+  const headlineText = "Your First Demo Class Is Free.";
   const words = headlineText.split(" ");
 
   const containerVariants = {
