@@ -80,7 +80,7 @@ export default function Contact({ prefilledProgram }) {
                 <div className="flex flex-col gap-1 text-[13px] font-sans font-light text-[#555555]">
                   <div>Dhananjay Rajput: <strong className="font-semibold text-brand-navy">+91 80003 28054</strong></div>
                   <div>Niraj Rajput: <strong className="font-semibold text-brand-navy">+91 90335 52048</strong></div>
-                  <div>Office: <strong className="font-semibold text-brand-navy">+91 99090 41161</strong></div>
+                  <div>Office: <strong className="font-semibold text-brand-navy">+91 85114 41138</strong></div>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default function Contact({ prefilledProgram }) {
                   Nikol, Ahmedabad
                 </p>
                 <div className="text-[13px] font-sans font-light text-[#555555]">
-                  Phone: <strong className="font-semibold text-brand-navy">+91 80003 28054</strong>
+                  Phone: <strong className="font-semibold text-brand-navy">+91 85114 41178</strong>
                 </div>
               </div>
             </div>
