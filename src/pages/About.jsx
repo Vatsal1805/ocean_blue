@@ -325,7 +325,7 @@ export default function About() {
                 <img 
                   src={new URL('../../Assets/our team/founder1.jpeg', import.meta.url).href} 
                   alt="Mr. Dhananjay Rajput - Founder & Director" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
 
@@ -417,7 +417,8 @@ export default function About() {
                 <img 
                   src={new URL('../../Assets/our team/Director.jpeg', import.meta.url).href} 
                   alt="Mr. Niraj Rajput - Managing Director" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
+                  
                 />
               </div>
 
